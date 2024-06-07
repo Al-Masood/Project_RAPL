@@ -1,11 +1,18 @@
 const users = require('../models/users')
 
-const loginUser = async (req, res) => {
-
+const signupUser = async (req, res) => {
+    const data = req.body
+    try{
+        const user = await users.signup(data)
+        res.status(200).json({user})
+    } catch (error){
+        res.status(400).json({error: error.message})
+    }
 }
 
-const signupUser = async (req, res) => {
+const loginUser = async (req, res) => {
     
 }
+
 
 module.exports = {loginUser, signupUser}

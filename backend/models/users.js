@@ -46,8 +46,18 @@ const userSchema = new Schema({
 
 }, {timestamps: true})
 
-userSchema.statics.signup = async () => {
+userSchema.statics.signup = async function (name, email, roll, cfHandle, vjHandle, ccHandle, atcoderHandle, password) {
     const exists = await this.findOne({email})
+
+    if(exists){
+        throw Error('Email already in use')
+    }
+
+    const salt = await bcrypt.genSalt(10)
+    const hash = await bcrypt.hash(password, salt)
+    const user = await this.create({name, email, roll, cfHandle, vjHandle, ccHandle, atcoderHandle, password: hash})
+
+    return user
 }
 
 const users = mongoose.model('users', userSchema)

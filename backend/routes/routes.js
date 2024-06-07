@@ -7,13 +7,16 @@ const fetchCFRanklist = require('../controllers/cfperfrank')
 const addVJContest = require('../controllers/addvj')
 const fetchVJRanklist = require('../controllers/vjrank')
 
+
+router.post('/signup', (req, res) => {
+    
+})
+
 router.post('/login', () => {
 
 })
 
-router.post('/signup', () => {
 
-})
 
 router.post('/cfcontestcount', async (req, res) => {
     const data = req.body

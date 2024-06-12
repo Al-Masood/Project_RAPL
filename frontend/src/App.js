@@ -5,6 +5,7 @@ import CFPerfRanklist from './pages/CFPerfRanklist'
 import VJRanklist from './pages/VJRanklist'
 import Login from './pages/Login'
 import SignUp from './pages/SignUp'
+import AdminPanel from './pages/AdminPanel'
 import Navbar from './components/Navbar'
 
 function App() {
@@ -36,7 +37,13 @@ function App() {
               path = "/signup"
               element = {<SignUp />}
             />
+
+          <Route
+              path = "/adminpanel"
+              element = {<AdminPanel />}
+            />
           </Routes>
+
         </div>
       </BrowserRouter>
     </div>

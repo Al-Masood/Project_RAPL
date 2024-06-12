@@ -12,6 +12,24 @@ const SignUp = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault()
+        const user = {
+            name: name,
+            email: email,
+            roll: roll,
+            cfHandle: cfHandle,
+            vjHandle: vjHandle,
+            ccHandle: ccHandle,
+            atcoderHandle: atcoderHandle,
+            password: password
+        }
+
+        await fetch('http://localhost:4000/api/signup', {
+            method: 'POST',
+            body: JSON.stringify(user),
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
     }
 
     return (

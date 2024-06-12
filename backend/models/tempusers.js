@@ -46,6 +46,6 @@ const tempUserSchema = new Schema({
 
 }, {timestamps: true})
 
-const tempUsers = mongoose.model('users', tempUserSchema)
+const tempUsers = mongoose.model('tempusers', tempUserSchema)
 
 module.exports = tempUsers

@@ -24,6 +24,10 @@ const Navbar = () => {
                     <h1>Sign Up</h1>
                 </Link>
 
+                <Link to ="/adminpanel">
+                    <h1>Admin Panel</h1>
+                </Link>
+
             </div>
         </header>
     )

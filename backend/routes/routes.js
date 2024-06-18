@@ -1,31 +1,22 @@
 const express = require('express')
 const router = express.Router()
 
-const {signupUser, loginUser, addUser, removeUser} = require('../controllers/userController')
+const {signupUser, loginUser,  getTempUsers, addUser, removeUser} = require('../controllers/userController')
 const getCount = require('../controllers/getcount')
 const fetchCFRanklist = require('../controllers/cfperfrank')
 const addVJContest = require('../controllers/addvj')
 const fetchVJRanklist = require('../controllers/vjrank')
 
 
-router.post('/signup', async (req, res) => {
-    await signupUser(req)
-    console.log('Temporary User Added')
-})
+router.post('/signup', signupUser)
 
-router.post('/login', () => {
+router.post('/login',)
 
-})
+router.get('/gettempusers', getTempUsers)
 
-router.post('/adduser', async (req, res) => {
-    await addUser(req)
-    res.send('User Added')
-})
+router.post('/adduser', addUser)
 
-router.post('/removeuser', async (req, res) => {
-    await removeUser(req)
-    res.send('User Removed')
-})
+router.post('/removeuser', removeUser)
 
 router.post('/cfcontestcount', async (req, res) => {
     const data = req.body

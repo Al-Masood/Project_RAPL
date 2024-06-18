@@ -1,4 +1,4 @@
-const TempUsers = require('../components/TempUsers')
+import TempUsers from '../components/TempUsers'
 
 const AdminPanel = () => {
 

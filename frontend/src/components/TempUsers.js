@@ -11,6 +11,7 @@ const TempUsers = () => {
             }
         })
         const fetchedUsers = await response.json()
+        console.log(fetchedUsers)
         setTempUsers(fetchedUsers)
     }
 
@@ -21,19 +22,17 @@ const TempUsers = () => {
     const addUser = async (email) => {
         await fetch('http://localhost:4000/api/adduser', {
             method: 'POST',
-            body: JSON.stringify(email),
+            body: JSON.stringify({email}),
             headers: {
                 'Content-Type': 'application/json'
             }
         })
-
-
     }
 
     const removeUser = async (email) => {
         await fetch('http://localhost:4000/api/removeuser', {
             method: 'POST',
-            body: JSON.stringify(email),
+            body: JSON.stringify({email}),
             headers: {
                 'Content-Type': 'application/json'
             }
@@ -42,20 +41,20 @@ const TempUsers = () => {
 
     return(
         <div>
-            <ul>
+            <ul className="user-list">
                 {tempUsers.map(user => (
-                    <li key={user._id}>
+                    <li key={user._id} className="user-item">
                         <p>Name: {user.name}</p>
                         <p>Email: {user.email}</p>
                         <p>Roll: {user.roll}</p>
                         <p>Codeforces Handle: {user.cfHandle}</p>
                         <p>VJudge Handle: {user.vjHandle}</p>
 
-                        <button onClick={() => addUser(user.email)}>
+                        <button className='button' onClick={() => addUser(user.email)}>
                             Add User
                         </button>
 
-                        <button onClick={() => removeUser(user.email)}>
+                        <button className='button' onClick={() => removeUser(user.email)}>
                             Remove User
                         </button>
                     </li>

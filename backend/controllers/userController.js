@@ -50,19 +50,18 @@ const loginUser = async (req, res) => {
 
         const user = await users.findOne({ email: data.email })
         if (!user) {
-            return res.status(400).send('Email not valid')
+            return res.status(400).send('Incorrect Email')
         }
 
         const match = await bcrypt.compare(data.password, user.password)
         if (!match) {
-            return res.status(400).send('Incorrect password')
+            return res.status(400).send('Incorrect Password')
         }
 
         const token = createToken(user._id)
-        res.status(200).json({ token })
+        res.status(200).json({name: user.name, token})
     } catch (error) {
-        console.log(error)
-        res.status(500).send('Server Error')
+        res.status(500).send()
     }
 }
 

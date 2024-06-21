@@ -10,7 +10,7 @@ const fetchVJRanklist = require('../controllers/vjrank')
 
 router.post('/signup', signupUser)
 
-router.post('/login',)
+router.post('/login', loginUser)
 
 router.get('/gettempusers', getTempUsers)
 

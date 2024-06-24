@@ -36,13 +36,8 @@ const VJSelector = ({updateRanklist}) => {
     }
 
     return (
-        <div>
-            <div>
-                <button className = 'button' onClick={currentRanklist}>
-                    Ranklist of Current TFCs
-                </button>
-            </div>
-            <div>
+        <div className='vjudge-selector'>
+            <div className='vjudge-selector-custom'>
                 <input
                     className='input-field'
                     type='text'
@@ -50,10 +45,13 @@ const VJSelector = ({updateRanklist}) => {
                     onChange={inputTaken}
                     placeholder='Enter contest numbers space separated'
                 />
-            </div>
-            <div>
                 <button className = 'button' onClick={customRanklist}>
                     Generate Ranklist
+                </button>
+            </div>
+            <div className='vjudge-selector-current'>
+                <button className = 'button' onClick={currentRanklist}>
+                    Ranklist of Current TFCs
                 </button>
             </div>
         </div>

@@ -57,16 +57,12 @@ const CFSelector = ({ updateRanklist }) => {
                 <select className='year' onChange={updateYear}>
                     <option>2024</option>
                 </select>
-            </div>
-            <div className="form-group">
                 <label htmlFor="month">Select Month: </label>
                 <select className='month' onChange={updateMonth}>
                     {Array.from({ length: 12 }, (_, i) => i + 1).map(i => (
                         <option key={i}>{i}</option>
                     ))}
                 </select>
-            </div>
-            <div className="form-group">
                 <label htmlFor="best of">Best of: </label>
                 <select className='best of' onChange={updateBestof}>
                     {Array.from({ length: count + 1 }, (_, i) => i).map(i => (
@@ -74,7 +70,7 @@ const CFSelector = ({ updateRanklist }) => {
                     ))}
                 </select>
             </div>
-            <div className="form-group">
+            <div>
                 <button className='button' onClick={generateRanklist}>
                     Generate Ranklist
                 </button>

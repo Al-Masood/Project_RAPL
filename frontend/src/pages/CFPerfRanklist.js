@@ -8,6 +8,7 @@ const CFPerfRanklist = () => {
     const updateRanklist = (newRanklist) => {
         setRanklist(newRanklist)
     }
+    
     return(
         <div className = "cfperf">
             <CFSelector updateRanklist = {updateRanklist}/>

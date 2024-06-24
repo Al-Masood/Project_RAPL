@@ -1,8 +1,12 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 import Home from './pages/Home'
+import CFRating from './pages/CFRating'
+import CFActivity from './pages/CFActivity'
 import CFPerfRanklist from './pages/CFPerfRanklist'
 import VJRanklist from './pages/VJRanklist'
+import Resources from './pages/Resources'
+import HallofFame from './pages/HallofFame'
 import Login from './pages/Login'
 import SignUp from './pages/SignUp'
 import AdminPanel from './pages/AdminPanel'
@@ -19,6 +23,17 @@ function App() {
               path = "/"
               element = {<Home />}
             />
+
+            <Route
+              path = "/cfrating"
+              element = {<CFRating />}
+            />
+
+            <Route
+              path = "/cfactivity"
+              element = {<CFActivity />}
+            />
+
             <Route
               path = "/cfperformance"
               element = {<CFPerfRanklist />}
@@ -26,6 +41,16 @@ function App() {
             <Route
               path = "/vjudgeranklist"
               element = {<VJRanklist />}
+            />
+
+            <Route
+              path = "/resources"
+              element = {<Resources />}
+            />
+
+            <Route
+              path = "/halloffame"
+              element = {<HallofFame />}
             />
 
             <Route

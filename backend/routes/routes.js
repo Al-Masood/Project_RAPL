@@ -6,6 +6,7 @@ const getCount = require('../controllers/getcount')
 const fetchCFRanklist = require('../controllers/cfperfrank')
 const addVJContest = require('../controllers/addvj')
 const fetchVJRanklist = require('../controllers/vjrank')
+const cfRating = require('../controllers/cfrating')
 
 
 router.post('/signup', signupUser)
@@ -17,6 +18,8 @@ router.get('/gettempusers', getTempUsers)
 router.post('/adduser', addUser)
 
 router.post('/removeuser', removeUser)
+
+router.post('/cfrating', cfRating)
 
 router.post('/cfcontestcount', async (req, res) => {
     const data = req.body

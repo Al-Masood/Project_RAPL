@@ -3,52 +3,74 @@ import { useLogout } from "../hooks/UseLogout";
 import { useAuthContext } from "../hooks/UseAuthContext";
 
 const Navbar = () => {
-    const {logout} = useLogout()
-    const {user} = useAuthContext()
+    const { logout } = useLogout()
+    const { user } = useAuthContext()
     const handleClick = () => {
         logout()
     }
-    return(
+
+    return (
         <header>
-            <div className="container">
-                <Link to ="/">
-                    <h1>Homepage</h1>
+            <div className="navbar-brand">
+                <Link to="/">
+                    RAPL
                 </Link>
-
-                <Link to ="/cfperformance">
-                    <h1>Codeforces Performance</h1>
-                </Link>
-                
-                <Link to ="/vjudgeranklist">
-                    <h1>Vjudge Ranklist</h1>
-                </Link>
-
-                <Link to ="/adminpanel">
-                    <h1>Admin Panel</h1>
-                </Link>
-
-                {user && (
-                    <div>
-                        <span>{user.name}</span>
-                        <button className = 'button' onClick={handleClick}> Logout</button>
-                    </div>
-                )}
-
-                {!user && (
-                    <div>
-                        <Link to ="/login">
-                            <h1>Login</h1>
-                        </Link>
-
-                        <Link to ="/signup">
-                            <h1>Sign Up</h1>
-                        </Link>
-                    </div>
-                )}
-
-
-
             </div>
+
+            <div className="navbar-links">
+                <Link to="/cfrating">
+                    CF Rating
+                </Link>
+
+                <Link to="/cfactivity">
+                    CF Activity
+                </Link>
+
+                <Link to="/cfperformance">
+                    CF Performance
+                </Link>
+
+                <Link to="/vjudgeranklist">
+                    Vjudge Ranklist
+                </Link>
+
+                <Link to="/resources">
+                    Resources
+                </Link>
+
+                <Link to="/halloffame">
+                    Hall of Fame
+                </Link>
+
+
+                {user && user.user.admin === true && (
+                    <Link to="/adminpanel">
+                        Admin Panel
+                    </Link>
+                    )
+                }
+            </div>
+
+            {user && (
+                <div className="navbar-user">
+                    <span className='navbar-profile'>{user.user.name}</span>
+                    <Link onClick={handleClick}> 
+                        Logout
+                    </Link>
+                </div>
+            )}
+
+            {!user && (
+                <div className="navbar-user">
+                    <Link to="/login">
+                        Login
+                    </Link>
+
+                    <Link to="/signup">
+                        Sign Up
+                    </Link>
+                </div>
+            )}
         </header>
     )
 }

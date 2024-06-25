@@ -46,6 +46,21 @@ const userSchema = new Schema({
 
     admin: {
         type: Boolean,
+        default: false,
+    },
+
+    allTime: {
+        type: Number,
+        default: false
+    },
+
+    lastYear: {
+        type: Number,
+        default: false
+    },
+
+    lastMonth: {
+        type: Number,
         default: false
     }
 

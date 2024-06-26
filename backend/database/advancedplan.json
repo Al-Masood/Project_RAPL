@@ -1,0 +1,130 @@
+{
+    "Sessions": [
+        {
+            "Week": 1,
+            "Title": "Probability and Expected Value",
+            "Marathon Link": "https://vjudge.net/contest/615699",
+            "Resources": "Probability & Expected Value Resources",
+            "Date": 1733184000000
+        },
+        {
+            "Week": 2,
+            "Title": "Matrix Exponentiation\nBIT",
+            "Marathon Link": "https://vjudge.net/contest/633019\nhttps://vjudge.net/contest/633018",
+            "Resources": "Matrix Exponentiation Resources\nBIT Resources",
+            "Date": 1720224000000
+        },
+        {
+            "Week": 3,
+            "Title": "Game Theory",
+            "Marathon Link": null,
+            "Resources": null,
+            "Date": null
+        },
+        {
+            "Week": 4,
+            "Title": "Flow",
+            "Marathon Link": "https://vjudge.net/contest/619549",
+            "Resources": "Flow Resources",
+            "Date": "29/03/24"
+        },
+        {
+            "Week": 5,
+            "Title": "DP Optimizations:\n1. Convex Hull Trick\n2. Range Query\n3. Divide and Conquer\n4. Knuth Optimization",
+            "Marathon Link": "https://vjudge.net/contest/629992\nhttps://vjudge.net/contest/634255",
+            "Resources": "\nDP Optimizations (CHT & Range Query) Resources\nDP Optimizations (D&C and Knuth) Resources",
+            "Date": "16/04/24\n13/06/24"
+        },
+        {
+            "Week": 6,
+            "Title": "DP\n1. SOS DP\n2. Broken Profile DP\n3. Tree DP",
+            "Marathon Link": "https://vjudge.net/contest/634249",
+            "Resources": "DP (SOS, BP, Tree) Resources",
+            "Date": 1733443200000
+        },
+        {
+            "Week": 7,
+            "Title": "Geometry",
+            "Marathon Link": null,
+            "Resources": null,
+            "Date": null
+        },
+        {
+            "Week": 8,
+            "Title": "Persistent Segment Tree",
+            "Marathon Link": null,
+            "Resources": null,
+            "Date": null
+        },
+        {
+            "Week": 9,
+            "Title": "Suffix Array",
+            "Marathon Link": null,
+            "Resources": null,
+            "Date": null
+        },
+        {
+            "Week": 10,
+            "Title": "DSU on Tree",
+            "Marathon Link": null,
+            "Resources": null,
+            "Date": null
+        },
+        {
+            "Week": 11,
+            "Title": "Centroid Decomposition",
+            "Marathon Link": null,
+            "Resources": null,
+            "Date": null
+        },
+        {
+            "Week": 12,
+            "Title": "FFT \nNTT",
+            "Marathon Link": null,
+            "Resources": null,
+            "Date": null
+        },
+        {
+            "Week": 13,
+            "Title": "KMP\nAho Corasick",
+            "Marathon Link": null,
+            "Resources": null,
+            "Date": null
+        },
+        {
+            "Week": 14,
+            "Title": "Heavy Light Decomposition",
+            "Marathon Link": null,
+            "Resources": null,
+            "Date": null
+        },
+        {
+            "Week": 15,
+            "Title": "Palindromic Tree",
+            "Marathon Link": null,
+            "Resources": null,
+            "Date": null
+        },
+        {
+            "Week": 16,
+            "Title": "XOR Basis",
+            "Marathon Link": null,
+            "Resources": null,
+            "Date": null
+        },
+        {
+            "Week": 17,
+            "Title": "Treap",
+            "Marathon Link": null,
+            "Resources": null,
+            "Date": null
+        },
+        {
+            "Week": 18,
+            "Title": "Segment Tree with Beats",
+            "Marathon Link": null,
+            "Resources": null,
+            "Date": null
+        }
+    ]
+}

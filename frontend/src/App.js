@@ -10,68 +10,74 @@ import HallofFame from './pages/HallofFame'
 import Login from './pages/Login'
 import SignUp from './pages/SignUp'
 import AdminPanel from './pages/AdminPanel'
+import Profile from './pages/Profile'
 import Navbar from './components/Navbar'
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        <Navbar/>
+        <Navbar />
         <div className="pages">
           <Routes>
             <Route
-              path = "/"
-              element = {<Home />}
+              path="/"
+              element={<Home />}
             />
 
             <Route
-              path = "/cfrating"
-              element = {<CFRating />}
+              path="/cfrating"
+              element={<CFRating />}
             />
 
             <Route
-              path = "/cfactivity"
-              element = {<CFActivity />}
+              path="/cfactivity"
+              element={<CFActivity />}
             />
 
             <Route
-              path = "/cfperformance"
-              element = {<CFPerfRanklist />}
+              path="/cfperformance"
+              element={<CFPerfRanklist />}
             />
             <Route
-              path = "/vjudgeranklist"
-              element = {<VJRanklist />}
+              path="/vjudgeranklist"
+              element={<VJRanklist />}
             />
 
             <Route
-              path = "/resources"
-              element = {<Resources />}
+              path="/resources"
+              element={<Resources />}
             />
 
             <Route
-              path = "/halloffame"
-              element = {<HallofFame />}
+              path="/halloffame"
+              element={<HallofFame />}
             />
 
             <Route
-              path = "/login"
-              element = {<Login />}
+              path="/login"
+              element={<Login />}
             />
 
             <Route
-              path = "/signup"
-              element = {<SignUp />}
+              path="/signup"
+              element={<SignUp />}
             />
 
-          <Route
-              path = "/adminpanel"
-              element = {<AdminPanel />}
+            <Route
+              path="/adminpanel"
+              element={<AdminPanel />}
+            />
+
+            <Route
+              path="/profile"
+              element={<Profile />}
             />
           </Routes>
 
         </div>
-      </BrowserRouter>
-    </div>
+      </BrowserRouter >
+    </div >
   );
 }
 

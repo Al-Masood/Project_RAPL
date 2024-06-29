@@ -11,7 +11,6 @@ const TempUsers = () => {
             }
         })
         const fetchedUsers = await response.json()
-        console.log(fetchedUsers)
         setTempUsers(fetchedUsers)
     }
 

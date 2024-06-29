@@ -4,6 +4,7 @@ import Home from './pages/Home'
 import CFRating from './pages/CFRating'
 import CFActivity from './pages/CFActivity'
 import CFPerfRanklist from './pages/CFPerfRanklist'
+import CFStandings from './pages/CFStandings'
 import VJRanklist from './pages/VJRanklist'
 import Resources from './pages/Resources'
 import HallofFame from './pages/HallofFame'
@@ -39,6 +40,12 @@ function App() {
               path="/cfperformance"
               element={<CFPerfRanklist />}
             />
+
+            <Route
+              path="/cfstandings"
+              element={<CFStandings />}
+            />
+
             <Route
               path="/vjudgeranklist"
               element={<VJRanklist />}

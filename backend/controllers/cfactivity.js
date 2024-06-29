@@ -4,8 +4,6 @@ async function cfActivity (req, res){
     const type = req.body.type
     const fetchedUsers = await users.find({})
     
-    console.log('paisi')
-    
     ranklist = []
     finalRanklist = []
 

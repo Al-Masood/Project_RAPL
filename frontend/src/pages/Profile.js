@@ -1,18 +1,17 @@
 import { useState } from 'react'
-import UpdateInfo from '../components/UpdateInfo'
+import UserProfile from '../components/UserProfile'
 import PasswordChange from '../components/PasswordChange'
 
 
 const Profile = () => {
-    const [activeComponent, setActiveComponent] = useState(UpdateInfo) 
+    const [activeComponent, setActiveComponent] = useState('UserProfile') 
     return (
         <div>
-            <button className='rating-button' onClick={() => setActiveComponent('UpdateInfo')}> Update Info</button>
+            <button className='rating-button' onClick={() => setActiveComponent('UserProfile')}> Profile</button>
             <button className='rating-button' onClick={() => setActiveComponent('PasswordChange')}> Change Password</button>
 
-            {activeComponent === 'UpdateInfo' && <UpdateInfo />}
+            {activeComponent === 'UserProfile' && <UserProfile />}
             {activeComponent === 'PasswordChange' && <PasswordChange />}
-
         </div>
     )
 }

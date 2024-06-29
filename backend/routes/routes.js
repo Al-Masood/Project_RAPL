@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router()
 
-const {signupUser, loginUser,  getTempUsers, addUser, removeUser} = require('../controllers/userController')
+const  {signupUser, loginUser, getTempUsers, addUser, removeUser, getChangeRequests, requestChange, approveChange, denyChange, changePassword } = require('../controllers/userController')
 const getCount = require('../controllers/getcount')
 const fetchCFRanklist = require('../controllers/cfperfrank')
 const addVJContest = require('../controllers/addvj')
@@ -19,6 +19,16 @@ router.get('/gettempusers', getTempUsers)
 router.post('/adduser', addUser)
 
 router.post('/removeuser', removeUser)
+
+router.get('/getchangerequests', getChangeRequests)
+
+router.post('/requestchange', requestChange)
+
+router.post('/approvechange', approveChange)
+
+router.post('/denychange', denyChange)
+
+router.post('/changepassword', changePassword)
 
 router.post('/cfrating', cfRating)
 

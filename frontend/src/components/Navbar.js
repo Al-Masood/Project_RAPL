@@ -30,6 +30,10 @@ const Navbar = () => {
                     CF Performance
                 </Link>
 
+                <Link to="/cfstandings">
+                    CF Standings
+                </Link>
+
                 <Link to="/vjudgeranklist">
                     Vjudge Ranklist
                 </Link>

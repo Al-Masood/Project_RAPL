@@ -23,7 +23,6 @@ const UserProfile = () => {
         })
     }
 
-
     const handleEdit = () => {
         setEditMode(true)
     }
@@ -43,13 +42,13 @@ const UserProfile = () => {
     }
 
     return (
-        <div>
+        <div className="listing">
             {editMode ? (
                 <div>
-                    <div>
-                        <label> Name: </label>
+                    <div className="details-group">
+                        <label>Name:</label>
                         <input 
-                            className = 'input-field'
+                            className='input-field'
                             type="text"
                             name="name"
                             value={change.name}
@@ -57,9 +56,10 @@ const UserProfile = () => {
                             placeholder={user.user.name}
                         />
                     </div>
-                    <div>
-                        <label> Email: </label>
-                        <input className = 'input-field'
+                    <div className="details-group">
+                        <label>Email:</label>
+                        <input 
+                            className='input-field'
                             type="email"
                             name="email"
                             value={change.email}
@@ -67,9 +67,10 @@ const UserProfile = () => {
                             placeholder={user.user.email}
                         />
                     </div>
-                    <div>
-                        <label> Roll: </label>
-                        <input className = 'input-field'
+                    <div className="details-group">
+                        <label>Roll:</label>
+                        <input 
+                            className='input-field'
                             type="text"
                             name="roll"
                             value={change.roll}
@@ -77,9 +78,10 @@ const UserProfile = () => {
                             placeholder={user.user.roll}
                         />
                     </div>
-                    <div>
-                        <label> Codeforces Handle: </label>
-                        <input className = 'input-field'
+                    <div className="details-group">
+                        <label>Codeforces Handle:</label>
+                        <input 
+                            className='input-field'
                             type="text"
                             name="cfHandle"
                             value={change.cfHandle}
@@ -87,9 +89,10 @@ const UserProfile = () => {
                             placeholder={user.user.cfHandle}
                         />
                     </div>
-                    <div>
-                        <label> Vjudge Handle: </label>
-                        <input className = 'input-field'
+                    <div className="details-group">
+                        <label>Vjudge Handle:</label>
+                        <input 
+                            className='input-field'
                             type="text"
                             name="vjHandle"
                             value={change.vjHandle}
@@ -97,9 +100,10 @@ const UserProfile = () => {
                             placeholder={user.user.vjHandle}
                         />
                     </div>
-                    <div>
-                        <label> CodeChef Handle: </label>
-                        <input className = 'input-field'
+                    <div className="details-group">
+                        <label>CodeChef Handle:</label>
+                        <input 
+                            className='input-field'
                             type="text"
                             name="ccHandle"
                             value={change.ccHandle}
@@ -107,9 +111,10 @@ const UserProfile = () => {
                             placeholder={user.user.ccHandle}
                         />
                     </div>
-                    <div>
-                        <label> Atcoder Handle: </label>
-                        <input className = 'input-field'
+                    <div className="details-group">
+                        <label>Atcoder Handle:</label>
+                        <input 
+                            className='input-field'
                             type="text"
                             name="atcoderHandle"
                             value={change.atcoderHandle}
@@ -117,45 +122,46 @@ const UserProfile = () => {
                             placeholder={user.user.atcoderHandle}
                         />
                     </div>
-                    <button className='rating-button' onClick={handleChangeRequest}>Request Changes</button>
-                    <button className='rating-button' onClick={handleCancelEdit}>Cancel Edit</button>
+                    <div className="button-group">
+                        <button className='button' onClick={handleChangeRequest}>Request Changes</button>
+                        <button className='button' onClick={handleCancelEdit}>Cancel Edit</button>
+                    </div>
                 </div>
-
             ) : (
                 <div>
-                    <div>
-                        <label> Name: </label>
+                    <div className="details-group">
+                        <label>Name:</label>
                         <span>{user.user.name}</span>
                     </div>
-                    <div>
-                        <label> Email: </label>
+                    <div className="details-group">
+                        <label>Email:</label>
                         <span>{user.user.email}</span>
                     </div>
-                    <div>
-                        <label> Roll: </label>
+                    <div className="details-group">
+                        <label>Roll:</label>
                         <span>{user.user.roll}</span>
                     </div>
-                    <div>
-                        <label> Codeforces Handle: </label>
+                    <div className="details-group">
+                        <label>Codeforces Handle:</label>
                         <span>{user.user.cfHandle}</span>
                     </div>
-                    <div>
-                        <label> Vjudge Handle </label>
+                    <div className="details-group">
+                        <label>Vjudge Handle:</label>
                         <span>{user.user.vjHandle}</span>
                     </div>
-                    <div>
-                        <label> CodeChef Handle: </label>
+                    <div className="details-group">
+                        <label>CodeChef Handle:</label>
                         <span>{user.user.ccHandle}</span>
                     </div>
-                    <div>
-                        <label> Atcoder Handle: </label>
+                    <div className="details-group">
+                        <label>Atcoder Handle:</label>
                         <span>{user.user.atcoderHandle}</span>
                     </div>
-                    <button onClick={handleEdit} className='rating-button'>Edit</button>
+                    <div className="button-group">
+                        <button onClick={handleEdit} className='button'>Edit</button>
+                    </div>
                 </div>
             )}
-
-
         </div>
     )
 }

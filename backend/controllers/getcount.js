@@ -13,7 +13,7 @@ async function getCount(data) {
                 $lte: endDate
             }
         })
-
+        
         return count
         
     } catch (error) {

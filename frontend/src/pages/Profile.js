@@ -2,16 +2,30 @@ import { useState } from 'react'
 import UserProfile from '../components/UserProfile'
 import PasswordChange from '../components/PasswordChange'
 
-
 const Profile = () => {
-    const [activeComponent, setActiveComponent] = useState('UserProfile') 
+    const [activeComponent, setActiveComponent] = useState('UserProfile')
+
     return (
         <div>
-            <button className='rating-button' onClick={() => setActiveComponent('UserProfile')}> Profile</button>
-            <button className='rating-button' onClick={() => setActiveComponent('PasswordChange')}> Change Password</button>
+            <div className="option-button-group">
+                <button
+                    className={`option-button button ${activeComponent === 'UserProfile' ? 'active' : ''}`}
+                    onClick={() => setActiveComponent('UserProfile')}
+                >
+                    Profile
+                </button>
+                <button
+                    className={`option-button button ${activeComponent === 'PasswordChange' ? 'active' : ''}`}
+                    onClick={() => setActiveComponent('PasswordChange')}
+                >
+                    Change Password
+                </button>
+            </div>
 
-            {activeComponent === 'UserProfile' && <UserProfile />}
-            {activeComponent === 'PasswordChange' && <PasswordChange />}
+            <div>
+                {activeComponent === 'UserProfile' && <UserProfile />}
+                {activeComponent === 'PasswordChange' && <PasswordChange />}
+            </div>
         </div>
     )
 }

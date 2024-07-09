@@ -36,11 +36,11 @@ function App() {
               element={<CFActivity />}
             />
 
-            <Route
-              path="/cfperformance"
-              element={<CFPerfRanklist />}
+            <Route 
+              path="/cfperformance/:query?" 
+              element={<CFPerfRanklist />} 
             />
-
+            
             <Route
               path="/cfstandings"
               element={<CFStandings />}

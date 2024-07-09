@@ -35,7 +35,7 @@ const Navbar = () => {
                 </Link>
 
                 <Link to="/vjudgeranklist">
-                    Vjudge Ranklist
+                    TFC Ranklist
                 </Link>
 
                 <Link to="/resources">

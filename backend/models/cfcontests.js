@@ -20,6 +20,18 @@ const cfContestsSchema = new Schema({
             type: String,
             required: true
         },
+        rank: {
+            type: Number,
+            required: true
+        },
+        oldRating: {
+            type: Number,
+            required: false
+        },
+        newRating: {
+            type: Number,
+            required: false
+        },
         performanceRating: {
             type: Number,
             required: true

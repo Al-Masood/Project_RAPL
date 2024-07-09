@@ -45,10 +45,10 @@ const PasswordChange = () => {
     }
 
     return (
-        <div>
+        <div className="listing">
             {error && <div className="error">{error}</div>}
             {success && <div className="success">{success}</div>}
-            <div>
+            <div className="details-group">
                 <label>Old Password:</label>
                 <input
                     className='input-field'
@@ -58,7 +58,7 @@ const PasswordChange = () => {
                     onChange={handleChange}
                 />
             </div>
-            <div>
+            <div className="details-group">
                 <label>New Password:</label>
                 <input
                     className='input-field'
@@ -68,7 +68,7 @@ const PasswordChange = () => {
                     onChange={handleChange}
                 />
             </div>
-            <div>
+            <div className="details-group">
                 <label>Confirm Password:</label>
                 <input
                     className='input-field'
@@ -78,9 +78,11 @@ const PasswordChange = () => {
                     onChange={handleChange}
                 />
             </div>
-            <button className = 'button' onClick = {handleSubmit} >
-                Change Password
-            </button>
+            <div className="button-group">
+                <button className='button' onClick={handleSubmit} >
+                    Change Password
+                </button>
+            </div>
         </div>
     )
 }

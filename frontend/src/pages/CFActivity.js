@@ -22,10 +22,10 @@ const CodeforcesRating = () => {
 
     return(
         <div>
-            <div className='rating-button-container'>
-                <button className="rating-button" onClick={ () => handleClick('allTime')}> All Time</button>
-                <button className="rating-button" onClick={ () => handleClick('lastYear')}> Last Year</button>
-                <button className="rating-button" onClick={ () => handleClick('lastMonth')}> Last Month</button>
+            <div className='option-button-group-large'>
+                <button className="option-button button" onClick={ () => handleClick('allTime')}> All Time</button>
+                <button className="option-button button" onClick={ () => handleClick('lastYear')}> Last Year</button>
+                <button className="option-button button" onClick={ () => handleClick('lastMonth')}> Last Month</button>
             </div>
             <Ranktable finalRanklist={ranklist}/>
         </div>

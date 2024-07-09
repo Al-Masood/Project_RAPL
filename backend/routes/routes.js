@@ -8,6 +8,8 @@ const addVJContest = require('../controllers/addvj')
 const fetchVJRanklist = require('../controllers/vjrank')
 const cfRating = require('../controllers/cfrating')
 const cfActivity = require('../controllers/cfactivity')
+const cfStandings = require('../controllers/cfstandings')
+const getContests = require('../controllers/getcontests')
 
 
 router.post('/signup', signupUser)
@@ -33,6 +35,10 @@ router.post('/changepassword', changePassword)
 router.post('/cfrating', cfRating)
 
 router.post('/cfactivity', cfActivity)
+
+router.post('/cfstandings', cfStandings)
+
+router.get('/getcontests', getContests)
 
 router.post('/cfcontestcount', async (req, res) => {
     const data = req.body

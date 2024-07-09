@@ -1,63 +1,77 @@
-import { useState, useEffect } from 'react';
-import Ranktable from "../components/Ranktable";
+import { useState, useEffect } from 'react'
+import Ranktable from "../components/Ranktable"
 
 const CodeforcesStandings = () => {
-    const [contests, setContests] = useState([]);
-    const [selectedContestId, setSelectedContestId] = useState(null);
-    const [ranklist, setRanklist] = useState([]);
+    const [contests, setContests] = useState([])
+    const [selectedContestId, setSelectedContestId] = useState('')
+    const [ranklist, setRanklist] = useState([])
 
     useEffect(() => {
         const fetchContests = async () => {
             try {
-                const response = await fetch('https://codeforces.com/api/contest.list?gym=false');
-                const data = await response.json();
-                if (data.status === 'OK') {
-                    const recentContests = data.result.slice(0, 10);
-                    setContests(recentContests);
-                }
+                const response = await fetch('http://localhost:4000/api/getcontests', {
+                    method: 'GET'
+                })
+                const recentContests = await response.json()
+                setContests(recentContests)
             } catch (error) {
-                console.error("Error fetching contests:", error);
+                console.error("Error fetching contests:", error)
             }
-        };
-
-        fetchContests();
-    }, []);
+        }
+        fetchContests()
+    }, [])
 
     useEffect(() => {
         const fetchStandings = async () => {
             if (selectedContestId) {
                 try {
-                    const response = await fetch(`https://codeforces.com/api/contest.standings?contestId=${selectedContestId}&from=1&count=10`);
-                    const data = await response.json();
-                    if (data.status === 'OK') {
-                        setRanklist(data.result.rows);
+                    const response = await fetch('http://localhost:4000/api/cfstandings', {
+                        method: 'POST',
+                        body: JSON.stringify({ selectedContestId }),
+                        headers: {
+                            'Content-Type': 'application/json'
+                        }
+                    })
+
+                    if (response.ok) {
+                        const data = await response.json()
+                        setRanklist(data)
+                    } else {
+                        console.error("Error fetching standings:", response.statusText)
                     }
                 } catch (error) {
-                    console.error("Error fetching standings:", error);
+                    console.error("Error fetching standings:", error)
                 }
             }
-        };
+        }
 
-        fetchStandings();
-    }, [selectedContestId]);
+        fetchStandings()
+    }, [selectedContestId])
+
+    const handleContestChange = (event) => {
+        setSelectedContestId(event.target.value)
+    }
 
     return (
-        <div style={{ display: 'flex' }}>
-            <div style={{ width: '30%', borderRight: '1px solid #ccc' }}>
-                <h2>Last 10 Contests</h2>
-                <ul>
-                    {contests.map(contest => (
-                        <li key={contest.id} onClick={() => setSelectedContestId(contest.id)}>
-                            {contest.name}
-                        </li>
-                    ))}
-                </ul>
+        <div>
+            <div className='selector'>
+                <div>
+                    <label>Select Contest:</label>
+                    <div className="select-wrapper">
+                        <select className="select-field" onChange={handleContestChange} value={selectedContestId}>
+                            <option value="" disabled>Select a contest</option>
+                            {contests.map(contest => (
+                                <option key={contest.number} value={contest.number}>
+                                    {contest.name}
+                                </option>
+                            ))}
+                        </select>
+                    </div>
+                </div>
             </div>
-            <div style={{ width: '70%' }}>
-                <Ranktable finalRanklist={ranklist} />
-            </div>
+            <Ranktable finalRanklist={ranklist} />
         </div>
-    );
-};
+    )
+}
 
-export default CodeforcesStandings;
+export default CodeforcesStandings

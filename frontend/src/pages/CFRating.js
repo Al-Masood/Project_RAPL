@@ -15,16 +15,16 @@ const CodeforcesRating = () => {
                 'Content-Type': 'application/json'
             }
         })
-        
+         
         const newRanklist = await response.json()
         setRanklist(newRanklist)
     }
 
     return(
         <div>
-            <div className='rating-button-container'>
-                <button className="rating-button" onClick={ () => handleClick('CurrentRating')}> Current Rating</button>
-                <button className="rating-button" onClick={ () => handleClick('MaxRating')}> Maximum Rating</button>
+            <div className='option-button-group-large'>
+                <button className="option-button button" onClick={ () => handleClick('CurrentRating')}> Current Rating</button>
+                <button className="option-button button" onClick={ () => handleClick('MaxRating')}> Maximum Rating</button>
             </div>
             <Ranktable finalRanklist={ranklist}/>
         </div>

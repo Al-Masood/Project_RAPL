@@ -7,13 +7,13 @@ const UserProfile = () => {
     const [editMode, setEditMode] = useState(false)
 
     const [change, setChange] = useState({
-        name: user.user.name,
-        email: user.user.email,
-        roll: user.user.roll,
-        cfHandle: user.user.cfHandle,
-        vjHandle: user.user.vjHandle,
-        ccHandle: user.user.ccHandle,
-        atcoderHandle: user.user.atcoderHandle
+        name: user.name,
+        email: user.email,
+        roll: user.roll,
+        cfHandle: user.cfHandle,
+        vjHandle: user.vjHandle,
+        ccHandle: user.ccHandle,
+        atcoderHandle: user.atcoderHandle
     })
 
     const handleChange = (e) => {
@@ -54,7 +54,7 @@ const UserProfile = () => {
                             name="name"
                             value={change.name}
                             onChange={handleChange}
-                            placeholder={user.user.name}
+                            placeholder={user.name}
                         />
                     </div>
                     <div className="details-group">
@@ -65,7 +65,7 @@ const UserProfile = () => {
                             name="email"
                             value={change.email}
                             onChange={handleChange}
-                            placeholder={user.user.email}
+                            placeholder={user.email}
                         />
                     </div>
                     <div className="details-group">
@@ -76,7 +76,7 @@ const UserProfile = () => {
                             name="roll"
                             value={change.roll}
                             onChange={handleChange}
-                            placeholder={user.user.roll}
+                            placeholder={user.roll}
                         />
                     </div>
                     <div className="details-group">
@@ -87,7 +87,7 @@ const UserProfile = () => {
                             name="cfHandle"
                             value={change.cfHandle}
                             onChange={handleChange}
-                            placeholder={user.user.cfHandle}
+                            placeholder={user.cfHandle}
                         />
                     </div>
                     <div className="details-group">
@@ -98,7 +98,7 @@ const UserProfile = () => {
                             name="vjHandle"
                             value={change.vjHandle}
                             onChange={handleChange}
-                            placeholder={user.user.vjHandle}
+                            placeholder={user.vjHandle}
                         />
                     </div>
                     <div className="details-group">
@@ -109,7 +109,7 @@ const UserProfile = () => {
                             name="ccHandle"
                             value={change.ccHandle}
                             onChange={handleChange}
-                            placeholder={user.user.ccHandle}
+                            placeholder={user.ccHandle}
                         />
                     </div>
                     <div className="details-group">
@@ -120,7 +120,7 @@ const UserProfile = () => {
                             name="atcoderHandle"
                             value={change.atcoderHandle}
                             onChange={handleChange}
-                            placeholder={user.user.atcoderHandle}
+                            placeholder={user.atcoderHandle}
                         />
                     </div>
                     <div className="button-group">
@@ -132,31 +132,31 @@ const UserProfile = () => {
                 <div>
                     <div className="details-group">
                         <label>Name:</label>
-                        <span>{user.user.name}</span>
+                        <span>{user.name}</span>
                     </div>
                     <div className="details-group">
                         <label>Email:</label>
-                        <span>{user.user.email}</span>
+                        <span>{user.email}</span>
                     </div>
                     <div className="details-group">
                         <label>Roll:</label>
-                        <span>{user.user.roll}</span>
+                        <span>{user.roll}</span>
                     </div>
                     <div className="details-group">
                         <label>Codeforces Handle:</label>
-                        <span>{user.user.cfHandle}</span>
+                        <span>{user.cfHandle}</span>
                     </div>
                     <div className="details-group">
                         <label>Vjudge Handle:</label>
-                        <span>{user.user.vjHandle}</span>
+                        <span>{user.vjHandle}</span>
                     </div>
                     <div className="details-group">
                         <label>CodeChef Handle:</label>
-                        <span>{user.user.ccHandle}</span>
+                        <span>{user.ccHandle}</span>
                     </div>
                     <div className="details-group">
                         <label>Atcoder Handle:</label>
-                        <span>{user.user.atcoderHandle}</span>
+                        <span>{user.atcoderHandle}</span>
                     </div>
                     <div className="button-group">
                         <button onClick={handleEdit} className='button'>Edit</button>

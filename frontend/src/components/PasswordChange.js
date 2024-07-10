@@ -25,7 +25,7 @@ const PasswordChange = () => {
         const response = await fetch(`${BACKEND_URL}/changepassword`, {
             method: 'POST',
             body: JSON.stringify({
-                email: user.user.email,
+                email: user.email,
                 oldPassword,
                 newPassword,
                 confirmPassword

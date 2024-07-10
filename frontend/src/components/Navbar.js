@@ -47,7 +47,7 @@ const Navbar = () => {
                 </Link>
 
 
-                {user && user.user.admin === true && (
+                {user && user.admin === true && (
                     <Link to="/adminpanel">
                         Admin Panel
                     </Link>
@@ -58,7 +58,7 @@ const Navbar = () => {
             {user && (
                 <div className="navbar-user">
                     <Link to='/profile'>
-                        {user.user.name}
+                        {user.name}
                     </Link>
                     
                     <Link onClick={handleClick}> 

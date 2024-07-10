@@ -68,9 +68,22 @@ const loginUser = async (req, res) => {
         if (!match) {
             return res.status(400).send('Incorrect Password')
         }
-
+        
         const token = createToken(user._id)
-        res.status(200).json({ user, token })
+
+        const userInfo = {
+            token,
+            name: user.name,
+            email: user.email,
+            admin: user.admin,
+            roll: user.roll,
+            cfHandle: user.cfHandle,
+            vjHandle: user.vjHandle,
+            ccHandle: user.ccHandle,
+            atcoderHandle: user.atcoderHandle 
+        }
+        
+        res.status(200).json(userInfo)
     } catch (error) {
         res.status(500).send()
     }

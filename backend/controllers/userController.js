@@ -1,4 +1,5 @@
 const bcrypt = require('bcrypt')
+const crypto = require('crypto');
 const validator = require('validator')
 const jwt = require('jsonwebtoken')
 const nodemailer = require('nodemailer')
@@ -214,9 +215,16 @@ const requestPasswordReset = async (req, res) => {
             return res.status(400).send('No user found with this email')
         }
 
+        const currentTime = Date.now();
+        const fiveMinutes = 5 * 60 * 1000;
+
+        if (user.resetPasswordExpires && currentTime < user.resetPasswordExpires - (3600000 - fiveMinutes)) {
+            return res.status(400).send('Password reset link already sent. Please wait a few minutes before requesting again.');
+        }
+
         const token = crypto.randomBytes(20).toString('hex')
         user.resetPasswordToken = token,
-        user.resetPasswordExpires = Date.now + 3600000
+        user.resetPasswordExpires = Date.now() + 3600000
 
         await user.save()
 
@@ -251,6 +259,10 @@ const resetPassword = async (req, res) => {
             resetPasswordToken: data.token,
             resetPasswordExpires: { $gt: Date.now()}
         })
+
+        if(!user){
+            return res.status(400).send('No such password reset link created')
+        }
 
         if (!validator.isStrongPassword(data.newPassword)) {
             return res.status(400).send('Password is not strong enough')

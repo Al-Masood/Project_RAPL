@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
+const BACKEND_URL = process.env.REACT_APP_BACKEND_URL
 
 const ResetPassword = () => {
     const { token } = useParams();
     const navigate = useNavigate();
     const [newPassword, setNewPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
-    const [message, setMessage] = useState('');
+    const [success, setMessage] = useState('');
     const [error, setError] = useState('');
 
     const handleSubmit = async (e) => {
@@ -14,13 +15,8 @@ const ResetPassword = () => {
         setError('');
         setMessage('');
 
-        if (newPassword !== confirmPassword) {
-            setError('Passwords do not match');
-            return;
-        }
-
         try {
-            const response = await fetch('http://localhost:4000/api/resetpassword', {
+            const response = await fetch(`${BACKEND_URL}/resetpassword`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -41,34 +37,36 @@ const ResetPassword = () => {
     };
 
     return (
-        <div className="reset-password">
+        <form className="listing" onSubmit={handleSubmit}>
             <h2>Reset Password</h2>
-            <form onSubmit={handleSubmit}>
-                <div>
-                    <label htmlFor="newPassword">New Password:</label>
-                    <input
-                        type="password"
-                        id="newPassword"
-                        value={newPassword}
-                        onChange={(e) => setNewPassword(e.target.value)}
-                        required
-                    />
-                </div>
-                <div>
-                    <label htmlFor="confirmPassword">Confirm Password:</label>
-                    <input
-                        type="password"
-                        id="confirmPassword"
-                        value={confirmPassword}
-                        onChange={(e) => setConfirmPassword(e.target.value)}
-                        required
-                    />
-                </div>
-                <button type="submit">Reset Password</button>
-            </form>
-            {message && <p>{message}</p>}
-            {error && <p style={{ color: 'red' }}>{error}</p>}
-        </div>
+            <div className='details-group'>
+                <label htmlFor="newPassword">New Password:</label>
+                <input
+                    className='input-field'
+                    type="password"
+                    id="newPassword"
+                    value={newPassword}
+                    onChange={(e) => setNewPassword(e.target.value)}
+                    required
+                />
+            </div>
+            <div className='details-group'>
+                <label htmlFor="confirmPassword">Confirm Password:</label>
+                <input
+                    className='input-field'
+                    type="password"
+                    id="confirmPassword"
+                    value={confirmPassword}
+                    onChange={(e) => setConfirmPassword(e.target.value)}
+                    required
+                />
+            </div>
+            <div className='button-group'>
+                <button type="submit" className="button">Reset Password</button>
+            </div>
+            {success && <div className='success'>{success}</div>}
+            {error && <div className='error'>{error}</div>}
+        </form>
     );
 };
 

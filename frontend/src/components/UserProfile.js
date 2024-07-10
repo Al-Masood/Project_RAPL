@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { useAuthContext } from "../hooks/UseAuthContext";
+const BACKEND_URL = process.env.REACT_APP_BACKEND_URL
 
 const UserProfile = () => {
     const { user } = useAuthContext()
@@ -32,7 +33,7 @@ const UserProfile = () => {
     }
 
     const handleChangeRequest = async () => {
-        await fetch('http://localhost:4000/api/requestchange', {
+        await fetch(`${BACKEND_URL}/requestchange`, {
             method: 'POST',
             body: JSON.stringify(change),
             headers: {

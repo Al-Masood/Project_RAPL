@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react"
+const BACKEND_URL = process.env.REACT_APP_BACKEND_URL
 
 const ChangeRequests = () => {
     const [changeRequests, setChangeRequests] = useState([])
 
     const fetchChangeRequests = async () => {
-        const response = await fetch('http://localhost:4000/api/getchangerequests', {
+        const response = await fetch(`${BACKEND_URL}/getchangerequests`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json'
@@ -19,7 +20,7 @@ const ChangeRequests = () => {
     })
 
     const approveChange = async (request) => {
-        await fetch('http://localhost:4000/api/approvechange', {
+        await fetch(`${BACKEND_URL}/approvechange`, {
             method: 'POST',
             body: JSON.stringify(request),
             headers: {
@@ -29,7 +30,7 @@ const ChangeRequests = () => {
     }
 
     const denyChange = async (request) => {
-        await fetch('http://localhost:4000/api/denychange', {
+        await fetch(`${BACKEND_URL}/denychange`, {
             method: 'POST',
             body: JSON.stringify(request),
             headers: {

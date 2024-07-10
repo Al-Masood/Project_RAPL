@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+const BACKEND_URL = process.env.REACT_APP_BACKEND_URL
 
 const CFSelector = ({ updateURL, initial }) => {
     const [year, setYear] = useState(initial.year || 2024);
@@ -7,7 +8,7 @@ const CFSelector = ({ updateURL, initial }) => {
     const [count, setCount] = useState(0);
 
     useEffect(() => {
-        fetch('http://localhost:4000/api/cfcontestcount', {
+        fetch(`${BACKEND_URL}/cfcontestcount`, {
             method: 'POST',
             body: JSON.stringify([year, month]),
             headers: {

@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+const BACKEND_URL = process.env.REACT_APP_BACKEND_URL
 
 const VJAdder = () => {
     const [data, setData] = useState('')
@@ -8,7 +9,7 @@ const VJAdder = () => {
     }
     
     const addData = async () => {
-        await fetch ('http://localhost:4000/api/vjaddcontest', {
+        await fetch (`${BACKEND_URL}/vjaddcontest`, {
             method: 'POST',
             body: data,
             headers:{

@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
+const BACKEND_URL = process.env.REACT_APP_BACKEND_URL
 
 const ForgotPassword = () => {
     const [email, setEmail] = useState('');
-    const [message, setMessage] = useState('');
+    const [success, setMessage] = useState('');
     const [error, setError] = useState('');
 
     const handleSubmit = async (e) => {
@@ -11,7 +12,7 @@ const ForgotPassword = () => {
         setMessage('');
 
         try {
-            const response = await fetch('http://localhost:4000/api/requestpasswordreset', {
+            const response = await fetch(`${BACKEND_URL}/requestpasswordreset`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -45,7 +46,7 @@ const ForgotPassword = () => {
             <div className='button-group'>
                 <button type="submit" className="button"> Send Reset Link </button>
             </div>
-            {message && <div className='message'>{message}</div>}
+            {success && <div className='success'>{success}</div>}
             {error && <div className='error'>{error}</div>}
         </form>
     );

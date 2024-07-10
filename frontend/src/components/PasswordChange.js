@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useAuthContext } from "../hooks/UseAuthContext";
+const BACKEND_URL = process.env.REACT_APP_BACKEND_URL
 
 const PasswordChange = () => {
     const { user } = useAuthContext()
@@ -21,7 +22,7 @@ const PasswordChange = () => {
     };
 
     const handleSubmit = async () => {
-        const response = await fetch('http://localhost:4000/api/changepassword', {
+        const response = await fetch(`${BACKEND_URL}/changepassword`, {
             method: 'POST',
             body: JSON.stringify({
                 email: user.user.email,

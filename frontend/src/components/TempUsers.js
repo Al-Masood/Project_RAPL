@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
+const BACKEND_URL = process.env.REACT_APP_BACKEND_URL
 
 const TempUsers = () => {
     const [tempUsers, setTempUsers] = useState([]);
 
     const fetchTempUsers = async () => {
-        const response = await fetch('http://localhost:4000/api/gettempusers', {
+        const response = await fetch(`${BACKEND_URL}/gettempusers`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json'
@@ -19,7 +20,7 @@ const TempUsers = () => {
     }, []);
 
     const addUser = async (email) => {
-        await fetch('http://localhost:4000/api/adduser', {
+        await fetch(`${BACKEND_URL}/adduser`, {
             method: 'POST',
             body: JSON.stringify({ email }),
             headers: {
@@ -29,7 +30,7 @@ const TempUsers = () => {
     };
 
     const removeUser = async (email) => {
-        await fetch('http://localhost:4000/api/removeuser', {
+        await fetch(`${BACKEND_URL}/removeuser`, {
             method: 'POST',
             body: JSON.stringify({ email }),
             headers: {

@@ -1,5 +1,6 @@
 import {useState} from 'react'
 import Ranktable from "../components/Ranktable"
+const BACKEND_URL = process.env.REACT_APP_BACKEND_URL
 
 const CodeforcesRating = () => {
 
@@ -8,7 +9,7 @@ const CodeforcesRating = () => {
     
     const handleClick = async (clickType) => {
         setType(clickType)
-        const response = await fetch('http://localhost:4000/api/cfrating', {
+        const response = await fetch(`${BACKEND_URL}/cfrating`, {
             method: 'POST',
             body: JSON.stringify({type}),
             headers: {

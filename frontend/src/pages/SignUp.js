@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+const BACKEND_URL = process.env.REACT_APP_BACKEND_URL
 
 const SignUp = () => {
     const [name, setName] = useState('');
@@ -40,7 +41,7 @@ const SignUp = () => {
             password
         };
 
-        const response = await fetch('http://localhost:4000/api/signup', {
+        const response = await fetch(`${BACKEND_URL}/signup`, {
             method: 'POST',
             body: JSON.stringify(user),
             headers: {
@@ -59,8 +60,6 @@ const SignUp = () => {
     return (
         <form className="listing" onSubmit={handleSubmit}>
             <h2>Sign Up</h2>
-            {error && <div className="error">{error}</div>}
-            {success && <div className="success">{success}</div>}
             <div className="details-group">
                 <label>Name:</label>
                 <input
@@ -136,6 +135,8 @@ const SignUp = () => {
             <div className="button-group">
                 <button className="button">Sign Up</button>
             </div>
+            {error && <div className="error">{error}</div>}
+            {success && <div className="success">{success}</div>}
         </form>
     );
 }

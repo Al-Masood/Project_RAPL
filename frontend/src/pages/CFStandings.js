@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import Ranktable from "../components/Ranktable"
+const BACKEND_URL = process.env.REACT_APP_BACKEND_URL
 
 const CodeforcesStandings = () => {
     const [contests, setContests] = useState([])
@@ -9,7 +10,7 @@ const CodeforcesStandings = () => {
     useEffect(() => {
         const fetchContests = async () => {
             try {
-                const response = await fetch('http://localhost:4000/api/getcontests', {
+                const response = await fetch(`${BACKEND_URL}/getcontests`, {
                     method: 'GET'
                 })
                 const recentContests = await response.json()
@@ -25,7 +26,7 @@ const CodeforcesStandings = () => {
         const fetchStandings = async () => {
             if (selectedContestId) {
                 try {
-                    const response = await fetch('http://localhost:4000/api/cfstandings', {
+                    const response = await fetch(`${BACKEND_URL}/cfstandings`, {
                         method: 'POST',
                         body: JSON.stringify({ selectedContestId }),
                         headers: {

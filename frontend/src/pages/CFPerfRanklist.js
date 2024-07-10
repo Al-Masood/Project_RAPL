@@ -2,6 +2,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { useState, useEffect, useCallback } from 'react';
 import CFSelector from '../components/CFSelector.js';
 import Ranktable from '../components/Ranktable.js';
+const BACKEND_URL = process.env.REACT_APP_BACKEND_URL
 
 const CFPerfRanklist = () => {
     const { query } = useParams();
@@ -9,7 +10,7 @@ const CFPerfRanklist = () => {
     const navigate = useNavigate();
 
     const generateRanklist = useCallback(async (year, month, bestof) => {
-        const response = await fetch('http://localhost:4000/api/cfranklist', {
+        const response = await fetch(`${BACKEND_URL}/cfranklist`, {
             method: 'POST',
             body: JSON.stringify([year, month, bestof]),
             headers: {

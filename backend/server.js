@@ -5,13 +5,14 @@ const mongoose = require('mongoose')
 const routes = require('./routes/routes')
 
 const app = express()
+const DB_URL=process.env.DB_URL
 
 app.use(cors());
 app.use(express.json())
 
 app.use('/api/', routes)
 
-mongoose.connect('mongodb://127.0.0.1:27017/rapl', { 
+mongoose.connect(DB_URL, { 
 })
 .then(() => console.log('MongoDB Connected'))
 .catch(err => console.log(err));

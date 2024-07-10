@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 
-const CFSelector = ({ updateURL }) => {
-    const [year, setYear] = useState(2024);
-    const [month, setMonth] = useState(1);
-    const [bestof, setBestof] = useState(0);
+const CFSelector = ({ updateURL, initial }) => {
+    const [year, setYear] = useState(initial.year || 2024);
+    const [month, setMonth] = useState(initial.month || 1);
+    const [bestof, setBestof] = useState(initial.bestof || 0);
     const [count, setCount] = useState(0);
 
     useEffect(() => {
@@ -41,7 +41,7 @@ const CFSelector = ({ updateURL }) => {
             <div>
                 <label>Select Year:</label>
                 <div className="select-wrapper">
-                    <select className="select-field" onChange={updateYear}>
+                    <select className="select-field" onChange={updateYear} value={year}>
                         <option>2024</option>
                     </select>
                 </div>
@@ -49,9 +49,9 @@ const CFSelector = ({ updateURL }) => {
             <div>
                 <label>Select Month:</label>
                 <div className="select-wrapper">
-                    <select className="select-field" onChange={updateMonth}>
+                    <select className="select-field" onChange={updateMonth} value={month}>
                         {Array.from({ length: 12 }, (_, i) => i + 1).map(i => (
-                            <option key={i}>{i}</option>
+                            <option key={i} value={i}>{i}</option>
                         ))}
                     </select>
                 </div>
@@ -59,9 +59,9 @@ const CFSelector = ({ updateURL }) => {
             <div>
                 <label>Best of:</label>
                 <div className="select-wrapper">
-                    <select className="select-field" onChange={updateBestof}>
+                    <select className="select-field" onChange={updateBestof} value={bestof}>
                         {Array.from({ length: count + 1 }, (_, i) => i).map(i => (
-                            <option key={i}>{i}</option>
+                            <option key={i} value={i}>{i}</option>
                         ))}
                     </select>
                 </div>

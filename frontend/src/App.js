@@ -12,6 +12,8 @@ import Login from './pages/Login'
 import SignUp from './pages/SignUp'
 import AdminPanel from './pages/AdminPanel'
 import Profile from './pages/Profile'
+import ForgotPassword from './pages/ForgotPassword'
+import ResetPassword from './pages/ResetPassword'
 import Navbar from './components/Navbar'
 
 function App() {
@@ -79,6 +81,15 @@ function App() {
             <Route
               path="/profile"
               element={<Profile />}
+            />
+
+            <Route 
+              path="/forgotpassword" 
+              element={<ForgotPassword />} 
+            />
+            <Route 
+              path="/reset/:token" 
+              element={<ResetPassword />} 
             />
           </Routes>
 

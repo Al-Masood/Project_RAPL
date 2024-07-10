@@ -1,14 +1,20 @@
 import { useState } from 'react'
 import { useLogin } from '../hooks/UseLogin'
+import { useNavigate } from 'react-router-dom'
 
 const Login = () => {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const { login, isLoading, error } = useLogin()
+    const navigate = useNavigate()
 
     const handleSubmit = async (e) => {
         e.preventDefault()
         await login(email, password)
+    }
+
+    const handleForgotPassword = () => {
+        navigate('/forgotpassword')
     }
 
     return (
@@ -34,6 +40,7 @@ const Login = () => {
             </div>
             <div className='button-group'>
                 <button disabled={isLoading} className="button"> Login </button>
+                <button type="button" onClick={handleForgotPassword} className="button"> Forgot Password </button>
             </div>
             {error && <div className='error'>{error}</div>}
         </form>

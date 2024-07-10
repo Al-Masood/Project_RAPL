@@ -62,6 +62,16 @@ const userSchema = new Schema({
     lastMonth: {
         type: Number,
         default: false
+    },
+
+    resetPasswordToken : {
+        type: String,
+        required: false
+    },
+
+    resetPasswordExpires: {
+        type: Date,
+        required: false
     }
 
 }, {timestamps: true})

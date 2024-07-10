@@ -21,9 +21,18 @@ const CFPerfRanklist = () => {
         setRanklist(ranklist);
     }, []);
 
-    useEffect(() => {
+    const parseQueryParams = (query) => {
         if (query) {
             const [year, month, bestof] = query.split('-').map(Number);
+            return { year, month, bestof };
+        }
+        return { year: 2024, month: 1, bestof: 0 };
+    };
+
+    useEffect(() => {
+        const initialParams = parseQueryParams(query);
+        if (query) {
+            const { year, month, bestof } = initialParams;
             generateRanklist(year, month, bestof);
         }
     }, [query, generateRanklist]);
@@ -34,9 +43,11 @@ const CFPerfRanklist = () => {
         generateRanklist(year, month, bestof);
     };
 
+    const initialParams = parseQueryParams(query);
+
     return (
         <div className="cfperf">
-            <CFSelector updateURL={updateURL} />
+            <CFSelector updateURL={updateURL} initial={initialParams} />
             <Ranktable finalRanklist={ranklist} />
         </div>
     );

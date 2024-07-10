@@ -1,6 +1,7 @@
 const bcrypt = require('bcrypt')
 const validator = require('validator')
 const jwt = require('jsonwebtoken')
+const nodemailer = require('nodemailer')
 const users = require('../models/users')
 const tempUsers = require('../models/tempusers')
 const changeRequests = require('../models/changerequests')
@@ -8,6 +9,14 @@ const changeRequests = require('../models/changerequests')
 const createToken = (_id) => {
     return jwt.sign({ _id }, process.env.SECRET, { expiresIn: '3d' })
 }
+
+const transporter = nodemailer.createTransport({
+    service: 'Gmail',
+    auth : {
+        user: process.env.EMAIL,
+        pass: process.env.EMAIL_PASSWORD
+    }
+})
 
 const signupUser = async (req, res) => {
     try {
@@ -192,5 +201,79 @@ const changePassword = async (req, res) => {
     res.status(200).send('Password Changed Succesfully')
 }
 
+const requestPasswordReset = async (req, res) => {
+    try{
+        const {email} = req.body
+        if(!validator.isEmail(email)){
+            return res.status(400).send('Email is not valid')
+        }
+        
+        const user = await users.findOne({email})
 
-module.exports = { signupUser, loginUser, getTempUsers, addUser, removeUser, getChangeRequests, requestChange, approveChange, denyChange, changePassword }
+        if(!user){
+            return res.status(400).send('No user found with this email')
+        }
+
+        const token = crypto.randomBytes(20).toString('hex')
+        user.resetPasswordToken = token,
+        user.resetPasswordExpires = Date.now + 3600000
+
+        await user.save()
+
+        const mailOptions = {
+            to: user.email,
+            from: process.env.EMAIL,
+            subject: 'Password Reset',
+            text: `You are receiving this because you (or someone else) have requested the reset of the password for your account.\n\n
+            Please click on the following link, or paste this into your browser to complete the process:\n\n
+            http://${req.headers.host}/reset/${token}\n\n
+            If you did not request this, please ignore this email and your password will remain unchanged.\n`
+        }
+
+        transporter.sendMail(mailOptions, (err) => {
+            if(err) {
+                console.log(err)
+                return res.status(500).send('Error sending email')
+            }
+            res.status(200).send('Recovery email sent')
+        })
+    } catch (error) {
+        console.log(error)
+        res.status(500).send('Server Error')
+    }
+}
+
+const resetPassword = async (req, res) => {
+    try {
+        const data = req.body
+
+        const user = await users.findOne({
+            resetPasswordToken: data.token,
+            resetPasswordExpires: { $gt: Date.now()}
+        })
+
+        if (!validator.isStrongPassword(data.newPassword)) {
+            return res.status(400).send('Password is not strong enough')
+        }
+    
+        if(data.newPassword != data.confirmPassword){
+            return res.status(400).send('Passwords do not match')
+        }
+    
+        const salt = await bcrypt.genSalt(10)
+        const hash = await bcrypt.hash(data.newPassword, salt)
+        user.password = hash
+        user.resetPassword = undefined
+        user.resetPasswordExpires= undefined
+        await user.save()
+        
+        res.status(200).send('Password Reset Succesfully')
+
+
+    } catch (error) {
+        console.log(error)
+        res.status(500).send('Server Error')
+    }
+}
+
+module.exports = { signupUser, loginUser, getTempUsers, addUser, removeUser, getChangeRequests, requestChange, approveChange, denyChange, changePassword, requestPasswordReset, resetPassword }

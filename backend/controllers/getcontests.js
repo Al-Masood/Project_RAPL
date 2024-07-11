@@ -6,6 +6,7 @@ async function getContests(req, res) {
         .limit(10)
         .select('name number')
         .exec();
+    
     res.send(contests)
 }
 

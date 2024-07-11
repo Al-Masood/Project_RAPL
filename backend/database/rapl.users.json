@@ -1,0 +1,49 @@
+[{
+  "_id": {
+    "$oid": "667649bb2ed81e23848baca0"
+  },
+  "name": "Abdullah Al Masood",
+  "email": "aalmasood22@gmail.com",
+  "roll": "1903088",
+  "cfHandle": "masood_",
+  "vjHandle": "masood_1903088",
+  "ccHandle": "al_masood",
+  "atcoderHandle": "masood",
+  "password": "$2b$10$8lUm76Lu1VGWvfP/Lu1x8unDvm8iOoc65pAnnfOvgxIKXzMI73ABG",
+  "admin": true,
+  "createdAt": {
+    "$date": "2024-06-22T03:49:15.680Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-10T05:56:46.311Z"
+  },
+  "__v": 0,
+  "allTime": 1712,
+  "lastMonth": 9,
+  "lastYear": 237,
+  "resetPasswordToken": "cb1d34c21ae1bdcd84c0440daf07fbf887d6bd05"
+},
+{
+  "_id": {
+    "$oid": "66767be4c7bda34287b2861c"
+  },
+  "name": "Sayeef Mahmud",
+  "email": "sayeefmahmud@gmail.com",
+  "roll": "1903006",
+  "cfHandle": "notSayeef",
+  "vjHandle": "sayeef_1903006",
+  "ccHandle": "",
+  "atcoderHandle": "",
+  "password": "$2b$10$mDT4tGrrtZiNj0DpkKdyqO4d3HN0DXzNd49Lk0zDLwzyAZMhtabwC",
+  "admin": false,
+  "createdAt": {
+    "$date": "2024-06-22T07:23:16.668Z"
+  },
+  "updatedAt": {
+    "$date": "2024-06-25T03:46:15.498Z"
+  },
+  "__v": 0,
+  "allTime": 2251,
+  "lastMonth": 19,
+  "lastYear": 255
+}]

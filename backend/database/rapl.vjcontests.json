@@ -1,0 +1,2864 @@
+[{
+  "_id": {
+    "$oid": "66593a60b78e07707269a757"
+  },
+  "data": [
+    {
+      "handle": "suvrodroy",
+      "solved": 2,
+      "penalty": 101,
+      "_id": {
+        "$oid": "66593a60b78e07707269a758"
+      }
+    },
+    {
+      "handle": "Shuvo_Malakar",
+      "solved": 3,
+      "penalty": 112,
+      "_id": {
+        "$oid": "66593a60b78e07707269a759"
+      }
+    },
+    {
+      "handle": "Nipunbaishnab",
+      "solved": 3,
+      "penalty": 143,
+      "_id": {
+        "$oid": "66593a60b78e07707269a75a"
+      }
+    },
+    {
+      "handle": "Rahman_1910055",
+      "solved": 2,
+      "penalty": 215,
+      "_id": {
+        "$oid": "66593a60b78e07707269a75b"
+      }
+    },
+    {
+      "handle": "shaon_1903031",
+      "solved": 2,
+      "penalty": 49,
+      "_id": {
+        "$oid": "66593a60b78e07707269a75c"
+      }
+    },
+    {
+      "handle": "Sumaiya_1903045",
+      "solved": 3,
+      "penalty": 137,
+      "_id": {
+        "$oid": "66593a60b78e07707269a75d"
+      }
+    },
+    {
+      "handle": "sayeef_1903006",
+      "solved": 3,
+      "penalty": 127,
+      "_id": {
+        "$oid": "66593a60b78e07707269a75e"
+      }
+    },
+    {
+      "handle": "fahim_1903110",
+      "solved": 3,
+      "penalty": 201,
+      "_id": {
+        "$oid": "66593a60b78e07707269a75f"
+      }
+    },
+    {
+      "handle": "Efa_1903092",
+      "solved": 3,
+      "penalty": 380,
+      "_id": {
+        "$oid": "66593a60b78e07707269a760"
+      }
+    },
+    {
+      "handle": "masood_1903088",
+      "solved": 3,
+      "penalty": 144,
+      "_id": {
+        "$oid": "66593a60b78e07707269a761"
+      }
+    },
+    {
+      "handle": "adnan_1903137",
+      "solved": 4,
+      "penalty": 299,
+      "_id": {
+        "$oid": "66593a60b78e07707269a762"
+      }
+    },
+    {
+      "handle": "Shafin_1903155",
+      "solved": 2,
+      "penalty": 140,
+      "_id": {
+        "$oid": "66593a60b78e07707269a763"
+      }
+    },
+    {
+      "handle": "Ayan29_1903162",
+      "solved": 3,
+      "penalty": 193,
+      "_id": {
+        "$oid": "66593a60b78e07707269a764"
+      }
+    },
+    {
+      "handle": "Kholilur_Rahman",
+      "solved": 1,
+      "penalty": 179,
+      "_id": {
+        "$oid": "66593a60b78e07707269a765"
+      }
+    },
+    {
+      "handle": "Arifur_30",
+      "solved": 0,
+      "penalty": 0,
+      "_id": {
+        "$oid": "66593a60b78e07707269a766"
+      }
+    },
+    {
+      "handle": "Ghost_014",
+      "solved": 3,
+      "penalty": 113,
+      "_id": {
+        "$oid": "66593a60b78e07707269a767"
+      }
+    },
+    {
+      "handle": "Nafis2003174",
+      "solved": 3,
+      "penalty": 114,
+      "_id": {
+        "$oid": "66593a60b78e07707269a768"
+      }
+    },
+    {
+      "handle": "FAHEDUL_ISLAM",
+      "solved": 2,
+      "penalty": 174,
+      "_id": {
+        "$oid": "66593a60b78e07707269a769"
+      }
+    },
+    {
+      "handle": "acd04",
+      "solved": 2,
+      "penalty": 205,
+      "_id": {
+        "$oid": "66593a60b78e07707269a76a"
+      }
+    },
+    {
+      "handle": "noob_saikat86",
+      "solved": 2,
+      "penalty": 46,
+      "_id": {
+        "$oid": "66593a60b78e07707269a76b"
+      }
+    },
+    {
+      "handle": "Archita_120",
+      "solved": 1,
+      "penalty": 138,
+      "_id": {
+        "$oid": "66593a60b78e07707269a76c"
+      }
+    },
+    {
+      "handle": "rhutshab1618",
+      "solved": 3,
+      "penalty": 132,
+      "_id": {
+        "$oid": "66593a60b78e07707269a76d"
+      }
+    },
+    {
+      "handle": "rifath1729",
+      "solved": 2,
+      "penalty": 79,
+      "_id": {
+        "$oid": "66593a60b78e07707269a76e"
+      }
+    },
+    {
+      "handle": "tonmoy_00saha",
+      "solved": 3,
+      "penalty": 245,
+      "_id": {
+        "$oid": "66593a60b78e07707269a76f"
+      }
+    },
+    {
+      "handle": "Touhidul2003051",
+      "solved": 3,
+      "penalty": 236,
+      "_id": {
+        "$oid": "66593a60b78e07707269a770"
+      }
+    },
+    {
+      "handle": "what_is_Life",
+      "solved": 1,
+      "penalty": 73,
+      "_id": {
+        "$oid": "66593a60b78e07707269a771"
+      }
+    },
+    {
+      "handle": "imrat_67",
+      "solved": 3,
+      "penalty": 95,
+      "_id": {
+        "$oid": "66593a60b78e07707269a772"
+      }
+    },
+    {
+      "handle": "wasimur_01",
+      "solved": 3,
+      "penalty": 170,
+      "_id": {
+        "$oid": "66593a60b78e07707269a773"
+      }
+    },
+    {
+      "handle": "attoCoder",
+      "solved": 3,
+      "penalty": 253,
+      "_id": {
+        "$oid": "66593a60b78e07707269a774"
+      }
+    },
+    {
+      "handle": "NoobLabib1",
+      "solved": 3,
+      "penalty": 329,
+      "_id": {
+        "$oid": "66593a60b78e07707269a775"
+      }
+    },
+    {
+      "handle": "EaslyubitsS",
+      "solved": 1,
+      "penalty": 12,
+      "_id": {
+        "$oid": "66593a60b78e07707269a776"
+      }
+    },
+    {
+      "handle": "walidswadhin",
+      "solved": 2,
+      "penalty": 225,
+      "_id": {
+        "$oid": "66593a60b78e07707269a777"
+      }
+    },
+    {
+      "handle": "sajal_2103034",
+      "solved": 3,
+      "penalty": 367,
+      "_id": {
+        "$oid": "66593a60b78e07707269a778"
+      }
+    },
+    {
+      "handle": "zanifa_2110008",
+      "solved": 1,
+      "penalty": 44,
+      "_id": {
+        "$oid": "66593a60b78e07707269a779"
+      }
+    },
+    {
+      "handle": "Fahad_2103114",
+      "solved": 2,
+      "penalty": 127,
+      "_id": {
+        "$oid": "66593a60b78e07707269a77a"
+      }
+    },
+    {
+      "handle": "SADAT_2103108",
+      "solved": 3,
+      "penalty": 270,
+      "_id": {
+        "$oid": "66593a60b78e07707269a77b"
+      }
+    },
+    {
+      "handle": "hasan_2103160",
+      "solved": 1,
+      "penalty": 121,
+      "_id": {
+        "$oid": "66593a60b78e07707269a77c"
+      }
+    },
+    {
+      "handle": "tonmoy_2103127",
+      "solved": 3,
+      "penalty": 81,
+      "_id": {
+        "$oid": "66593a60b78e07707269a77d"
+      }
+    },
+    {
+      "handle": "Fuad_2103158",
+      "solved": 2,
+      "penalty": 95,
+      "_id": {
+        "$oid": "66593a60b78e07707269a77e"
+      }
+    },
+    {
+      "handle": "Abir_2103133",
+      "solved": 3,
+      "penalty": 110,
+      "_id": {
+        "$oid": "66593a60b78e07707269a77f"
+      }
+    },
+    {
+      "handle": "Srs_10",
+      "solved": 2,
+      "penalty": 227,
+      "_id": {
+        "$oid": "66593a60b78e07707269a780"
+      }
+    },
+    {
+      "handle": "Uthso",
+      "solved": 2,
+      "penalty": 248,
+      "_id": {
+        "$oid": "66593a60b78e07707269a781"
+      }
+    },
+    {
+      "handle": "F_A_Tanzim",
+      "solved": 2,
+      "penalty": 83,
+      "_id": {
+        "$oid": "66593a60b78e07707269a782"
+      }
+    },
+    {
+      "handle": "404_n0man_found",
+      "solved": 2,
+      "penalty": 162,
+      "_id": {
+        "$oid": "66593a60b78e07707269a783"
+      }
+    },
+    {
+      "handle": "Kayum_gazi01",
+      "solved": 3,
+      "penalty": 163,
+      "_id": {
+        "$oid": "66593a60b78e07707269a784"
+      }
+    },
+    {
+      "handle": "air007",
+      "solved": 2,
+      "penalty": 193,
+      "_id": {
+        "$oid": "66593a60b78e07707269a785"
+      }
+    },
+    {
+      "handle": "sh_sho1kat",
+      "solved": 3,
+      "penalty": 117,
+      "_id": {
+        "$oid": "66593a60b78e07707269a786"
+      }
+    },
+    {
+      "handle": "mahadi2103143",
+      "solved": 1,
+      "penalty": 147,
+      "_id": {
+        "$oid": "66593a60b78e07707269a787"
+      }
+    },
+    {
+      "handle": "LubnaSadia",
+      "solved": 2,
+      "penalty": 151,
+      "_id": {
+        "$oid": "66593a60b78e07707269a788"
+      }
+    },
+    {
+      "handle": "rakibdurjoy11",
+      "solved": 2,
+      "penalty": 246,
+      "_id": {
+        "$oid": "66593a60b78e07707269a789"
+      }
+    },
+    {
+      "handle": "sujoy_banik_007",
+      "solved": 2,
+      "penalty": 122,
+      "_id": {
+        "$oid": "66593a60b78e07707269a78a"
+      }
+    },
+    {
+      "handle": "Zesanul_2103123",
+      "solved": 3,
+      "penalty": 242,
+      "_id": {
+        "$oid": "66593a60b78e07707269a78b"
+      }
+    },
+    {
+      "handle": "2203116_mizanur",
+      "solved": 3,
+      "penalty": 205,
+      "_id": {
+        "$oid": "66593a60b78e07707269a78c"
+      }
+    },
+    {
+      "handle": "2203115_Ramim",
+      "solved": 2,
+      "penalty": 59,
+      "_id": {
+        "$oid": "66593a60b78e07707269a78d"
+      }
+    },
+    {
+      "handle": "2203113_TausiF",
+      "solved": 3,
+      "penalty": 633,
+      "_id": {
+        "$oid": "66593a60b78e07707269a78e"
+      }
+    },
+    {
+      "handle": "2203109_Rumpa",
+      "solved": 0,
+      "penalty": 0,
+      "_id": {
+        "$oid": "66593a60b78e07707269a78f"
+      }
+    },
+    {
+      "handle": "2203083_Arobi",
+      "solved": 0,
+      "penalty": 0,
+      "_id": {
+        "$oid": "66593a60b78e07707269a790"
+      }
+    },
+    {
+      "handle": "ArafSPiDEY",
+      "solved": 1,
+      "penalty": 69,
+      "_id": {
+        "$oid": "66593a60b78e07707269a791"
+      }
+    },
+    {
+      "handle": "OMICSE_RUET94",
+      "solved": 1,
+      "penalty": 32,
+      "_id": {
+        "$oid": "66593a60b78e07707269a792"
+      }
+    },
+    {
+      "handle": "moloy10",
+      "solved": 2,
+      "penalty": 254,
+      "_id": {
+        "$oid": "66593a60b78e07707269a793"
+      }
+    },
+    {
+      "handle": "2110044_Sadaf",
+      "solved": 1,
+      "penalty": 69,
+      "_id": {
+        "$oid": "66593a60b78e07707269a794"
+      }
+    },
+    {
+      "handle": "NamelessKing",
+      "solved": 3,
+      "penalty": 86,
+      "_id": {
+        "$oid": "66593a60b78e07707269a795"
+      }
+    },
+    {
+      "handle": "You_DontKnow_Who",
+      "solved": 3,
+      "penalty": 293,
+      "_id": {
+        "$oid": "66593a60b78e07707269a796"
+      }
+    },
+    {
+      "handle": "nightwing_808",
+      "solved": 3,
+      "penalty": 79,
+      "_id": {
+        "$oid": "66593a60b78e07707269a797"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": "2024-05-31T02:48:00.920Z"
+  },
+  "updatedAt": {
+    "$date": "2024-05-31T02:48:00.920Z"
+  },
+  "__v": 0,
+  "number": 627365
+},
+{
+  "_id": {
+    "$oid": "66594454839f36c542360182"
+  },
+  "data": [
+    {
+      "handle": "suvrodroy",
+      "solved": 2,
+      "penalty": 294,
+      "_id": {
+        "$oid": "66594454839f36c542360183"
+      }
+    },
+    {
+      "handle": "Shuvo_Malakar",
+      "solved": 4,
+      "penalty": 397,
+      "_id": {
+        "$oid": "66594454839f36c542360184"
+      }
+    },
+    {
+      "handle": "shaon_1903031",
+      "solved": 2,
+      "penalty": 398,
+      "_id": {
+        "$oid": "66594454839f36c542360185"
+      }
+    },
+    {
+      "handle": "Sumaiya_1903045",
+      "solved": 2,
+      "penalty": 173,
+      "_id": {
+        "$oid": "66594454839f36c542360186"
+      }
+    },
+    {
+      "handle": "sayeef_1903006",
+      "solved": 5,
+      "penalty": 368,
+      "_id": {
+        "$oid": "66594454839f36c542360187"
+      }
+    },
+    {
+      "handle": "fahim_1903110",
+      "solved": 3,
+      "penalty": 204,
+      "_id": {
+        "$oid": "66594454839f36c542360188"
+      }
+    },
+    {
+      "handle": "Efa_1903092",
+      "solved": 2,
+      "penalty": 200,
+      "_id": {
+        "$oid": "66594454839f36c542360189"
+      }
+    },
+    {
+      "handle": "masood_1903088",
+      "solved": 4,
+      "penalty": 185,
+      "_id": {
+        "$oid": "66594454839f36c54236018a"
+      }
+    },
+    {
+      "handle": "adnan_1903137",
+      "solved": 5,
+      "penalty": 561,
+      "_id": {
+        "$oid": "66594454839f36c54236018b"
+      }
+    },
+    {
+      "handle": "Shafin_1903155",
+      "solved": 1,
+      "penalty": 121,
+      "_id": {
+        "$oid": "66594454839f36c54236018c"
+      }
+    },
+    {
+      "handle": "Ayan29_1903162",
+      "solved": 2,
+      "penalty": 167,
+      "_id": {
+        "$oid": "66594454839f36c54236018d"
+      }
+    },
+    {
+      "handle": "Kholilur_Rahman",
+      "solved": 1,
+      "penalty": 266,
+      "_id": {
+        "$oid": "66594454839f36c54236018e"
+      }
+    },
+    {
+      "handle": "Ghost_014",
+      "solved": 3,
+      "penalty": 419,
+      "_id": {
+        "$oid": "66594454839f36c54236018f"
+      }
+    },
+    {
+      "handle": "Nafis2003174",
+      "solved": 4,
+      "penalty": 293,
+      "_id": {
+        "$oid": "66594454839f36c542360190"
+      }
+    },
+    {
+      "handle": "acd04",
+      "solved": 2,
+      "penalty": 171,
+      "_id": {
+        "$oid": "66594454839f36c542360191"
+      }
+    },
+    {
+      "handle": "noob_saikat86",
+      "solved": 0,
+      "penalty": 0,
+      "_id": {
+        "$oid": "66594454839f36c542360192"
+      }
+    },
+    {
+      "handle": "Archita_120",
+      "solved": 1,
+      "penalty": 187,
+      "_id": {
+        "$oid": "66594454839f36c542360193"
+      }
+    },
+    {
+      "handle": "f_rabbi_ri",
+      "solved": 3,
+      "penalty": 374,
+      "_id": {
+        "$oid": "66594454839f36c542360194"
+      }
+    },
+    {
+      "handle": "rhutshab1618",
+      "solved": 4,
+      "penalty": 484,
+      "_id": {
+        "$oid": "66594454839f36c542360195"
+      }
+    },
+    {
+      "handle": "tonmoy_00saha",
+      "solved": 2,
+      "penalty": 219,
+      "_id": {
+        "$oid": "66594454839f36c542360196"
+      }
+    },
+    {
+      "handle": "Touhidul2003051",
+      "solved": 2,
+      "penalty": 170,
+      "_id": {
+        "$oid": "66594454839f36c542360197"
+      }
+    },
+    {
+      "handle": "nion_2003021",
+      "solved": 1,
+      "penalty": 71,
+      "_id": {
+        "$oid": "66594454839f36c542360198"
+      }
+    },
+    {
+      "handle": "imrat_67",
+      "solved": 3,
+      "penalty": 405,
+      "_id": {
+        "$oid": "66594454839f36c542360199"
+      }
+    },
+    {
+      "handle": "wasimur_01",
+      "solved": 4,
+      "penalty": 277,
+      "_id": {
+        "$oid": "66594454839f36c54236019a"
+      }
+    },
+    {
+      "handle": "attoCoder",
+      "solved": 2,
+      "penalty": 199,
+      "_id": {
+        "$oid": "66594454839f36c54236019b"
+      }
+    },
+    {
+      "handle": "NoobLabib1",
+      "solved": 2,
+      "penalty": 224,
+      "_id": {
+        "$oid": "66594454839f36c54236019c"
+      }
+    },
+    {
+      "handle": "EaslyubitsS",
+      "solved": 1,
+      "penalty": 81,
+      "_id": {
+        "$oid": "66594454839f36c54236019d"
+      }
+    },
+    {
+      "handle": "walidswadhin",
+      "solved": 1,
+      "penalty": 220,
+      "_id": {
+        "$oid": "66594454839f36c54236019e"
+      }
+    },
+    {
+      "handle": "sajal_2103034",
+      "solved": 1,
+      "penalty": 130,
+      "_id": {
+        "$oid": "66594454839f36c54236019f"
+      }
+    },
+    {
+      "handle": "mikat_2103032",
+      "solved": 1,
+      "penalty": 214,
+      "_id": {
+        "$oid": "66594454839f36c5423601a0"
+      }
+    },
+    {
+      "handle": "SADAT_2103108",
+      "solved": 2,
+      "penalty": 161,
+      "_id": {
+        "$oid": "66594454839f36c5423601a1"
+      }
+    },
+    {
+      "handle": "tonmoy_2103127",
+      "solved": 3,
+      "penalty": 383,
+      "_id": {
+        "$oid": "66594454839f36c5423601a2"
+      }
+    },
+    {
+      "handle": "Fuad_2103158",
+      "solved": 2,
+      "penalty": 381,
+      "_id": {
+        "$oid": "66594454839f36c5423601a3"
+      }
+    },
+    {
+      "handle": "Abir_2103133",
+      "solved": 0,
+      "penalty": 0,
+      "_id": {
+        "$oid": "66594454839f36c5423601a4"
+      }
+    },
+    {
+      "handle": "Srs_10",
+      "solved": 1,
+      "penalty": 166,
+      "_id": {
+        "$oid": "66594454839f36c5423601a5"
+      }
+    },
+    {
+      "handle": "Uthso",
+      "solved": 2,
+      "penalty": 148,
+      "_id": {
+        "$oid": "66594454839f36c5423601a6"
+      }
+    },
+    {
+      "handle": "Kayum_gazi01",
+      "solved": 3,
+      "penalty": 458,
+      "_id": {
+        "$oid": "66594454839f36c5423601a7"
+      }
+    },
+    {
+      "handle": "air007",
+      "solved": 3,
+      "penalty": 265,
+      "_id": {
+        "$oid": "66594454839f36c5423601a8"
+      }
+    },
+    {
+      "handle": "sh_sho1kat",
+      "solved": 2,
+      "penalty": 154,
+      "_id": {
+        "$oid": "66594454839f36c5423601a9"
+      }
+    },
+    {
+      "handle": "LubnaSadia",
+      "solved": 2,
+      "penalty": 301,
+      "_id": {
+        "$oid": "66594454839f36c5423601aa"
+      }
+    },
+    {
+      "handle": "rakibdurjoy11",
+      "solved": 2,
+      "penalty": 284,
+      "_id": {
+        "$oid": "66594454839f36c5423601ab"
+      }
+    },
+    {
+      "handle": "sujoy_banik_007",
+      "solved": 2,
+      "penalty": 258,
+      "_id": {
+        "$oid": "66594454839f36c5423601ac"
+      }
+    },
+    {
+      "handle": "Zesanul_2103123",
+      "solved": 2,
+      "penalty": 188,
+      "_id": {
+        "$oid": "66594454839f36c5423601ad"
+      }
+    },
+    {
+      "handle": "2203116_mizanur",
+      "solved": 1,
+      "penalty": 115,
+      "_id": {
+        "$oid": "66594454839f36c5423601ae"
+      }
+    },
+    {
+      "handle": "2203079_Borno",
+      "solved": 1,
+      "penalty": 57,
+      "_id": {
+        "$oid": "66594454839f36c5423601af"
+      }
+    },
+    {
+      "handle": "2203115_Ramim",
+      "solved": 2,
+      "penalty": 379,
+      "_id": {
+        "$oid": "66594454839f36c5423601b0"
+      }
+    },
+    {
+      "handle": "Ahnaf_2210007",
+      "solved": 2,
+      "penalty": 314,
+      "_id": {
+        "$oid": "66594454839f36c5423601b1"
+      }
+    },
+    {
+      "handle": "2203113_TausiF",
+      "solved": 2,
+      "penalty": 242,
+      "_id": {
+        "$oid": "66594454839f36c5423601b2"
+      }
+    },
+    {
+      "handle": "2203083_Arobi",
+      "solved": 1,
+      "penalty": 225,
+      "_id": {
+        "$oid": "66594454839f36c5423601b3"
+      }
+    },
+    {
+      "handle": "mrfhsn235",
+      "solved": 2,
+      "penalty": 236,
+      "_id": {
+        "$oid": "66594454839f36c5423601b4"
+      }
+    },
+    {
+      "handle": "OMICSE_RUET94",
+      "solved": 1,
+      "penalty": 159,
+      "_id": {
+        "$oid": "66594454839f36c5423601b5"
+      }
+    },
+    {
+      "handle": "moloy10",
+      "solved": 1,
+      "penalty": 184,
+      "_id": {
+        "$oid": "66594454839f36c5423601b6"
+      }
+    },
+    {
+      "handle": "You_DontKnow_Who",
+      "solved": 2,
+      "penalty": 138,
+      "_id": {
+        "$oid": "66594454839f36c5423601b7"
+      }
+    },
+    {
+      "handle": "nightwing_808",
+      "solved": 3,
+      "penalty": 372,
+      "_id": {
+        "$oid": "66594454839f36c5423601b8"
+      }
+    },
+    {
+      "handle": "Mahmud_Hasan1958",
+      "solved": 1,
+      "penalty": 181,
+      "_id": {
+        "$oid": "66594454839f36c5423601b9"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": "2024-05-31T03:30:28.406Z"
+  },
+  "updatedAt": {
+    "$date": "2024-05-31T03:30:28.406Z"
+  },
+  "__v": 0,
+  "number": 628754
+},
+{
+  "_id": {
+    "$oid": "6659449a8255407316057ead"
+  },
+  "data": [
+    {
+      "handle": "suvrodroy",
+      "solved": 3,
+      "penalty": 426,
+      "_id": {
+        "$oid": "6659449a8255407316057eae"
+      }
+    },
+    {
+      "handle": "Shuvo_Malakar",
+      "solved": 5,
+      "penalty": 514,
+      "_id": {
+        "$oid": "6659449a8255407316057eaf"
+      }
+    },
+    {
+      "handle": "shaon_1903031",
+      "solved": 4,
+      "penalty": 459,
+      "_id": {
+        "$oid": "6659449a8255407316057eb0"
+      }
+    },
+    {
+      "handle": "Sumaiya_1903045",
+      "solved": 4,
+      "penalty": 74,
+      "_id": {
+        "$oid": "6659449a8255407316057eb1"
+      }
+    },
+    {
+      "handle": "sayeef_1903006",
+      "solved": 6,
+      "penalty": 554,
+      "_id": {
+        "$oid": "6659449a8255407316057eb2"
+      }
+    },
+    {
+      "handle": "fahim_1903110",
+      "solved": 4,
+      "penalty": 477,
+      "_id": {
+        "$oid": "6659449a8255407316057eb3"
+      }
+    },
+    {
+      "handle": "masood_1903088",
+      "solved": 6,
+      "penalty": 552,
+      "_id": {
+        "$oid": "6659449a8255407316057eb4"
+      }
+    },
+    {
+      "handle": "adnan_1903137",
+      "solved": 7,
+      "penalty": 981,
+      "_id": {
+        "$oid": "6659449a8255407316057eb5"
+      }
+    },
+    {
+      "handle": "Miraz_1903179",
+      "solved": 3,
+      "penalty": 326,
+      "_id": {
+        "$oid": "6659449a8255407316057eb6"
+      }
+    },
+    {
+      "handle": "faysal_1903164",
+      "solved": 1,
+      "penalty": 139,
+      "_id": {
+        "$oid": "6659449a8255407316057eb7"
+      }
+    },
+    {
+      "handle": "Ayan29_1903162",
+      "solved": 5,
+      "penalty": 497,
+      "_id": {
+        "$oid": "6659449a8255407316057eb8"
+      }
+    },
+    {
+      "handle": "Kholilur_Rahman",
+      "solved": 3,
+      "penalty": 299,
+      "_id": {
+        "$oid": "6659449a8255407316057eb9"
+      }
+    },
+    {
+      "handle": "Ghost_014",
+      "solved": 4,
+      "penalty": 82,
+      "_id": {
+        "$oid": "6659449a8255407316057eba"
+      }
+    },
+    {
+      "handle": "Nafis2003174",
+      "solved": 6,
+      "penalty": 713,
+      "_id": {
+        "$oid": "6659449a8255407316057ebb"
+      }
+    },
+    {
+      "handle": "acd04",
+      "solved": 4,
+      "penalty": 278,
+      "_id": {
+        "$oid": "6659449a8255407316057ebc"
+      }
+    },
+    {
+      "handle": "Archita_120",
+      "solved": 3,
+      "penalty": 355,
+      "_id": {
+        "$oid": "6659449a8255407316057ebd"
+      }
+    },
+    {
+      "handle": "f_rabbi_ri",
+      "solved": 4,
+      "penalty": 332,
+      "_id": {
+        "$oid": "6659449a8255407316057ebe"
+      }
+    },
+    {
+      "handle": "rhutshab1618",
+      "solved": 6,
+      "penalty": 556,
+      "_id": {
+        "$oid": "6659449a8255407316057ebf"
+      }
+    },
+    {
+      "handle": "tonmoy_00saha",
+      "solved": 3,
+      "penalty": 204,
+      "_id": {
+        "$oid": "6659449a8255407316057ec0"
+      }
+    },
+    {
+      "handle": "Touhidul2003051",
+      "solved": 3,
+      "penalty": 134,
+      "_id": {
+        "$oid": "6659449a8255407316057ec1"
+      }
+    },
+    {
+      "handle": "imrat_67",
+      "solved": 3,
+      "penalty": 95,
+      "_id": {
+        "$oid": "6659449a8255407316057ec2"
+      }
+    },
+    {
+      "handle": "wasimur_01",
+      "solved": 7,
+      "penalty": 652,
+      "_id": {
+        "$oid": "6659449a8255407316057ec3"
+      }
+    },
+    {
+      "handle": "attoCoder",
+      "solved": 3,
+      "penalty": 230,
+      "_id": {
+        "$oid": "6659449a8255407316057ec4"
+      }
+    },
+    {
+      "handle": "NoobLabib1",
+      "solved": 3,
+      "penalty": 126,
+      "_id": {
+        "$oid": "6659449a8255407316057ec5"
+      }
+    },
+    {
+      "handle": "EaslyubitsS",
+      "solved": 4,
+      "penalty": 282,
+      "_id": {
+        "$oid": "6659449a8255407316057ec6"
+      }
+    },
+    {
+      "handle": "walidswadhin",
+      "solved": 0,
+      "penalty": 0,
+      "_id": {
+        "$oid": "6659449a8255407316057ec7"
+      }
+    },
+    {
+      "handle": "sajal_2103034",
+      "solved": 3,
+      "penalty": 389,
+      "_id": {
+        "$oid": "6659449a8255407316057ec8"
+      }
+    },
+    {
+      "handle": "mikat_2103032",
+      "solved": 1,
+      "penalty": 84,
+      "_id": {
+        "$oid": "6659449a8255407316057ec9"
+      }
+    },
+    {
+      "handle": "SADAT_2103108",
+      "solved": 3,
+      "penalty": 150,
+      "_id": {
+        "$oid": "6659449a8255407316057eca"
+      }
+    },
+    {
+      "handle": "tonmoy_2103127",
+      "solved": 3,
+      "penalty": 67,
+      "_id": {
+        "$oid": "6659449a8255407316057ecb"
+      }
+    },
+    {
+      "handle": "Fuad_2103158",
+      "solved": 3,
+      "penalty": 303,
+      "_id": {
+        "$oid": "6659449a8255407316057ecc"
+      }
+    },
+    {
+      "handle": "Abir_2103133",
+      "solved": 3,
+      "penalty": 135,
+      "_id": {
+        "$oid": "6659449a8255407316057ecd"
+      }
+    },
+    {
+      "handle": "Uthso",
+      "solved": 3,
+      "penalty": 223,
+      "_id": {
+        "$oid": "6659449a8255407316057ece"
+      }
+    },
+    {
+      "handle": "F_A_Tanzim",
+      "solved": 3,
+      "penalty": 131,
+      "_id": {
+        "$oid": "6659449a8255407316057ecf"
+      }
+    },
+    {
+      "handle": "LoShadop",
+      "solved": 1,
+      "penalty": 65,
+      "_id": {
+        "$oid": "6659449a8255407316057ed0"
+      }
+    },
+    {
+      "handle": "Kayum_gazi01",
+      "solved": 3,
+      "penalty": 157,
+      "_id": {
+        "$oid": "6659449a8255407316057ed1"
+      }
+    },
+    {
+      "handle": "air007",
+      "solved": 3,
+      "penalty": 442,
+      "_id": {
+        "$oid": "6659449a8255407316057ed2"
+      }
+    },
+    {
+      "handle": "sh_sho1kat",
+      "solved": 4,
+      "penalty": 281,
+      "_id": {
+        "$oid": "6659449a8255407316057ed3"
+      }
+    },
+    {
+      "handle": "LubnaSadia",
+      "solved": 2,
+      "penalty": 175,
+      "_id": {
+        "$oid": "6659449a8255407316057ed4"
+      }
+    },
+    {
+      "handle": "rakibdurjoy11",
+      "solved": 3,
+      "penalty": 381,
+      "_id": {
+        "$oid": "6659449a8255407316057ed5"
+      }
+    },
+    {
+      "handle": "Zesanul_2103123",
+      "solved": 5,
+      "penalty": 379,
+      "_id": {
+        "$oid": "6659449a8255407316057ed6"
+      }
+    },
+    {
+      "handle": "2203079_Borno",
+      "solved": 1,
+      "penalty": 82,
+      "_id": {
+        "$oid": "6659449a8255407316057ed7"
+      }
+    },
+    {
+      "handle": "2203115_Ramim",
+      "solved": 4,
+      "penalty": 468,
+      "_id": {
+        "$oid": "6659449a8255407316057ed8"
+      }
+    },
+    {
+      "handle": "Ahnaf_2210007",
+      "solved": 3,
+      "penalty": 299,
+      "_id": {
+        "$oid": "6659449a8255407316057ed9"
+      }
+    },
+    {
+      "handle": "2203113_TausiF",
+      "solved": 3,
+      "penalty": 184,
+      "_id": {
+        "$oid": "6659449a8255407316057eda"
+      }
+    },
+    {
+      "handle": "2203083_Arobi",
+      "solved": 1,
+      "penalty": 37,
+      "_id": {
+        "$oid": "6659449a8255407316057edb"
+      }
+    },
+    {
+      "handle": "mrfhsn235",
+      "solved": 3,
+      "penalty": 169,
+      "_id": {
+        "$oid": "6659449a8255407316057edc"
+      }
+    },
+    {
+      "handle": "OMICSE_RUET94",
+      "solved": 2,
+      "penalty": 242,
+      "_id": {
+        "$oid": "6659449a8255407316057edd"
+      }
+    },
+    {
+      "handle": "moloy10",
+      "solved": 2,
+      "penalty": 241,
+      "_id": {
+        "$oid": "6659449a8255407316057ede"
+      }
+    },
+    {
+      "handle": "You_DontKnow_Who",
+      "solved": 5,
+      "penalty": 410,
+      "_id": {
+        "$oid": "6659449a8255407316057edf"
+      }
+    },
+    {
+      "handle": "nightwing_808",
+      "solved": 3,
+      "penalty": 200,
+      "_id": {
+        "$oid": "6659449a8255407316057ee0"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": "2024-05-31T03:31:38.942Z"
+  },
+  "updatedAt": {
+    "$date": "2024-05-31T03:31:38.942Z"
+  },
+  "__v": 0,
+  "number": 629205
+},
+{
+  "_id": {
+    "$oid": "6659451959837c2701852e49"
+  },
+  "data": [
+    {
+      "handle": "suvrodroy",
+      "solved": 2,
+      "penalty": 324,
+      "_id": {
+        "$oid": "6659451959837c2701852e4a"
+      }
+    },
+    {
+      "handle": "Shuvo_Malakar",
+      "solved": 2,
+      "penalty": 47,
+      "_id": {
+        "$oid": "6659451959837c2701852e4b"
+      }
+    },
+    {
+      "handle": "shaon_1903031",
+      "solved": 2,
+      "penalty": 61,
+      "_id": {
+        "$oid": "6659451959837c2701852e4c"
+      }
+    },
+    {
+      "handle": "Sumaiya_1903045",
+      "solved": 2,
+      "penalty": 170,
+      "_id": {
+        "$oid": "6659451959837c2701852e4d"
+      }
+    },
+    {
+      "handle": "sayeef_1903006",
+      "solved": 3,
+      "penalty": 293,
+      "_id": {
+        "$oid": "6659451959837c2701852e4e"
+      }
+    },
+    {
+      "handle": "fahim_1903110",
+      "solved": 1,
+      "penalty": 119,
+      "_id": {
+        "$oid": "6659451959837c2701852e4f"
+      }
+    },
+    {
+      "handle": "masood_1903088",
+      "solved": 2,
+      "penalty": 106,
+      "_id": {
+        "$oid": "6659451959837c2701852e50"
+      }
+    },
+    {
+      "handle": "adnan_1903137",
+      "solved": 3,
+      "penalty": 206,
+      "_id": {
+        "$oid": "6659451959837c2701852e51"
+      }
+    },
+    {
+      "handle": "faysal_1903164",
+      "solved": 0,
+      "penalty": 0,
+      "_id": {
+        "$oid": "6659451959837c2701852e52"
+      }
+    },
+    {
+      "handle": "Ayan29_1903162",
+      "solved": 1,
+      "penalty": 276,
+      "_id": {
+        "$oid": "6659451959837c2701852e53"
+      }
+    },
+    {
+      "handle": "Ghost_014",
+      "solved": 2,
+      "penalty": 334,
+      "_id": {
+        "$oid": "6659451959837c2701852e54"
+      }
+    },
+    {
+      "handle": "Nafis2003174",
+      "solved": 2,
+      "penalty": 54,
+      "_id": {
+        "$oid": "6659451959837c2701852e55"
+      }
+    },
+    {
+      "handle": "acd04",
+      "solved": 1,
+      "penalty": 305,
+      "_id": {
+        "$oid": "6659451959837c2701852e56"
+      }
+    },
+    {
+      "handle": "Archita_120",
+      "solved": 0,
+      "penalty": 0,
+      "_id": {
+        "$oid": "6659451959837c2701852e57"
+      }
+    },
+    {
+      "handle": "f_rabbi_ri",
+      "solved": 2,
+      "penalty": 66,
+      "_id": {
+        "$oid": "6659451959837c2701852e58"
+      }
+    },
+    {
+      "handle": "rhutshab1618",
+      "solved": 3,
+      "penalty": 388,
+      "_id": {
+        "$oid": "6659451959837c2701852e59"
+      }
+    },
+    {
+      "handle": "tonmoy_00saha",
+      "solved": 1,
+      "penalty": 100,
+      "_id": {
+        "$oid": "6659451959837c2701852e5a"
+      }
+    },
+    {
+      "handle": "imrat_67",
+      "solved": 2,
+      "penalty": 111,
+      "_id": {
+        "$oid": "6659451959837c2701852e5b"
+      }
+    },
+    {
+      "handle": "wasimur_01",
+      "solved": 2,
+      "penalty": 45,
+      "_id": {
+        "$oid": "6659451959837c2701852e5c"
+      }
+    },
+    {
+      "handle": "attoCoder",
+      "solved": 2,
+      "penalty": 166,
+      "_id": {
+        "$oid": "6659451959837c2701852e5d"
+      }
+    },
+    {
+      "handle": "NoobLabib1",
+      "solved": 2,
+      "penalty": 134,
+      "_id": {
+        "$oid": "6659451959837c2701852e5e"
+      }
+    },
+    {
+      "handle": "EaslyubitsS",
+      "solved": 0,
+      "penalty": 0,
+      "_id": {
+        "$oid": "6659451959837c2701852e5f"
+      }
+    },
+    {
+      "handle": "sajal_2103034",
+      "solved": 1,
+      "penalty": 88,
+      "_id": {
+        "$oid": "6659451959837c2701852e60"
+      }
+    },
+    {
+      "handle": "SADAT_2103108",
+      "solved": 1,
+      "penalty": 86,
+      "_id": {
+        "$oid": "6659451959837c2701852e61"
+      }
+    },
+    {
+      "handle": "tonmoy_2103127",
+      "solved": 2,
+      "penalty": 236,
+      "_id": {
+        "$oid": "6659451959837c2701852e62"
+      }
+    },
+    {
+      "handle": "Fuad_2103158",
+      "solved": 1,
+      "penalty": 37,
+      "_id": {
+        "$oid": "6659451959837c2701852e63"
+      }
+    },
+    {
+      "handle": "Abir_2103133",
+      "solved": 2,
+      "penalty": 102,
+      "_id": {
+        "$oid": "6659451959837c2701852e64"
+      }
+    },
+    {
+      "handle": "Uthso",
+      "solved": 0,
+      "penalty": 0,
+      "_id": {
+        "$oid": "6659451959837c2701852e65"
+      }
+    },
+    {
+      "handle": "F_A_Tanzim",
+      "solved": 2,
+      "penalty": 71,
+      "_id": {
+        "$oid": "6659451959837c2701852e66"
+      }
+    },
+    {
+      "handle": "LoShadop",
+      "solved": 0,
+      "penalty": 0,
+      "_id": {
+        "$oid": "6659451959837c2701852e67"
+      }
+    },
+    {
+      "handle": "Kayum_gazi01",
+      "solved": 2,
+      "penalty": 71,
+      "_id": {
+        "$oid": "6659451959837c2701852e68"
+      }
+    },
+    {
+      "handle": "air007",
+      "solved": 1,
+      "penalty": 257,
+      "_id": {
+        "$oid": "6659451959837c2701852e69"
+      }
+    },
+    {
+      "handle": "sh_sho1kat",
+      "solved": 2,
+      "penalty": 62,
+      "_id": {
+        "$oid": "6659451959837c2701852e6a"
+      }
+    },
+    {
+      "handle": "LubnaSadia",
+      "solved": 1,
+      "penalty": 28,
+      "_id": {
+        "$oid": "6659451959837c2701852e6b"
+      }
+    },
+    {
+      "handle": "rakibdurjoy11",
+      "solved": 1,
+      "penalty": 160,
+      "_id": {
+        "$oid": "6659451959837c2701852e6c"
+      }
+    },
+    {
+      "handle": "Zesanul_2103123",
+      "solved": 1,
+      "penalty": 5,
+      "_id": {
+        "$oid": "6659451959837c2701852e6d"
+      }
+    },
+    {
+      "handle": "2203079_Borno",
+      "solved": 0,
+      "penalty": 0,
+      "_id": {
+        "$oid": "6659451959837c2701852e6e"
+      }
+    },
+    {
+      "handle": "2203115_Ramim",
+      "solved": 0,
+      "penalty": 0,
+      "_id": {
+        "$oid": "6659451959837c2701852e6f"
+      }
+    },
+    {
+      "handle": "Ahnaf_2210007",
+      "solved": 1,
+      "penalty": 119,
+      "_id": {
+        "$oid": "6659451959837c2701852e70"
+      }
+    },
+    {
+      "handle": "2203113_TausiF",
+      "solved": 2,
+      "penalty": 134,
+      "_id": {
+        "$oid": "6659451959837c2701852e71"
+      }
+    },
+    {
+      "handle": "2203109_Rumpa",
+      "solved": 0,
+      "penalty": 0,
+      "_id": {
+        "$oid": "6659451959837c2701852e72"
+      }
+    },
+    {
+      "handle": "OMICSE_RUET94",
+      "solved": 0,
+      "penalty": 0,
+      "_id": {
+        "$oid": "6659451959837c2701852e73"
+      }
+    },
+    {
+      "handle": "moloy10",
+      "solved": 1,
+      "penalty": 230,
+      "_id": {
+        "$oid": "6659451959837c2701852e74"
+      }
+    },
+    {
+      "handle": "You_DontKnow_Who",
+      "solved": 2,
+      "penalty": 104,
+      "_id": {
+        "$oid": "6659451959837c2701852e75"
+      }
+    },
+    {
+      "handle": "nightwing_808",
+      "solved": 2,
+      "penalty": 237,
+      "_id": {
+        "$oid": "6659451959837c2701852e76"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": "2024-05-31T03:33:45.284Z"
+  },
+  "updatedAt": {
+    "$date": "2024-05-31T03:33:45.284Z"
+  },
+  "__v": 0,
+  "number": 630390
+},
+{
+  "_id": {
+    "$oid": "6659453fd9fa09c3a17e61a4"
+  },
+  "data": [
+    {
+      "handle": "suvrodroy",
+      "solved": 3,
+      "penalty": 224,
+      "_id": {
+        "$oid": "6659453fd9fa09c3a17e61a5"
+      }
+    },
+    {
+      "handle": "Shuvo_Malakar",
+      "solved": 5,
+      "penalty": 546,
+      "_id": {
+        "$oid": "6659453fd9fa09c3a17e61a6"
+      }
+    },
+    {
+      "handle": "shaon_1903031",
+      "solved": 2,
+      "penalty": 76,
+      "_id": {
+        "$oid": "6659453fd9fa09c3a17e61a7"
+      }
+    },
+    {
+      "handle": "Sumaiya_1903045",
+      "solved": 3,
+      "penalty": 315,
+      "_id": {
+        "$oid": "6659453fd9fa09c3a17e61a8"
+      }
+    },
+    {
+      "handle": "sayeef_1903006",
+      "solved": 7,
+      "penalty": 404,
+      "_id": {
+        "$oid": "6659453fd9fa09c3a17e61a9"
+      }
+    },
+    {
+      "handle": "fahim_1903110",
+      "solved": 3,
+      "penalty": 326,
+      "_id": {
+        "$oid": "6659453fd9fa09c3a17e61aa"
+      }
+    },
+    {
+      "handle": "masood_1903088",
+      "solved": 6,
+      "penalty": 664,
+      "_id": {
+        "$oid": "6659453fd9fa09c3a17e61ab"
+      }
+    },
+    {
+      "handle": "adnan_1903137",
+      "solved": 7,
+      "penalty": 555,
+      "_id": {
+        "$oid": "6659453fd9fa09c3a17e61ac"
+      }
+    },
+    {
+      "handle": "Ayan29_1903162",
+      "solved": 1,
+      "penalty": 78,
+      "_id": {
+        "$oid": "6659453fd9fa09c3a17e61ad"
+      }
+    },
+    {
+      "handle": "Ghost_014",
+      "solved": 4,
+      "penalty": 318,
+      "_id": {
+        "$oid": "6659453fd9fa09c3a17e61ae"
+      }
+    },
+    {
+      "handle": "Nafis2003174",
+      "solved": 4,
+      "penalty": 246,
+      "_id": {
+        "$oid": "6659453fd9fa09c3a17e61af"
+      }
+    },
+    {
+      "handle": "acd04",
+      "solved": 1,
+      "penalty": 76,
+      "_id": {
+        "$oid": "6659453fd9fa09c3a17e61b0"
+      }
+    },
+    {
+      "handle": "f_rabbi_ri",
+      "solved": 2,
+      "penalty": 144,
+      "_id": {
+        "$oid": "6659453fd9fa09c3a17e61b1"
+      }
+    },
+    {
+      "handle": "rhutshab1618",
+      "solved": 6,
+      "penalty": 600,
+      "_id": {
+        "$oid": "6659453fd9fa09c3a17e61b2"
+      }
+    },
+    {
+      "handle": "imrat_67",
+      "solved": 3,
+      "penalty": 313,
+      "_id": {
+        "$oid": "6659453fd9fa09c3a17e61b3"
+      }
+    },
+    {
+      "handle": "wasimur_01",
+      "solved": 6,
+      "penalty": 541,
+      "_id": {
+        "$oid": "6659453fd9fa09c3a17e61b4"
+      }
+    },
+    {
+      "handle": "attoCoder",
+      "solved": 1,
+      "penalty": 133,
+      "_id": {
+        "$oid": "6659453fd9fa09c3a17e61b5"
+      }
+    },
+    {
+      "handle": "NoobLabib1",
+      "solved": 2,
+      "penalty": 160,
+      "_id": {
+        "$oid": "6659453fd9fa09c3a17e61b6"
+      }
+    },
+    {
+      "handle": "EaslyubitsS",
+      "solved": 1,
+      "penalty": 130,
+      "_id": {
+        "$oid": "6659453fd9fa09c3a17e61b7"
+      }
+    },
+    {
+      "handle": "sajal_2103034",
+      "solved": 1,
+      "penalty": 27,
+      "_id": {
+        "$oid": "6659453fd9fa09c3a17e61b8"
+      }
+    },
+    {
+      "handle": "SADAT_2103108",
+      "solved": 2,
+      "penalty": 191,
+      "_id": {
+        "$oid": "6659453fd9fa09c3a17e61b9"
+      }
+    },
+    {
+      "handle": "tonmoy_2103127",
+      "solved": 3,
+      "penalty": 280,
+      "_id": {
+        "$oid": "6659453fd9fa09c3a17e61ba"
+      }
+    },
+    {
+      "handle": "Fuad_2103158",
+      "solved": 1,
+      "penalty": 66,
+      "_id": {
+        "$oid": "6659453fd9fa09c3a17e61bb"
+      }
+    },
+    {
+      "handle": "Abir_2103133",
+      "solved": 1,
+      "penalty": 109,
+      "_id": {
+        "$oid": "6659453fd9fa09c3a17e61bc"
+      }
+    },
+    {
+      "handle": "Uthso",
+      "solved": 0,
+      "penalty": 0,
+      "_id": {
+        "$oid": "6659453fd9fa09c3a17e61bd"
+      }
+    },
+    {
+      "handle": "Kayum_gazi01",
+      "solved": 2,
+      "penalty": 166,
+      "_id": {
+        "$oid": "6659453fd9fa09c3a17e61be"
+      }
+    },
+    {
+      "handle": "air007",
+      "solved": 1,
+      "penalty": 124,
+      "_id": {
+        "$oid": "6659453fd9fa09c3a17e61bf"
+      }
+    },
+    {
+      "handle": "sh_sho1kat",
+      "solved": 3,
+      "penalty": 221,
+      "_id": {
+        "$oid": "6659453fd9fa09c3a17e61c0"
+      }
+    },
+    {
+      "handle": "rakibdurjoy11",
+      "solved": 1,
+      "penalty": 27,
+      "_id": {
+        "$oid": "6659453fd9fa09c3a17e61c1"
+      }
+    },
+    {
+      "handle": "2203115_Ramim",
+      "solved": 0,
+      "penalty": 0,
+      "_id": {
+        "$oid": "6659453fd9fa09c3a17e61c2"
+      }
+    },
+    {
+      "handle": "Ahnaf_2210007",
+      "solved": 2,
+      "penalty": 201,
+      "_id": {
+        "$oid": "6659453fd9fa09c3a17e61c3"
+      }
+    },
+    {
+      "handle": "2203113_TausiF",
+      "solved": 5,
+      "penalty": 716,
+      "_id": {
+        "$oid": "6659453fd9fa09c3a17e61c4"
+      }
+    },
+    {
+      "handle": "OMICSE_RUET94",
+      "solved": 1,
+      "penalty": 32,
+      "_id": {
+        "$oid": "6659453fd9fa09c3a17e61c5"
+      }
+    },
+    {
+      "handle": "You_DontKnow_Who",
+      "solved": 1,
+      "penalty": 132,
+      "_id": {
+        "$oid": "6659453fd9fa09c3a17e61c6"
+      }
+    },
+    {
+      "handle": "nightwing_808",
+      "solved": 2,
+      "penalty": 72,
+      "_id": {
+        "$oid": "6659453fd9fa09c3a17e61c7"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": "2024-05-31T03:34:23.704Z"
+  },
+  "updatedAt": {
+    "$date": "2024-05-31T03:34:23.704Z"
+  },
+  "__v": 0,
+  "number": 630500
+},
+{
+  "_id": {
+    "$oid": "6659456e8a78372b5069239c"
+  },
+  "data": [
+    {
+      "handle": "suvrodroy",
+      "solved": 4,
+      "penalty": 448,
+      "_id": {
+        "$oid": "6659456e8a78372b5069239d"
+      }
+    },
+    {
+      "handle": "Shuvo_Malakar",
+      "solved": 3,
+      "penalty": 227,
+      "_id": {
+        "$oid": "6659456e8a78372b5069239e"
+      }
+    },
+    {
+      "handle": "Sumaiya_1903045",
+      "solved": 4,
+      "penalty": 382,
+      "_id": {
+        "$oid": "6659456e8a78372b5069239f"
+      }
+    },
+    {
+      "handle": "sayeef_1903006",
+      "solved": 4,
+      "penalty": 450,
+      "_id": {
+        "$oid": "6659456e8a78372b506923a0"
+      }
+    },
+    {
+      "handle": "fahim_1903110",
+      "solved": 4,
+      "penalty": 458,
+      "_id": {
+        "$oid": "6659456e8a78372b506923a1"
+      }
+    },
+    {
+      "handle": "masood_1903088",
+      "solved": 4,
+      "penalty": 542,
+      "_id": {
+        "$oid": "6659456e8a78372b506923a2"
+      }
+    },
+    {
+      "handle": "adnan_1903137",
+      "solved": 4,
+      "penalty": 200,
+      "_id": {
+        "$oid": "6659456e8a78372b506923a3"
+      }
+    },
+    {
+      "handle": "faysal_1903164",
+      "solved": 1,
+      "penalty": 149,
+      "_id": {
+        "$oid": "6659456e8a78372b506923a4"
+      }
+    },
+    {
+      "handle": "Ayan29_1903162",
+      "solved": 2,
+      "penalty": 213,
+      "_id": {
+        "$oid": "6659456e8a78372b506923a5"
+      }
+    },
+    {
+      "handle": "Ghost_014",
+      "solved": 4,
+      "penalty": 471,
+      "_id": {
+        "$oid": "6659456e8a78372b506923a6"
+      }
+    },
+    {
+      "handle": "Nafis2003174",
+      "solved": 4,
+      "penalty": 315,
+      "_id": {
+        "$oid": "6659456e8a78372b506923a7"
+      }
+    },
+    {
+      "handle": "acd04",
+      "solved": 2,
+      "penalty": 141,
+      "_id": {
+        "$oid": "6659456e8a78372b506923a8"
+      }
+    },
+    {
+      "handle": "f_rabbi_ri",
+      "solved": 3,
+      "penalty": 226,
+      "_id": {
+        "$oid": "6659456e8a78372b506923a9"
+      }
+    },
+    {
+      "handle": "rhutshab1618",
+      "solved": 4,
+      "penalty": 376,
+      "_id": {
+        "$oid": "6659456e8a78372b506923aa"
+      }
+    },
+    {
+      "handle": "nion_2003021",
+      "solved": 1,
+      "penalty": 125,
+      "_id": {
+        "$oid": "6659456e8a78372b506923ab"
+      }
+    },
+    {
+      "handle": "imrat_67",
+      "solved": 3,
+      "penalty": 311,
+      "_id": {
+        "$oid": "6659456e8a78372b506923ac"
+      }
+    },
+    {
+      "handle": "wasimur_01",
+      "solved": 4,
+      "penalty": 501,
+      "_id": {
+        "$oid": "6659456e8a78372b506923ad"
+      }
+    },
+    {
+      "handle": "attoCoder",
+      "solved": 3,
+      "penalty": 207,
+      "_id": {
+        "$oid": "6659456e8a78372b506923ae"
+      }
+    },
+    {
+      "handle": "NoobLabib1",
+      "solved": 3,
+      "penalty": 186,
+      "_id": {
+        "$oid": "6659456e8a78372b506923af"
+      }
+    },
+    {
+      "handle": "EaslyubitsS",
+      "solved": 3,
+      "penalty": 282,
+      "_id": {
+        "$oid": "6659456e8a78372b506923b0"
+      }
+    },
+    {
+      "handle": "sajal_2103034",
+      "solved": 2,
+      "penalty": 388,
+      "_id": {
+        "$oid": "6659456e8a78372b506923b1"
+      }
+    },
+    {
+      "handle": "SADAT_2103108",
+      "solved": 3,
+      "penalty": 213,
+      "_id": {
+        "$oid": "6659456e8a78372b506923b2"
+      }
+    },
+    {
+      "handle": "tonmoy_2103127",
+      "solved": 3,
+      "penalty": 275,
+      "_id": {
+        "$oid": "6659456e8a78372b506923b3"
+      }
+    },
+    {
+      "handle": "Fuad_2103158",
+      "solved": 3,
+      "penalty": 311,
+      "_id": {
+        "$oid": "6659456e8a78372b506923b4"
+      }
+    },
+    {
+      "handle": "Abir_2103133",
+      "solved": 1,
+      "penalty": 45,
+      "_id": {
+        "$oid": "6659456e8a78372b506923b5"
+      }
+    },
+    {
+      "handle": "F_A_Tanzim",
+      "solved": 2,
+      "penalty": 126,
+      "_id": {
+        "$oid": "6659456e8a78372b506923b6"
+      }
+    },
+    {
+      "handle": "LoShadop",
+      "solved": 1,
+      "penalty": 76,
+      "_id": {
+        "$oid": "6659456e8a78372b506923b7"
+      }
+    },
+    {
+      "handle": "Kayum_gazi01",
+      "solved": 2,
+      "penalty": 146,
+      "_id": {
+        "$oid": "6659456e8a78372b506923b8"
+      }
+    },
+    {
+      "handle": "air007",
+      "solved": 3,
+      "penalty": 417,
+      "_id": {
+        "$oid": "6659456e8a78372b506923b9"
+      }
+    },
+    {
+      "handle": "sh_sho1kat",
+      "solved": 4,
+      "penalty": 355,
+      "_id": {
+        "$oid": "6659456e8a78372b506923ba"
+      }
+    },
+    {
+      "handle": "rakibdurjoy11",
+      "solved": 2,
+      "penalty": 160,
+      "_id": {
+        "$oid": "6659456e8a78372b506923bb"
+      }
+    },
+    {
+      "handle": "Ahnaf_2210007",
+      "solved": 1,
+      "penalty": 75,
+      "_id": {
+        "$oid": "6659456e8a78372b506923bc"
+      }
+    },
+    {
+      "handle": "2203113_TausiF",
+      "solved": 3,
+      "penalty": 343,
+      "_id": {
+        "$oid": "6659456e8a78372b506923bd"
+      }
+    },
+    {
+      "handle": "mrfhsn235",
+      "solved": 2,
+      "penalty": 179,
+      "_id": {
+        "$oid": "6659456e8a78372b506923be"
+      }
+    },
+    {
+      "handle": "moloy10",
+      "solved": 0,
+      "penalty": 0,
+      "_id": {
+        "$oid": "6659456e8a78372b506923bf"
+      }
+    },
+    {
+      "handle": "You_DontKnow_Who",
+      "solved": 2,
+      "penalty": 130,
+      "_id": {
+        "$oid": "6659456e8a78372b506923c0"
+      }
+    },
+    {
+      "handle": "nightwing_808",
+      "solved": 4,
+      "penalty": 441,
+      "_id": {
+        "$oid": "6659456e8a78372b506923c1"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": "2024-05-31T03:35:10.393Z"
+  },
+  "updatedAt": {
+    "$date": "2024-05-31T03:35:10.393Z"
+  },
+  "__v": 0,
+  "number": 631401
+},
+{
+  "_id": {
+    "$oid": "66615546720ded02cd82b566"
+  },
+  "number": 632483,
+  "data": [
+    {
+      "handle": "sayeef_1903006",
+      "solved": 1,
+      "penalty": 64,
+      "_id": {
+        "$oid": "66615546720ded02cd82b567"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": "2024-06-06T06:20:54.121Z"
+  },
+  "updatedAt": {
+    "$date": "2024-06-06T06:20:54.121Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "666155b2720ded02cd82b569"
+  },
+  "number": 603489,
+  "data": [
+    {
+      "handle": "suvrodroy",
+      "solved": 0,
+      "penalty": 0,
+      "_id": {
+        "$oid": "666155b2720ded02cd82b56a"
+      }
+    },
+    {
+      "handle": "Shuvo_Malakar",
+      "solved": 4,
+      "penalty": 347,
+      "_id": {
+        "$oid": "666155b2720ded02cd82b56b"
+      }
+    },
+    {
+      "handle": "Nipunbaishnab",
+      "solved": 4,
+      "penalty": 248,
+      "_id": {
+        "$oid": "666155b2720ded02cd82b56c"
+      }
+    },
+    {
+      "handle": "rifatrraazz",
+      "solved": 4,
+      "penalty": 363,
+      "_id": {
+        "$oid": "666155b2720ded02cd82b56d"
+      }
+    },
+    {
+      "handle": "Ashraful_9194",
+      "solved": 4,
+      "penalty": 420,
+      "_id": {
+        "$oid": "666155b2720ded02cd82b56e"
+      }
+    },
+    {
+      "handle": "esmay_1803017",
+      "solved": 3,
+      "penalty": 323,
+      "_id": {
+        "$oid": "666155b2720ded02cd82b56f"
+      }
+    },
+    {
+      "handle": "SantoECE18",
+      "solved": 1,
+      "penalty": 23,
+      "_id": {
+        "$oid": "666155b2720ded02cd82b570"
+      }
+    },
+    {
+      "handle": "faisal1803092",
+      "solved": 0,
+      "penalty": 0,
+      "_id": {
+        "$oid": "666155b2720ded02cd82b571"
+      }
+    },
+    {
+      "handle": "IMran88",
+      "solved": 1,
+      "penalty": 205,
+      "_id": {
+        "$oid": "666155b2720ded02cd82b572"
+      }
+    },
+    {
+      "handle": "Arnab_Saha",
+      "solved": 2,
+      "penalty": 141,
+      "_id": {
+        "$oid": "666155b2720ded02cd82b573"
+      }
+    },
+    {
+      "handle": "Sumaiya_1903045",
+      "solved": 2,
+      "penalty": 201,
+      "_id": {
+        "$oid": "666155b2720ded02cd82b574"
+      }
+    },
+    {
+      "handle": "sayeef_1903006",
+      "solved": 5,
+      "penalty": 444,
+      "_id": {
+        "$oid": "666155b2720ded02cd82b575"
+      }
+    },
+    {
+      "handle": "fahim_1903110",
+      "solved": 1,
+      "penalty": 332,
+      "_id": {
+        "$oid": "666155b2720ded02cd82b576"
+      }
+    },
+    {
+      "handle": "nidhi_1903080",
+      "solved": 2,
+      "penalty": 254,
+      "_id": {
+        "$oid": "666155b2720ded02cd82b577"
+      }
+    },
+    {
+      "handle": "masood_1903088",
+      "solved": 3,
+      "penalty": 196,
+      "_id": {
+        "$oid": "666155b2720ded02cd82b578"
+      }
+    },
+    {
+      "handle": "adnan_1903137",
+      "solved": 4,
+      "penalty": 153,
+      "_id": {
+        "$oid": "666155b2720ded02cd82b579"
+      }
+    },
+    {
+      "handle": "Ayan29_1903162",
+      "solved": 2,
+      "penalty": 176,
+      "_id": {
+        "$oid": "666155b2720ded02cd82b57a"
+      }
+    },
+    {
+      "handle": "Farhana_1903170",
+      "solved": 2,
+      "penalty": 153,
+      "_id": {
+        "$oid": "666155b2720ded02cd82b57b"
+      }
+    },
+    {
+      "handle": "Suraiya_1903153",
+      "solved": 1,
+      "penalty": 154,
+      "_id": {
+        "$oid": "666155b2720ded02cd82b57c"
+      }
+    },
+    {
+      "handle": "megatron_007",
+      "solved": 0,
+      "penalty": 0,
+      "_id": {
+        "$oid": "666155b2720ded02cd82b57d"
+      }
+    },
+    {
+      "handle": "abid_18",
+      "solved": 2,
+      "penalty": 354,
+      "_id": {
+        "$oid": "666155b2720ded02cd82b57e"
+      }
+    },
+    {
+      "handle": "Ghost_014",
+      "solved": 4,
+      "penalty": 583,
+      "_id": {
+        "$oid": "666155b2720ded02cd82b57f"
+      }
+    },
+    {
+      "handle": "Nafis2003174",
+      "solved": 4,
+      "penalty": 294,
+      "_id": {
+        "$oid": "666155b2720ded02cd82b580"
+      }
+    },
+    {
+      "handle": "FAHEDUL_ISLAM",
+      "solved": 2,
+      "penalty": 220,
+      "_id": {
+        "$oid": "666155b2720ded02cd82b581"
+      }
+    },
+    {
+      "handle": "tanvir_akon",
+      "solved": 1,
+      "penalty": 133,
+      "_id": {
+        "$oid": "666155b2720ded02cd82b582"
+      }
+    },
+    {
+      "handle": "acd04",
+      "solved": 1,
+      "penalty": 132,
+      "_id": {
+        "$oid": "666155b2720ded02cd82b583"
+      }
+    },
+    {
+      "handle": "foyez2003063",
+      "solved": 2,
+      "penalty": 204,
+      "_id": {
+        "$oid": "666155b2720ded02cd82b584"
+      }
+    },
+    {
+      "handle": "RezwanaRifah",
+      "solved": 0,
+      "penalty": 0,
+      "_id": {
+        "$oid": "666155b2720ded02cd82b585"
+      }
+    },
+    {
+      "handle": "f_rabbi_ri",
+      "solved": 2,
+      "penalty": 317,
+      "_id": {
+        "$oid": "666155b2720ded02cd82b586"
+      }
+    },
+    {
+      "handle": "rhutshab1618",
+      "solved": 2,
+      "penalty": 197,
+      "_id": {
+        "$oid": "666155b2720ded02cd82b587"
+      }
+    },
+    {
+      "handle": "Touhidul2003051",
+      "solved": 1,
+      "penalty": 53,
+      "_id": {
+        "$oid": "666155b2720ded02cd82b588"
+      }
+    },
+    {
+      "handle": "imrat_67",
+      "solved": 4,
+      "penalty": 461,
+      "_id": {
+        "$oid": "666155b2720ded02cd82b589"
+      }
+    },
+    {
+      "handle": "wasimur_01",
+      "solved": 3,
+      "penalty": 353,
+      "_id": {
+        "$oid": "666155b2720ded02cd82b58a"
+      }
+    },
+    {
+      "handle": "Dahy",
+      "solved": 3,
+      "penalty": 375,
+      "_id": {
+        "$oid": "666155b2720ded02cd82b58b"
+      }
+    },
+    {
+      "handle": "NoobLabib1",
+      "solved": 2,
+      "penalty": 392,
+      "_id": {
+        "$oid": "666155b2720ded02cd82b58c"
+      }
+    },
+    {
+      "handle": "EaslyubitsS",
+      "solved": 1,
+      "penalty": 132,
+      "_id": {
+        "$oid": "666155b2720ded02cd82b58d"
+      }
+    },
+    {
+      "handle": "Mushfiqur01",
+      "solved": 0,
+      "penalty": 0,
+      "_id": {
+        "$oid": "666155b2720ded02cd82b58e"
+      }
+    },
+    {
+      "handle": "Rayhan_2103049",
+      "solved": 0,
+      "penalty": 0,
+      "_id": {
+        "$oid": "666155b2720ded02cd82b58f"
+      }
+    },
+    {
+      "handle": "shafayet_2110057",
+      "solved": 1,
+      "penalty": 99,
+      "_id": {
+        "$oid": "666155b2720ded02cd82b590"
+      }
+    },
+    {
+      "handle": "MD_TAMIM_2103094",
+      "solved": 0,
+      "penalty": 0,
+      "_id": {
+        "$oid": "666155b2720ded02cd82b591"
+      }
+    },
+    {
+      "handle": "SADAT_2103108",
+      "solved": 2,
+      "penalty": 373,
+      "_id": {
+        "$oid": "666155b2720ded02cd82b592"
+      }
+    },
+    {
+      "handle": "arnob_2103152",
+      "solved": 3,
+      "penalty": 528,
+      "_id": {
+        "$oid": "666155b2720ded02cd82b593"
+      }
+    },
+    {
+      "handle": "tonmoy_2103127",
+      "solved": 0,
+      "penalty": 0,
+      "_id": {
+        "$oid": "666155b2720ded02cd82b594"
+      }
+    },
+    {
+      "handle": "Fuad_2103158",
+      "solved": 0,
+      "penalty": 0,
+      "_id": {
+        "$oid": "666155b2720ded02cd82b595"
+      }
+    },
+    {
+      "handle": "anirban_2110060",
+      "solved": 0,
+      "penalty": 0,
+      "_id": {
+        "$oid": "666155b2720ded02cd82b596"
+      }
+    },
+    {
+      "handle": "F_A_Tanzim",
+      "solved": 2,
+      "penalty": 316,
+      "_id": {
+        "$oid": "666155b2720ded02cd82b597"
+      }
+    },
+    {
+      "handle": "Kayum_gazi01",
+      "solved": 0,
+      "penalty": 0,
+      "_id": {
+        "$oid": "666155b2720ded02cd82b598"
+      }
+    },
+    {
+      "handle": "fahim_2110055",
+      "solved": 0,
+      "penalty": 0,
+      "_id": {
+        "$oid": "666155b2720ded02cd82b599"
+      }
+    },
+    {
+      "handle": "air007",
+      "solved": 1,
+      "penalty": 29,
+      "_id": {
+        "$oid": "666155b2720ded02cd82b59a"
+      }
+    },
+    {
+      "handle": "sh_sho1kat",
+      "solved": 2,
+      "penalty": 317,
+      "_id": {
+        "$oid": "666155b2720ded02cd82b59b"
+      }
+    },
+    {
+      "handle": "Ranger_SdK",
+      "solved": 1,
+      "penalty": 134,
+      "_id": {
+        "$oid": "666155b2720ded02cd82b59c"
+      }
+    },
+    {
+      "handle": "Zesanul_2103123",
+      "solved": 2,
+      "penalty": 268,
+      "_id": {
+        "$oid": "666155b2720ded02cd82b59d"
+      }
+    },
+    {
+      "handle": "2203113_TausiF",
+      "solved": 0,
+      "penalty": 0,
+      "_id": {
+        "$oid": "666155b2720ded02cd82b59e"
+      }
+    },
+    {
+      "handle": "nafis2203171",
+      "solved": 0,
+      "penalty": 0,
+      "_id": {
+        "$oid": "666155b2720ded02cd82b59f"
+      }
+    },
+    {
+      "handle": "You_DontKnow_Who",
+      "solved": 2,
+      "penalty": 187,
+      "_id": {
+        "$oid": "666155b2720ded02cd82b5a0"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": "2024-06-06T06:22:42.780Z"
+  },
+  "updatedAt": {
+    "$date": "2024-06-06T06:22:42.780Z"
+  },
+  "__v": 0
+}]

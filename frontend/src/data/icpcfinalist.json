@@ -1,0 +1,61 @@
+{
+    "teams": [
+        {   
+            "finalTitle": "",
+            "teamName": "",
+            "teamPhoto": "",
+            "teamMembers": [
+                {
+                    "name": "Tauhedul Haque Tanu",
+                    "photoLink": "",
+                    "series": 16,
+                    "cfHandle": "tanus_era",
+                    "linkedin": ""
+                },
+                {
+                    "name": "Risal Shahriar Shefin",
+                    "photoLink": "",
+                    "series": 16,
+                    "cfHandle": "Shefin_ ",
+                    "linkedin": ""
+                },
+                {
+                    "name": "",
+                    "photoLink": "",
+                    "series": 16,
+                    "cfHandle": "",
+                    "linkedin": ""
+                }
+            ]
+        },
+        {
+            "finalTitle": "",
+            "teamName": "",
+            "teamPhoto": "",
+            "teamMembers": [
+                {
+                    "name": "Risal Shahriar Shefin",
+                    "photoLink": "",
+                    "series": 16,
+                    "cfHandle": "Shefin_ ",
+                    "linkedin": ""
+                },
+
+                {
+                    "name": "Adnan Toky",
+                    "photoLink": "",
+                    "series": 19,
+                    "cfHandle": "adnan_toky",
+                    "linkedin": ""
+                },
+                {
+                    "name": "Sayeef Mahmud",
+                    "photoLink": "",
+                    "series": 16,
+                    "cfHandle": "thisIsMorningstar",
+                    "linkedin": ""
+                }
+            ]
+        }
+    ]
+}

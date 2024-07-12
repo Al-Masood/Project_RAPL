@@ -1,5 +1,5 @@
 const users = require('../models/users')
-const axios = require('axios');
+const axios = require('axios')
 
 async function cfRating (req, res){
     const type = req.body.type

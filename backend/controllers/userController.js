@@ -6,6 +6,7 @@ const nodemailer = require('nodemailer')
 const users = require('../models/users')
 const tempUsers = require('../models/tempusers')
 const changeRequests = require('../models/changerequests')
+const axios = require('axios');
 
 const createToken = (_id) => {
     return jwt.sign({ _id }, process.env.SECRET, { expiresIn: '3d' })
@@ -27,18 +28,32 @@ const signupUser = async (req, res) => {
             return res.status(400).send('Email is not valid')
         }
 
+        let apiURL = 'https://codeforces.com/api/user.info?handles='
+        apiURL+=data.cfHandle
+
+        try {
+            await axios.get(apiURL)
+        } catch {
+            return res.status(400).send('Codeforces handle is not valid')
+        }
+
         if (!validator.isStrongPassword(data.password)) {
-            return res.status(400).send('Password is not strong enough')
+            return res.status(400).send('Password must contain at least 8 characters, including uppercase, lowercase, digits, and symbols.')
+        }
+
+
+        if (data.password !== data.confirmPassword) {
+            return res.status(400).send('Passwords do not match')
         }
 
         const existingUser = await users.findOne({ email: data.email })
         const unapprovedUser = await tempUsers.findOne({ email: data.email })
 
         if (existingUser) {
-            return res.status(400).send('Existing User')
+            return res.status(400).send('User exists with this email')
         }
         if (unapprovedUser) {
-            return res.status(400).send('Unapproved User')
+            return res.status(400).send('You already have a signup request pending approval')
         }
 
         const salt = await bcrypt.genSalt(10)
@@ -48,7 +63,7 @@ const signupUser = async (req, res) => {
         const tempUser = new tempUsers(data)
         await tempUser.save()
 
-        res.status(200).send('User added to temporary approval list')
+        res.status(200).send('Your signup request has been send for approval')
     } catch (error) {
         console.log(error)
         res.status(500).send('Server Error')
@@ -106,6 +121,21 @@ const addUser = async (req, res) => {
         if (!query) {
             return res.status(400).send('No such user in temporary users')
         }
+
+        const mailOptions = {
+            to: data.email,
+            from: process.env.EMAIL,
+            subject: 'RAPL website signup request approved',
+            text: 'Your signup request for RAPL website has been approved.'
+        }
+
+        transporter.sendMail(mailOptions, (err) => {
+            if(err) {
+                console.log(err)
+                return res.status(500).send('Error sending email')
+            }
+            res.status(200).send('Approval email sent')
+        })
 
         const user = new users(query.toObject())
         await user.save()

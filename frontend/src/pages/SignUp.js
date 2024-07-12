@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL
+const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
 
 const SignUp = () => {
     const [name, setName] = useState('');
@@ -10,6 +10,7 @@ const SignUp = () => {
     const [ccHandle, setCCHandle] = useState('');
     const [atcoderHandle, setAtcoderHandle] = useState('');
     const [password, setPassword] = useState('');
+    const [confirmPassword, setConfirmPassword] = useState('');
     const [error, setError] = useState('');
     const [success, setSuccess] = useState('');
 
@@ -23,6 +24,7 @@ const SignUp = () => {
             setCCHandle('');
             setAtcoderHandle('');
             setPassword('');
+            setConfirmPassword('');
         }
     }, [success]);
 
@@ -30,6 +32,7 @@ const SignUp = () => {
         e.preventDefault();
         setError('');
         setSuccess('');
+
         const user = {
             name,
             email,
@@ -38,7 +41,8 @@ const SignUp = () => {
             vjHandle,
             ccHandle,
             atcoderHandle,
-            password
+            password,
+            confirmPassword
         };
 
         const response = await fetch(`${BACKEND_URL}/signup`, {
@@ -61,52 +65,57 @@ const SignUp = () => {
         <form className="listing" onSubmit={handleSubmit}>
             <h2>Sign Up</h2>
             <div className="details-group">
-                <label>Name:</label>
+                <label>Name *</label>
                 <input
                     className='input-field'
                     type='text'
                     onChange={(e) => setName(e.target.value)}
                     value={name}
+                    required
                 />
             </div>
             <div className="details-group">
-                <label>Email:</label>
+                <label>Email *</label>
                 <input
                     className='input-field'
                     type='email'
                     onChange={(e) => setEmail(e.target.value)}
                     value={email}
+                    required
                 />
             </div>
             <div className="details-group">
-                <label>Roll:</label>
+                <label>Roll *</label>
                 <input
                     className='input-field'
                     type='text'
                     onChange={(e) => setRoll(e.target.value)}
                     value={roll}
+                    required
                 />
             </div>
             <div className="details-group">
-                <label>Codeforces Handle:</label>
+                <label>Codeforces Handle *</label>
                 <input
                     className='input-field'
                     type='text'
                     onChange={(e) => setCFHandle(e.target.value)}
                     value={cfHandle}
+                    required
                 />
             </div>
             <div className="details-group">
-                <label>VJudge Handle:</label>
+                <label>VJudge Handle *</label>
                 <input
                     className='input-field'
                     type='text'
                     onChange={(e) => setVJHandle(e.target.value)}
                     value={vjHandle}
+                    required
                 />
             </div>
             <div className="details-group">
-                <label>CodeChef Handle:</label>
+                <label>CodeChef Handle</label>
                 <input
                     className='input-field'
                     type='text'
@@ -115,7 +124,7 @@ const SignUp = () => {
                 />
             </div>
             <div className="details-group">
-                <label>Atcoder Handle:</label>
+                <label>Atcoder Handle</label>
                 <input
                     className='input-field'
                     type='text'
@@ -124,12 +133,23 @@ const SignUp = () => {
                 />
             </div>
             <div className="details-group">
-                <label>Password:</label>
+                <label>Password *</label>
                 <input
                     className='input-field'
                     type='password'
                     onChange={(e) => setPassword(e.target.value)}
                     value={password}
+                    required
+                />
+            </div>
+            <div className="details-group">
+                <label>Confirm Password *</label>
+                <input
+                    className='input-field'
+                    type='password'
+                    onChange={(e) => setConfirmPassword(e.target.value)}
+                    value={confirmPassword}
+                    required
                 />
             </div>
             <div className="button-group">

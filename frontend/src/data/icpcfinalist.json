@@ -1,41 +1,41 @@
 {
     "teams": [
         {   
-            "finalTitle": "",
+            "finalsTitle": "45th ICPC World Finals",
             "teamName": "",
             "teamPhoto": "",
             "teamMembers": [
                 {
-                    "name": "Tauhedul Haque Tanu",
-                    "photoLink": "",
+                    "name": "Tauhedul Islam Tanu",
+                    "photo": "sayeef.jpg",
                     "series": 16,
                     "cfHandle": "tanus_era",
                     "linkedin": ""
                 },
                 {
                     "name": "Risal Shahriar Shefin",
-                    "photoLink": "",
+                    "photo": "sayeef.jpg",
                     "series": 16,
                     "cfHandle": "Shefin_ ",
                     "linkedin": ""
                 },
                 {
-                    "name": "",
-                    "photoLink": "",
+                    "name": "Shahwat Hasnaine",
+                    "photo": "sayeef.jpg",
                     "series": 16,
-                    "cfHandle": "",
+                    "cfHandle": "Hasnaine_",
                     "linkedin": ""
                 }
             ]
         },
         {
-            "finalTitle": "",
-            "teamName": "",
+            "finalsTitle": "46th ICPC World Finals",
+            "teamName": "RUET_Aftermath",
             "teamPhoto": "",
             "teamMembers": [
                 {
                     "name": "Risal Shahriar Shefin",
-                    "photoLink": "",
+                    "photo": "sayeef.jpg",
                     "series": 16,
                     "cfHandle": "Shefin_ ",
                     "linkedin": ""
@@ -43,15 +43,15 @@
 
                 {
                     "name": "Adnan Toky",
-                    "photoLink": "",
+                    "photo": "sayeef.jpg",
                     "series": 19,
                     "cfHandle": "adnan_toky",
                     "linkedin": ""
                 },
                 {
                     "name": "Sayeef Mahmud",
-                    "photoLink": "",
-                    "series": 16,
+                    "photo": "sayeef.jpg",
+                    "series": 19,
                     "cfHandle": "thisIsMorningstar",
                     "linkedin": ""
                 }

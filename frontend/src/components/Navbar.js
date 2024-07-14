@@ -2,7 +2,7 @@ import { Link, useLocation } from "react-router-dom";
 import { useLogout } from "../hooks/UseLogout";
 import { useAuthContext } from "../hooks/UseAuthContext";
 import '../css/Navbar.css';
-import logo from '../data/photos/rapl-logo.png';
+import logo from '../data/photos/rapl_logo_brand.jpg';
 
 const Navbar = () => {
     const { logout } = useLogout();

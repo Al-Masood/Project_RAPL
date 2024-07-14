@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import '../css/Selector.css'
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL
+import Select from 'react-select';
+import '../css/Selector.css';
+
+import customStyles from './SelectorCustomStyles';
+
+const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
 
 const CFSelector = ({ updateURL, initial }) => {
     const [year, setYear] = useState(initial.year || 2024);
@@ -16,56 +20,71 @@ const CFSelector = ({ updateURL, initial }) => {
                 'Content-Type': 'application/json'
             }
         })
-            .then(res => res.json())
-            .then(data => setCount(data));
+        .then(res => res.json())
+        .then(data => setCount(data));
     }, [year, month]);
 
-    const updateYear = (event) => {
-        setYear(event.target.value);
+    const updateYear = (selectedOption) => {
+        setYear(selectedOption.value);
         setBestof(0);
     };
 
-    const updateMonth = (event) => {
-        setMonth(event.target.value);
+    const updateMonth = (selectedOption) => {
+        setMonth(selectedOption.value);
         setBestof(0);
     };
 
-    const updateBestof = (event) => {
-        setBestof(event.target.value);
+    const updateBestof = (selectedOption) => {
+        setBestof(selectedOption.value);
     };
 
     const handleGenerateRanklist = () => {
         updateURL(year, month, bestof);
     };
 
+    const yearOptions = [
+        { value: 2024, label: 2024 },
+    ];
+
+    const monthOptions = Array.from({ length: 12 }, (_, i) => ({
+        value: i + 1,
+        label: i + 1
+    }));
+
+    const bestofOptions = Array.from({ length: count + 1 }, (_, i) => ({
+        value: i,
+        label: i
+    }));
+
     return (
         <div className='selector'>
-            <div>
+            <div className="selector-row">
                 <label>Select Year:</label>
                 <div className="select-wrapper">
-                    <select className="select-field" onChange={updateYear} value={year}>
-                        <option>2024</option>
-                    </select>
+                    <Select 
+                        styles={customStyles}
+                        options={yearOptions} 
+                        onChange={updateYear} 
+                        value={yearOptions.find(option => option.value === year)} 
+                    />
                 </div>
-            </div>
-            <div>
                 <label>Select Month:</label>
                 <div className="select-wrapper">
-                    <select className="select-field" onChange={updateMonth} value={month}>
-                        {Array.from({ length: 12 }, (_, i) => i + 1).map(i => (
-                            <option key={i} value={i}>{i}</option>
-                        ))}
-                    </select>
+                    <Select 
+                        styles={customStyles}
+                        options={monthOptions} 
+                        onChange={updateMonth} 
+                        value={monthOptions.find(option => option.value === month)} 
+                    />
                 </div>
-            </div>
-            <div>
                 <label>Best of:</label>
                 <div className="select-wrapper">
-                    <select className="select-field" onChange={updateBestof} value={bestof}>
-                        {Array.from({ length: count + 1 }, (_, i) => i).map(i => (
-                            <option key={i} value={i}>{i}</option>
-                        ))}
-                    </select>
+                    <Select 
+                        styles={customStyles}
+                        options={bestofOptions} 
+                        onChange={updateBestof} 
+                        value={bestofOptions.find(option => option.value === bestof)} 
+                    />
                 </div>
             </div>
             <div className="button-group">

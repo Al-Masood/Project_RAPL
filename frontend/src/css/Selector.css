@@ -1,50 +1,25 @@
-.select-field {
-    background-color: #ffffff33;
-    color: white;
+.selector {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: #112233;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.selector-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid white;
-    border-radius: 5px;
-    box-sizing: border-box;
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    position: relative; /* Added to support the pseudo-element */
-}
-
-.select-field:after {
-    content: "▼";
-    font-size: 14px;
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    pointer-events: none;
-}
-
-.select-field:focus {
-    outline: none;
-    border-color: #71f6ba;
 }
 
 .select-wrapper {
-    position: relative;
-    display: inline-block;
+    max-width: 200px;
     width: 100%;
-}
-
-.select-field option {
-    background-color: #112233;
-    color: white;
-    padding: 10px;
-}
-
-.select-field option:hover {
-    background-color: #334455;
-}
-
-.select-field option:checked {
-    background-color: #71f6ba;
-    color: #112233;
 }

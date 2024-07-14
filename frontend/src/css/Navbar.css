@@ -1,0 +1,68 @@
+header {
+    background-color: #010f1a;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 5%; /* Reduced padding */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: bolder;
+}
+
+header * {
+    color: white;
+}
+
+header .navbar-brand {
+    flex: 0 0 auto; /* Do not grow or shrink */
+}
+
+header .navbar-brand img {
+    height: 40px; /* Adjust as necessary */
+}
+
+header .navbar-links {
+    display: flex;
+    flex: 1 1 auto; /* Grow and shrink as necessary */
+    justify-content: center;
+    gap: 15px; /* Adjusted gap for smaller font size */
+}
+
+header .navbar-links a {
+    text-decoration: none;
+    padding: 8px; /* Adjusted padding for smaller font size */
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+    font-size: 12px; /* Reduced font size */
+}
+
+header .navbar-links a:hover {
+    background-color: #1a1a1a;
+}
+
+header .navbar-links a.active {
+    background-color: #1a1a1a;
+    color: #00aaff;
+}
+
+header .navbar-user {
+    display: flex;
+    justify-content: flex-end;
+    flex: 0 0 auto; /* Do not grow or shrink */
+    gap: 15px; /* Adjusted gap for smaller font size */
+    white-space: nowrap; /* Prevent text wrapping */
+}
+
+header .navbar-user a {
+    text-decoration: none;
+    padding: 8px; /* Adjusted padding for smaller font size */
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+    font-size: 12px; /* Reduced font size */
+}
+
+header .navbar-user a:hover {
+    background-color: #1a1a1a;
+}

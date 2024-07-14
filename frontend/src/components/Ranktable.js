@@ -1,3 +1,5 @@
+import '../css/Table.css'
+
 const Ranktable = ({finalRanklist}) => {
     if(finalRanklist.length === 0){
         return (

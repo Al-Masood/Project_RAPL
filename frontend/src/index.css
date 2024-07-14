@@ -10,32 +10,10 @@
 }
 
 body{
-  background-color: #021320;
+  background: linear-gradient(to bottom, #022641, #010f1a);
   padding-top: 80px;
 }
 
-header {
-  background-color: #71f6ba;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 20px 10%;
-  display: flex;  
-  justify-content: space-between;
-  font-size: 14.5px;
-  font-weight: bolder;
-}
-
-header *{
-  color: black
-}
-
-.navbar-links, .navbar-user{
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-}
 
 a {
   text-decoration: none;
@@ -45,48 +23,9 @@ a {
 .pages {
   max-width: 1400px;
   margin: 0 auto;
+  min-height: 100vh;
   padding: 20px;
-}
-
-.table-container {
-  width: 100%;
-  margin: 20px auto;
-  overflow: auto;
-  max-height: 600px; /* Adjust as needed */
-  font-family: Arial, sans-serif;
-  color: #ddd;
-  background-color: #021320;
-  border-radius: 8px;
-}
-
-.table-container table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-.table-container thead th {
-  position: sticky;
-  top: 0;
-  background-color: #112233;
-  z-index: 1; /* Ensure the header is above the table rows */
-}
-
-.table-container th, .table-container td {
-  padding: 12px 15px;
-  border: 1px solid #333;
-  text-align: left;
-}
-
-.table-container tr:nth-child(even) {
-  background-color: #112233;
-}
-
-.table-container tr:nth-child(odd) {
-  background-color: #334455
-}
-
-.table-container tr:hover {
-  background-color: #333;
+  padding-bottom: 80px;
 }
 
 .listing {
@@ -191,66 +130,9 @@ span {
   max-width: 100%
 }
 
-
-.select-field {
-  background-color: #ffffff33;
-  color: white;
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-  border: 1px solid white;
-  border-radius: 5px;
-  box-sizing: border-box;
-  appearance: none; /* Remove default arrow */
-  -webkit-appearance: none; /* Remove default arrow for Safari */
-  -moz-appearance: none; /* Remove default arrow for Firefox */
-}
-
-/* Arrow for the select element */
-.select-field:after {
-  content: "▼";
-  font-size: 14px;
-  position: absolute;
-  right: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-  pointer-events: none; /* Makes sure the arrow doesn't block the text */
-}
-
-/* Style for the select element on focus */
-.select-field:focus {
-  outline: none;
-  border-color: #71f6ba;
-}
-
-/* Optional: Add padding for the select arrow */
-.select-wrapper {
-  position: relative;
-  display: inline-block;
-  width: 100%;
-}
-
-.select-field option {
-  background-color: #112233;
-  color: white;
-  padding: 10px;
-}
-
-/* Hover effect for options */
-.select-field option:hover {
-  background-color: #334455;
-}
-
-/* Selected option */
-.select-field option:checked {
-  background-color: #71f6ba;
-  color: #112233;
-}
-
-/* Style for error messages */
 .error {
-  color: #ffb3b3; /* Light red for errors */
-  background-color: #2a1a1a; /* Dark background */
+  color: #ffb3b3;
+  background-color: #2a1a1a;
   padding: 10px;
   margin-top: 10px;
   border-radius: 5px;
@@ -258,10 +140,9 @@ span {
   border: 1px solid #ffb3b3;
 }
 
-/* Style for success messages */
 .success {
-  color: #b3ffb3; /* Light green for success messages */
-  background-color: #1a2a1a; /* Dark background */
+  color: #b3ffb3;
+  background-color: #1a2a1a;
   padding: 10px;
   margin-top: 10px;
   border-radius: 5px;
@@ -269,14 +150,11 @@ span {
   border: 1px solid #b3ffb3;
 }
 
-/* Existing CSS here */
-
-/* Loading Spinner */
 .loading-spinner-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* Full height of the viewport */
+  height: 50vh;
 }
 
 .loading-spinner {

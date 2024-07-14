@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import '../css/Selector.css'
 const BACKEND_URL = process.env.REACT_APP_BACKEND_URL
 
 const CFSelector = ({ updateURL, initial }) => {

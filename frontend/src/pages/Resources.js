@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import '../css/Resources.css';
+import '../css/Table.css';
 import beginnerData from '../data/beginnerplan.json';
 import advancedData from '../data/advancedplan.json';
 

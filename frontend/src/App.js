@@ -14,7 +14,9 @@ import Profile from './pages/Profile';
 import ForgotPassword from './pages/ForgotPassword';
 import ResetPassword from './pages/ResetPassword';
 import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 import { useAuthContext } from "./hooks/UseAuthContext";
+import './css/App.css'
 
 function App() {
   const { user } = useAuthContext()
@@ -69,6 +71,7 @@ function App() {
             <Route path="*" element={<Navigate to="/" />} />
           </Routes>
         </div>
+        <Footer />
       </BrowserRouter>
     </div>
   );

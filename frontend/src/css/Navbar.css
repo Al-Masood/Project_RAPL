@@ -4,11 +4,12 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 15px 5%; /* Reduced padding */
+    padding: 15px 5%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     font-weight: bolder;
+    z-index: 1000; /* Ensure the navbar is above other elements */
 }
 
 header * {
@@ -16,27 +17,38 @@ header * {
 }
 
 header .navbar-brand {
-    flex: 0 0 auto; /* Do not grow or shrink */
+    display: flex;
+    align-items: center;
 }
 
 header .navbar-brand img {
     border-radius: 8px;
-    height: 40px; /* Adjust as necessary */
+    height: 40px;
+}
+
+header .navbar-brand .mobile-menu-toggle {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    margin-left: 15px;
 }
 
 header .navbar-links {
     display: flex;
-    flex: 1 1 auto; /* Grow and shrink as necessary */
+    flex: 1;
     justify-content: center;
-    gap: 15px; /* Adjusted gap for smaller font size */
+    gap: 15px;
 }
 
 header .navbar-links a {
     text-decoration: none;
-    padding: 8px; /* Adjusted padding for smaller font size */
+    padding: 8px;
     border-radius: 4px;
     transition: background-color 0.3s, color 0.3s;
-    font-size: 12px; /* Reduced font size */
+    font-size: 12px;
 }
 
 header .navbar-links a:hover {
@@ -51,19 +63,40 @@ header .navbar-links a.active {
 header .navbar-user {
     display: flex;
     justify-content: flex-end;
-    flex: 0 0 auto; /* Do not grow or shrink */
-    gap: 15px; /* Adjusted gap for smaller font size */
-    white-space: nowrap; /* Prevent text wrapping */
+    flex: 0 0 auto;
+    gap: 15px;
+    white-space: nowrap;
 }
 
 header .navbar-user a {
     text-decoration: none;
-    padding: 8px; /* Adjusted padding for smaller font size */
+    padding: 8px;
     border-radius: 4px;
     transition: background-color 0.3s, color 0.3s;
-    font-size: 12px; /* Reduced font size */
+    font-size: 12px;
 }
 
 header .navbar-user a:hover {
     background-color: #1a1a1a;
+}
+
+@media (max-width: 768px) {
+    header .navbar-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #010f1a;
+        z-index: 999;
+    }
+
+    header .navbar-links.open {
+        display: flex;
+    }
+
+    header .navbar-brand .mobile-menu-toggle {
+        display: block;
+    }
 }

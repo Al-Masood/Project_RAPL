@@ -1,6 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import { useLogout } from "../hooks/UseLogout";
 import { useAuthContext } from "../hooks/UseAuthContext";
+import { useState } from "react";
 import '../css/Navbar.css';
 import logo from '../data/photos/rapl_logo_brand.jpg';
 
@@ -8,9 +9,14 @@ const Navbar = () => {
     const { logout } = useLogout();
     const { user } = useAuthContext();
     const location = useLocation();
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
     const handleClick = () => {
         logout();
+    };
+
+    const toggleMobileMenu = () => {
+        setIsMobileMenuOpen(!isMobileMenuOpen);
     };
 
     const links = [
@@ -29,14 +35,18 @@ const Navbar = () => {
                 <Link to="/">
                     <img src={logo} alt="RAPL Logo" />
                 </Link>
+                <button className="mobile-menu-toggle" onClick={toggleMobileMenu}>
+                    &#9776;
+                </button>
             </div>
 
-            <nav className="navbar-links">
+            <nav className={`navbar-links ${isMobileMenuOpen ? 'open' : ''}`}>
                 {links.map(link => (
                     <Link
                         key={link.to}
                         to={link.to}
                         className={location.pathname === link.to ? "active" : ""}
+                        onClick={() => setIsMobileMenuOpen(false)}
                     >
                         {link.label}
                     </Link>
@@ -45,6 +55,7 @@ const Navbar = () => {
                     <Link
                         to="/adminpanel"
                         className={location.pathname === "/adminpanel" ? "active" : ""}
+                        onClick={() => setIsMobileMenuOpen(false)}
                     >
                         Admin Panel
                     </Link>

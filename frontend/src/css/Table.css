@@ -26,6 +26,7 @@
     padding: 12px 15px;
     border: 1px solid #333;
     text-align: left;
+    white-space: nowrap;
 }
 
 .table-container tr:nth-child(even) {

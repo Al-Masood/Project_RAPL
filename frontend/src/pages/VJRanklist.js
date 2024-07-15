@@ -1,33 +1,49 @@
-import { useState, useEffect } from 'react'
-import Ranktable from '../components/Ranktable.js'
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL
+import React, { useState, useEffect } from 'react';
+import Ranktable from '../components/Ranktable.js';
+const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
 
-const currentContestNumbers = [627365, 628754, 629205, 630390, 630500, 631401]
+const currentContestNumbers = [627365, 628754, 629205, 630390, 630500, 631401];
 
 const VJRank = () => {
-    const [ranklist, setRanklist] = useState([])
+    const [ranklist, setRanklist] = useState([]);
+    const [loading, setLoading] = useState(false); // Add loading state
 
     useEffect(() => {
         const fetchRanklist = async () => {
-            const response = await fetch(`${BACKEND_URL}/vjudgeranklist`, {
-                method: 'POST',
-                body: JSON.stringify(currentContestNumbers),
-                headers: {
-                    'Content-Type': 'application/json'
-                }
-            })
+            setLoading(true); // Set loading state to true before fetching
 
-            const ranklist = await response.json()
-            setRanklist(ranklist)
-        }
-        fetchRanklist()
-    }, [])
+            try {
+                const response = await fetch(`${BACKEND_URL}/vjudgeranklist`, {
+                    method: 'POST',
+                    body: JSON.stringify(currentContestNumbers),
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                });
+
+                const ranklist = await response.json();
+                setRanklist(ranklist);
+            } catch (error) {
+                console.error('Error fetching ranklist:', error);
+            } finally {
+                setLoading(false); // Set loading state to false after fetching
+            }
+        };
+
+        fetchRanklist();
+    }, []);
 
     return (
         <div className='vjrank'>
-            <Ranktable finalRanklist={ranklist} />
+            {loading ? (
+                <div className="loading-spinner-container">
+                    <div className="loading-spinner"></div>
+                </div>
+            ) : (
+                <Ranktable finalRanklist={ranklist} />
+            )}
         </div>
-    )
-}
+    );
+};
 
-export default VJRank
+export default VJRank;

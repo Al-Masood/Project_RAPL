@@ -32,15 +32,14 @@
 .member {
   margin: 10px;
   padding: 10px;
-  background-color: #112233;
   border-radius: 10px;
   width: 200px;
   text-align: center;
 }
 
 .team-photo {
-  width: 600px;
-  height: 400px;
+  max-width: 75%;
+  height: auto; 
   border-radius: 5px;
   margin-bottom: 10px;
 }

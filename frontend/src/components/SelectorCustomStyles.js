@@ -26,6 +26,7 @@ const customStyles = {
         borderRadius: '5px',
         border: '1px solid white',
         boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+        zIndex: 9999,
     }),
     option: (provided, state) => ({
         ...provided,

@@ -20,8 +20,8 @@ const CFSelector = ({ updateURL, initial }) => {
                 'Content-Type': 'application/json'
             }
         })
-        .then(res => res.json())
-        .then(data => setCount(data));
+            .then(res => res.json())
+            .then(data => setCount(data));
     }, [year, month]);
 
     const updateYear = (selectedOption) => {
@@ -30,7 +30,7 @@ const CFSelector = ({ updateURL, initial }) => {
     };
 
     const updateMonth = (selectedOption) => {
-        setMonth(selectedOption.value);
+        setMonth(selectedOption.value); // Update using value
         setBestof(0);
     };
 
@@ -46,10 +46,20 @@ const CFSelector = ({ updateURL, initial }) => {
         { value: 2024, label: 2024 },
     ];
 
-    const monthOptions = Array.from({ length: 12 }, (_, i) => ({
-        value: i + 1,
-        label: i + 1
-    }));
+    const monthOptions = [
+        { value: 1, label: 'January' },
+        { value: 2, label: 'February' },
+        { value: 3, label: 'March' },
+        { value: 4, label: 'April' },
+        { value: 5, label: 'May' },
+        { value: 6, label: 'June' },
+        { value: 7, label: 'July' },
+        { value: 8, label: 'August' },
+        { value: 9, label: 'September' },
+        { value: 10, label: 'October' },
+        { value: 11, label: 'November' },
+        { value: 12, label: 'December' },
+    ];
 
     const bestofOptions = Array.from({ length: count + 1 }, (_, i) => ({
         value: i,
@@ -59,31 +69,31 @@ const CFSelector = ({ updateURL, initial }) => {
     return (
         <div className='selector'>
             <div className="selector-row">
-                <label>Select Year:</label>
                 <div className="select-wrapper">
-                    <Select 
+                    <label>Select Year:</label>
+                    <Select
                         styles={customStyles}
-                        options={yearOptions} 
-                        onChange={updateYear} 
-                        value={yearOptions.find(option => option.value === year)} 
+                        options={yearOptions}
+                        onChange={updateYear}
+                        value={yearOptions.find(option => option.value === year)}
                     />
                 </div>
-                <label>Select Month:</label>
                 <div className="select-wrapper">
-                    <Select 
+                    <label>Select Month:</label>
+                    <Select
                         styles={customStyles}
-                        options={monthOptions} 
-                        onChange={updateMonth} 
-                        value={monthOptions.find(option => option.value === month)} 
+                        options={monthOptions}
+                        onChange={updateMonth}
+                        value={monthOptions.find(option => option.value === month)} // Update to find by value
                     />
                 </div>
-                <label>Best of:</label>
                 <div className="select-wrapper">
-                    <Select 
+                    <label>Best of:</label>
+                    <Select
                         styles={customStyles}
-                        options={bestofOptions} 
-                        onChange={updateBestof} 
-                        value={bestofOptions.find(option => option.value === bestof)} 
+                        options={bestofOptions}
+                        onChange={updateBestof}
+                        value={bestofOptions.find(option => option.value === bestof)}
                     />
                 </div>
             </div>

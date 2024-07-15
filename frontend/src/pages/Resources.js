@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../css/Resources.css';
 import '../css/Table.css';
 import beginnerData from '../data/beginnerplan.json';
@@ -10,6 +10,8 @@ const Resources = () => {
   const [modalContent, setModalContent] = useState('');
   const [modalTitle, setModalTitle] = useState('');
   const [sessionData, setSessionData] = useState([]);
+  const [activeComponent, setActiveComponent] = useState('Beginner');
+
 
   const handleClick = (selectedType) => {
     if (selectedType === 'Advanced') {
@@ -18,6 +20,10 @@ const Resources = () => {
       setSessionData(beginnerData.Sessions);
     }
   };
+
+  useEffect(() => {
+    handleClick('Beginner');
+  }, []);
 
   const handleTitleClick = (topics) => {
     setModalTitle('Topics');
@@ -33,9 +39,19 @@ const Resources = () => {
 
   return (
     <div>
-      <div className='option-button-group-large'>
-        <button className="option-button button" onClick={() => handleClick('Beginner')}>Beginner</button>
-        <button className="option-button button" onClick={() => handleClick('Advanced')}>Advanced</button>
+      <div className="option-button-large">
+        <button
+          className={`option-button button ${activeComponent === 'Beginner' ? 'active' : ''}`}
+          onClick={() => { setActiveComponent('Beginner'); handleClick('Beginner'); }}
+        >
+          Beginner
+        </button>
+        <button
+          className={`option-button button ${activeComponent === 'Advanced' ? 'active' : ''}`}
+          onClick={() => { setActiveComponent('Advanced'); handleClick('Advanced'); }}
+        >
+          Advanced
+        </button>
       </div>
       <div className="table-container">
         {sessionData.length > 0 && (
@@ -64,7 +80,7 @@ const Resources = () => {
                       </button>
                     </td>
                     <td>
-                        {session.MarathonLink}
+                      {session.MarathonLink}
                     </td>
                   </tr>
                 ))}

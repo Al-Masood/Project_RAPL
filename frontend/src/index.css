@@ -108,9 +108,13 @@ span {
   margin: 0 auto;
 }
 
+.option-button-large {
+  margin: 0 auto;
+}
+
 .option-button {
   flex: 1;
-  background-color: #334455;
+  background-color: #112233;
   color: #ffffff;
   border: none;
   cursor: pointer;
@@ -119,11 +123,13 @@ span {
 }
 
 .option-button:hover {
-  background-color: #112233;
+  background-color: #334455;
 }
 
 .option-button.active {
-  background-color: #112233;
+  background-color: #334455;
+  border: 1px solid #b3ffb3;
+  border-radius: 5px;
 }
 
 .option-button-group-large {

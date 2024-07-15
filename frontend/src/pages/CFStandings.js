@@ -6,11 +6,11 @@ import customStyles from '../components/SelectorCustomStyles';
 
 const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
 
-
 const CodeforcesStandings = () => {
     const [contests, setContests] = useState([]);
     const [selectedContestId, setSelectedContestId] = useState('');
     const [ranklist, setRanklist] = useState([]);
+    const [loading, setLoading] = useState(false);
 
     useEffect(() => {
         const fetchContests = async () => {
@@ -30,6 +30,8 @@ const CodeforcesStandings = () => {
     useEffect(() => {
         const fetchStandings = async () => {
             if (selectedContestId) {
+                setLoading(true);
+
                 try {
                     const response = await fetch(`${BACKEND_URL}/cfstandings`, {
                         method: 'POST',
@@ -47,6 +49,8 @@ const CodeforcesStandings = () => {
                     }
                 } catch (error) {
                     console.error("Error fetching standings:", error);
+                } finally {
+                    setLoading(false); 
                 }
             }
         };
@@ -58,12 +62,22 @@ const CodeforcesStandings = () => {
         setSelectedContestId(selectedOption.value);
     };
 
-
-
     const contestOptions = contests.map(contest => ({
         value: contest.number,
         label: contest.name
     }));
+
+    const customStylesWidth = {
+        control: (provided) => ({
+            ...provided,
+            width: '500px', 
+        }),
+        menu: (provided) => ({
+            ...provided,
+            width: '500px', 
+        }),
+        ...customStyles 
+    };
 
     return (
         <div>
@@ -71,7 +85,7 @@ const CodeforcesStandings = () => {
                 <label>Select Contest:</label>
                 <div className="select-wrapper">
                     <Select 
-                        styles={customStyles}
+                        styles={customStylesWidth}
                         options={contestOptions} 
                         onChange={handleContestChange} 
                         value={contestOptions.find(option => option.value === selectedContestId)} 
@@ -79,7 +93,13 @@ const CodeforcesStandings = () => {
                     />
                 </div>
             </div>
-            <Ranktable finalRanklist={ranklist} />
+            {loading ? (
+                <div className="loading-spinner-container">
+                    <div className="loading-spinner"></div>
+                </div>
+            ) : (
+                <Ranktable finalRanklist={ranklist} />
+            )}
         </div>
     );
 };

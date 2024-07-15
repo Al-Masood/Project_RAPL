@@ -13,6 +13,7 @@ const SignUp = () => {
     const [confirmPassword, setConfirmPassword] = useState('');
     const [error, setError] = useState('');
     const [success, setSuccess] = useState('');
+    const [isLoading, setIsLoading] = useState(false);
 
     useEffect(() => {
         if (success) {
@@ -32,6 +33,7 @@ const SignUp = () => {
         e.preventDefault();
         setError('');
         setSuccess('');
+        setIsLoading(true);
 
         const user = {
             name,
@@ -45,19 +47,25 @@ const SignUp = () => {
             confirmPassword
         };
 
-        const response = await fetch(`${BACKEND_URL}/signup`, {
-            method: 'POST',
-            body: JSON.stringify(user),
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        });
+        try {
+            const response = await fetch(`${BACKEND_URL}/signup`, {
+                method: 'POST',
+                body: JSON.stringify(user),
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            });
 
-        const responseData = await response.text();
-        if (response.ok) {
-            setSuccess(responseData);
-        } else {
-            setError(responseData);
+            const responseData = await response.text();
+            if (response.ok) {
+                setSuccess(responseData);
+            } else {
+                setError(responseData);
+            }
+        } catch (error) {
+            setError('An error occurred. Please try again.');
+        } finally {
+            setIsLoading(false);
         }
     };
 
@@ -153,7 +161,11 @@ const SignUp = () => {
                 />
             </div>
             <div className="button-group">
-                <button className="button">Sign Up</button>
+                {isLoading ? (
+                    <div className="loading">Loading...</div>
+                ) : (
+                    <button className="button">Sign Up</button>
+                )}
             </div>
             {error && <div className="error">{error}</div>}
             {success && <div className="success">{success}</div>}

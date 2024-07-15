@@ -47,8 +47,6 @@ const PasswordChange = () => {
 
     return (
         <div className="listing">
-            {error && <div className="error">{error}</div>}
-            {success && <div className="success">{success}</div>}
             <div className="details-group">
                 <label>Old Password:</label>
                 <input
@@ -84,6 +82,8 @@ const PasswordChange = () => {
                     Change Password
                 </button>
             </div>
+            {error && <div className="error">{error}</div>}
+            {success && <div className="success">{success}</div>}
         </div>
     )
 }

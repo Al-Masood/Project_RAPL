@@ -46,7 +46,7 @@ const Login = () => {
                    
                 )}
                 {isLoading ? (
-                    <div className="loading">Loading...</div>
+                    <div className="loading"></div>
                 ) : (
                     <button className="button" onClick={handleForgotPassword}>Forgot Password</button>
                 )}

@@ -15,16 +15,16 @@ const Masters = () => {
       <h1 className="title">Masters</h1>
       <div className="masters">
         {mastersData.masters.map((master, index) => (
-          <div key={index} className="member">
+          <div key={index} className="master">
             <img 
               src={importImage(master.photo)} 
               alt={master.name} 
-              className="member-photo" 
+              className="master-photo" 
             />
-            <h3 className="member-name">{master.name}</h3>
-            <p className="member-handle">Handle: {master.cfHandle}</p>
-            <p className="member-series">Series: {master.series}</p>
-            <a href={master.linkedin} target="_blank" rel="noopener noreferrer" className="member-linkedin">LinkedIn</a>
+            <h3 className="master-name">{master.name}</h3>
+            <p className="master-handle">{master.cfHandle}</p>
+            <p className="master-roll">Roll: {master.roll}</p>
+            <a href={master.linkedin} target="_blank" rel="noopener noreferrer" className="master-linkedin">LinkedIn</a>
           </div>
         ))}
       </div>

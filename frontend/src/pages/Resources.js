@@ -17,19 +17,19 @@ const Resources = () => {
     } else {
       setSessionData(beginnerData.Sessions);
     }
-  }
+  };
 
   const handleTitleClick = (topics) => {
     setModalTitle('Topics');
-    setModalContent(topics || 'No topics available');
+    setModalContent(topics.length > 0 ? topics.join(', ') : 'No topics available');
     setShowTopicsModal(true);
-  }
+  };
 
   const handleResourcesClick = (resources) => {
     setModalTitle('Resources');
-    setModalContent(resources || 'No resources available');
+    setModalContent(resources ? resources : 'No resources available');
     setShowResourcesModal(true);
-  }
+  };
 
   return (
     <div>
@@ -40,14 +40,13 @@ const Resources = () => {
       <div className="table-container">
         {sessionData.length > 0 && (
           <>
-            <h1>Sessions</h1>
             <table>
               <thead>
                 <tr>
                   <th>Week</th>
                   <th>Title</th>
-                  <th>Date</th>
                   <th>Resources</th>
+                  <th>Marathon Link</th>
                 </tr>
               </thead>
               <tbody>
@@ -56,14 +55,16 @@ const Resources = () => {
                     <td>{session.Week}</td>
                     <td>
                       <button className="link-button" onClick={() => handleTitleClick(session.Topics)}>
-                        {session.Topics ? session.Topics.split('\n')[0] : 'No Title'}
+                        {session.Title}
                       </button>
                     </td>
-                    <td>{session.Date}</td>
                     <td>
                       <button className="link-button" onClick={() => handleResourcesClick(session.Resources)}>
                         Resources
                       </button>
+                    </td>
+                    <td>
+                        {session.MarathonLink}
                     </td>
                   </tr>
                 ))}

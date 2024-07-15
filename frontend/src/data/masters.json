@@ -3,28 +3,28 @@
         {
             "name": "Tauhedul Islam Tanu",
             "photo": "sayeef.jpg",
-            "series": 16,
+            "roll": 16,
             "cfHandle": "tanus_era",
             "linkedin": ""
         },
         {
             "name": "Risal Shahriar Shefin",
             "photo": "sayeef.jpg",
-            "series": 16,
+            "roll": 16,
             "cfHandle": "Shefin_ ",
             "linkedin": ""
         },
         {
             "name": "Adnan Toky",
             "photo": "sayeef.jpg",
-            "series": 19,
+            "roll": 19,
             "cfHandle": "adnan_toky",
             "linkedin": ""
         },
         {
             "name": "Sayeef Mahmud",
             "photo": "sayeef.jpg",
-            "series": 19,
+            "roll": 19,
             "cfHandle": "thisIsMorningstar",
             "linkedin": ""
         }

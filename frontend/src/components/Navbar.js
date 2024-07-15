@@ -35,9 +35,6 @@ const Navbar = () => {
                 <Link to="/">
                     <img src={logo} alt="RAPL Logo" />
                 </Link>
-                <button className="mobile-menu-toggle" onClick={toggleMobileMenu}>
-                    &#9776;
-                </button>
             </div>
 
             <nav className={`navbar-links ${isMobileMenuOpen ? 'open' : ''}`}>
@@ -60,29 +57,32 @@ const Navbar = () => {
                         Admin Panel
                     </Link>
                 )}
+                <div className="navbar-user">
+                    {user ? (
+                        <>
+                            <Link to='/profile' onClick={() => setIsMobileMenuOpen(false)}>
+                                {user.name}
+                            </Link>
+                            <Link to="/" onClick={handleClick}>
+                                Logout
+                            </Link>
+                        </>
+                    ) : (
+                        <>
+                            <Link to="/login" onClick={() => setIsMobileMenuOpen(false)}>
+                                Login
+                            </Link>
+                            <Link to="/signup" onClick={() => setIsMobileMenuOpen(false)}>
+                                Sign Up
+                            </Link>
+                        </>
+                    )}
+                </div>
             </nav>
 
-            <div className="navbar-user">
-                {user ? (
-                    <>
-                        <Link to='/profile'>
-                            {user.name}
-                        </Link>
-                        <Link to="/" onClick={handleClick}>
-                            Logout
-                        </Link>
-                    </>
-                ) : (
-                    <>
-                        <Link to="/login">
-                            Login
-                        </Link>
-                        <Link to="/signup">
-                            Sign Up
-                        </Link>
-                    </>
-                )}
-            </div>
+            <button className="mobile-menu-toggle" onClick={toggleMobileMenu}>
+                &#9776;
+            </button>
         </header>
     );
 };

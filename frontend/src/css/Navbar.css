@@ -4,12 +4,11 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 15px 5%;
+    padding: 15px 5%; /* Reduced padding */
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between; /* Ensures items are spread apart horizontally */
     font-weight: bolder;
-    z-index: 1000; /* Ensure the navbar is above other elements */
 }
 
 header * {
@@ -17,38 +16,27 @@ header * {
 }
 
 header .navbar-brand {
-    display: flex;
-    align-items: center;
+    flex: 0 0 auto; /* Do not grow or shrink */
 }
 
 header .navbar-brand img {
     border-radius: 8px;
-    height: 40px;
-}
-
-header .navbar-brand .mobile-menu-toggle {
-    display: none;
-    font-size: 24px;
-    background: none;
-    border: none;
-    color: white;
-    cursor: pointer;
-    margin-left: 15px;
+    height: 40px; /* Adjust as necessary */
 }
 
 header .navbar-links {
     display: flex;
-    flex: 1;
+    flex: 1 1 auto; /* Grow and shrink as necessary */
     justify-content: center;
-    gap: 15px;
+    gap: 15px; /* Adjusted gap for smaller font size */
 }
 
 header .navbar-links a {
     text-decoration: none;
-    padding: 8px;
+    padding: 8px; 
     border-radius: 4px;
     transition: background-color 0.3s, color 0.3s;
-    font-size: 12px;
+    font-size: 12px; 
 }
 
 header .navbar-links a:hover {
@@ -62,41 +50,76 @@ header .navbar-links a.active {
 
 header .navbar-user {
     display: flex;
-    justify-content: flex-end;
-    flex: 0 0 auto;
+    justify-content: flex-end; 
     gap: 15px;
-    white-space: nowrap;
 }
 
 header .navbar-user a {
     text-decoration: none;
-    padding: 8px;
+    padding: 8px; 
     border-radius: 4px;
     transition: background-color 0.3s, color 0.3s;
-    font-size: 12px;
+    font-size: 12px; 
 }
 
 header .navbar-user a:hover {
     background-color: #1a1a1a;
 }
 
+header .mobile-menu-toggle {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
 @media (max-width: 768px) {
+    header {
+        justify-content: space-between; /* Ensure space between items in mobile view */
+    }
+
     header .navbar-links {
         display: none;
         flex-direction: column;
         position: absolute;
         top: 100%;
-        left: 0;
-        width: 100%;
+        right: 0;
         background-color: #010f1a;
         z-index: 999;
+        width: auto;
     }
 
     header .navbar-links.open {
         display: flex;
     }
 
-    header .navbar-brand .mobile-menu-toggle {
+    header .mobile-menu-toggle {
         display: block;
+        margin-left: auto; /* Move to the right */
+    }
+
+    header .navbar-user {
+        display: none; /* Hide the user links on mobile */
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 15px;
+    }
+
+    header .navbar-user a {
+        text-decoration: none;
+        padding: 8px;
+        border-radius: 4px;
+        transition: background-color 0.3s, color 0.3s;
+        font-size: 12px;
+    }
+
+    header .navbar-user a:hover {
+        background-color: #1a1a1a;
+    }
+
+    header .navbar-links.open .navbar-user {
+        display: flex; /* Show the user links in the dropdown */
     }
 }

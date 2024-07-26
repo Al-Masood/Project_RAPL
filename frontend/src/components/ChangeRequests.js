@@ -39,17 +39,47 @@ const ChangeRequests = () => {
         })
     }
 
-    return(
-        <div>
-            <ul className="user-list">
-                {changeRequests.map(request => (
-                    <li key={request._id} className="user-item">
-                        <p>Name: {request.name}</p>
-                        <p>Email: {request.email}</p>
-                        <p>Roll: {request.roll}</p>
-                        <p>Codeforces Handle: {request.cfHandle}</p>
-                        <p>VJudge Handle: {request.vjHandle}</p>
+    return (
+        <div className="list">
+            <h3> Change Requests </h3>
+            {changeRequests.map(request => (
+                <div className="item">
+                    <div className="details-group">
+                        <label>Name:</label>
+                        <span>{request.name}</span>
+                    </div>
 
+                    <div className="details-group">
+                        <label>Email:</label>
+                        <span>{request.email}</span>
+                    </div>
+
+                    <div className="details-group">
+                        <label>Roll:</label>
+                        <span>{request.roll}</span>
+                    </div>
+
+                    <div className="details-group">
+                        <label>Codeforces Handle:</label>
+                        <span>{request.cfHandle}</span>
+                    </div>
+
+                    <div className="details-group">
+                        <label>Vjudge Handle:</label>
+                        <span>{request.vjHandle}</span>
+                    </div>
+
+                    <div className="details-group">
+                        <label>CodeChef Handle:</label>
+                        <span>{request.ccHandle}</span>
+                    </div>
+
+                    <div className="details-group">
+                        <label>Atcoder Handle:</label>
+                        <span>{request.atcoderHandle}</span>
+                    </div>
+
+                    <div className="button-group">
                         <button className='button' onClick={() => approveChange(request)}>
                             Approve Change
                         </button>
@@ -57,9 +87,9 @@ const ChangeRequests = () => {
                         <button className='button' onClick={() => denyChange(request)}>
                             Deny Change
                         </button>
-                    </li>
-                ))}
-            </ul>
+                    </div>
+                </div>
+            ))}
         </div>
     )
 }

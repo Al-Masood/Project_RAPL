@@ -1,11 +1,12 @@
 const users = require('../models/users')
 const cfContests = require('../models/cfcontests')
 
-async function fetchCFPerfRank(data) {
+async function cfPerformance(req, res) {
     try {
-        const year = data[0]
-        const month = data[1]
-        const best = data[2]
+        const data = req.body
+        const year = data.year
+        const month = data.month
+        const best = data.bestof
         const startDate = new Date(year, month - 1, 1, 0, 0, 0)
         const endDate = new Date(year, month, 0, 23, 59, 59)
 
@@ -16,7 +17,7 @@ async function fetchCFPerfRank(data) {
             }
         }).sort({ date: 1 })
 
-        if(contests.length === 0 || best == 0) return []
+        if (contests.length === 0 || best == 0) return []
 
         const ranklist = {}
         const fetchedUsers = await users.find({})
@@ -42,12 +43,16 @@ async function fetchCFPerfRank(data) {
             values.sort((a, b) => b - a)
             let sum = 0
             for (let i = 0; i < best; i++) sum += values[i]
-            ranklist[user][`Sum of Best ${best}`] = sum
+            ranklist[user][`Average of Best ${best}`] = sum
         }
 
         const ranklistEntries = Object.entries(ranklist);
 
-        ranklistEntries.sort((a, b) => b[1][`Sum of Best ${best}`] - a[1][`Sum of Best ${best}`]);
+        ranklistEntries.sort((a, b) => b[1][`Average of Best ${best}`] - a[1][`Average of Best ${best}`]);
+
+        for (const user of handles) {
+            ranklist[user][`Average of Best ${best}`] = Math.floor(ranklist[user][`Average of Best ${best}`] / best)
+        }
 
         const finalRanklist = []
 
@@ -66,12 +71,14 @@ async function fetchCFPerfRank(data) {
             for (const data of Object.values(entry[1])) {
                 row.push(data)
             }
-            finalRanklist.push(row)
+            if (row[row.length - 1] > 0) finalRanklist.push(row)
         }
-        return finalRanklist
-    } catch (error) {
-        console.log('Error while fetching CF performance rank')
+
+        res.status(200).send(JSON.stringify(finalRanklist))
+
+    } catch {
+        res.status(400).send('Error while fetching Codeforces Perfrmance Ranklist')
     }
 }
 
-module.exports = fetchCFPerfRank
+module.exports = cfPerformance

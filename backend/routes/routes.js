@@ -2,14 +2,14 @@ const express = require('express')
 const router = express.Router()
 
 const  {signupUser, loginUser, getTempUsers, addUser, removeUser, getChangeRequests, requestChange, approveChange, denyChange, changePassword, requestPasswordReset, resetPassword } = require('../controllers/userController')
-const getCount = require('../controllers/getcount')
-const fetchCFRanklist = require('../controllers/cfperfrank')
-const addVJContest = require('../controllers/addvj')
-const fetchVJRanklist = require('../controllers/vjrank')
+const addVJContest = require('../controllers/addvjcontest')
 const cfRating = require('../controllers/cfrating')
 const cfActivity = require('../controllers/cfactivity')
 const cfStandings = require('../controllers/cfstandings')
 const getContests = require('../controllers/getcontests')
+const cfPerformance = require('../controllers/cfperformance')
+const tfcRanklist = require('../controllers/tfcranklist')
+const getCount = require('../controllers/getcount')
 
 
 router.post('/signup', signupUser)
@@ -44,28 +44,12 @@ router.post('/cfstandings', cfStandings)
 
 router.get('/getcontests', getContests)
 
-router.post('/cfcontestcount', async (req, res) => {
-    const data = req.body
-    const count = await getCount(data)
-    const response = JSON.stringify(count)
-    res.send(response)
-})
+router.post('/cfcontestcount', getCount)
 
-router.post('/cfranklist', async (req, res) => {
-    const data = req.body
-    const ranklist = await fetchCFRanklist(data)
-    res.send(ranklist)
-})
+router.post('/cfperformance', cfPerformance)
 
-router.post('/vjudgeranklist', async (req, res) => {
-    const contestNumbers = req.body
-    const ranklist = await fetchVJRanklist(contestNumbers)
-    res.send(ranklist)
-})
+router.post('/tfcranklist', tfcRanklist)
 
-router.post('/vjaddcontest', async (req, res) => {
-    const contestData = req.body
-    await addVJContest(contestData)
-})
+router.post('/addvjcontest', addVJContest)
 
 module.exports = router

@@ -1,25 +1,26 @@
-import { useState } from "react";
-import { useAuthContext } from "../hooks/UseAuthContext";
+import { useState } from "react"
+import { useAuthContext } from "../hooks/UseAuthContext"
+
 const BACKEND_URL = process.env.REACT_APP_BACKEND_URL
 
 const PasswordChange = () => {
     const { user } = useAuthContext()
-    const [oldPassword, setOldPassword] = useState('');
-    const [newPassword, setNewPassword] = useState('');
-    const [confirmPassword, setConfirmPassword] = useState('');
+    const [oldPassword, setOldPassword] = useState('')
+    const [newPassword, setNewPassword] = useState('')
+    const [confirmPassword, setConfirmPassword] = useState('')
     const [error, setError] = useState('')
     const [success, setSuccess] = useState('')
 
     const handleChange = (e) => {
-        const { name, value } = e.target;
+        const { name, value } = e.target
         if (name === 'oldPassword') {
-            setOldPassword(value);
+            setOldPassword(value)
         } else if (name === 'newPassword') {
-            setNewPassword(value);
+            setNewPassword(value)
         } else if (name === 'confirmPassword') {
-            setConfirmPassword(value);
+            setConfirmPassword(value)
         }
-    };
+    }
 
     const handleSubmit = async () => {
         const response = await fetch(`${BACKEND_URL}/changepassword`, {
@@ -39,6 +40,10 @@ const PasswordChange = () => {
         if (response.ok) {
             setSuccess(responseData)
             setError(null)
+            setOldPassword('')
+            setNewPassword('')
+            setConfirmPassword('')
+    
         } else {
             setSuccess(null)
             setError(responseData)
@@ -78,7 +83,7 @@ const PasswordChange = () => {
                 />
             </div>
             <div className="button-group">
-                <button className='button' onClick={handleSubmit} >
+                <button className='button' onClick={handleSubmit}>
                     Change Password
                 </button>
             </div>
@@ -89,4 +94,3 @@ const PasswordChange = () => {
 }
 
 export default PasswordChange
-

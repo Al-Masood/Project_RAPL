@@ -26,6 +26,7 @@ const updateProblemCount = async () => {
         lastMonth = parseInt(lastMonth.match(/\d+/)[0], 10)
         
         console.log(allTime, lastYear, lastMonth)
+
         await users.findByIdAndUpdate(user._id, {
             $set: {
                 allTime,
@@ -37,4 +38,4 @@ const updateProblemCount = async () => {
     }
 }
 
-updateProblemCount()
+module.exports = updateProblemCount

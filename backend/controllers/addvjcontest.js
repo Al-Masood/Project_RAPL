@@ -1,8 +1,8 @@
 const vjContests = require('../models/vjcontests')
 
-async function addVJContest(jsonString) {
+async function addVJContest(req, res) {
     try {
-        const contest = jsonString
+        const contest = req.body
         const cleanedData = {}
         const idToHandle = {}
         const participantData = {}
@@ -19,9 +19,9 @@ async function addVJContest(jsonString) {
 
         for (const submission of contest.submissions) {
             const handle = idToHandle[submission[0]]
-            const problemNumber = submission[1];
-            const acceptStatus = submission[2];
-            const submissionTime = submission[3];
+            const problemNumber = submission[1]
+            const acceptStatus = submission[2]
+            const submissionTime = submission[3]
             if (!participantData[handle][problemNumber]) {
                 participantData[handle][problemNumber] = []
             }
@@ -61,9 +61,10 @@ async function addVJContest(jsonString) {
 
         const vjContest = new vjContests(cleanedData)
         await vjContest.save()
+        res.status(200).send('Contest added successfully')
 
-    } catch(error){
-        console.log('Error while adding VJudge contest', error)
+    } catch {
+        res.status(400).send('Error while adding VJudge contest')
     }
 }
 

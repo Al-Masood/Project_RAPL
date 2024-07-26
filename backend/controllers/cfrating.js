@@ -5,23 +5,9 @@ async function cfRating (req, res){
     const type = req.body.type
     const fetchedUsers = await users.find({})
     
-    
-    let apiURL = 'https://codeforces.com/api/user.info?handles='
-
-    
-
-    for (const user of fetchedUsers){
-        const handle = user.cfHandle
-       apiURL=apiURL+handle+';'
-    }
-
-    const response = await axios.get(apiURL)
-    const userData = response.data.result
-
-
     ranklist = []
-    for (const user of userData){
-        ranklist.push([user.handle, user.rating, user.maxRating])
+    for (const user of fetchedUsers){
+        ranklist.push([user.cfHandle, user.rating, user.maxRating])
     }
 
     if(type === 'CurrentRating'){

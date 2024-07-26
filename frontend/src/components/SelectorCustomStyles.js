@@ -34,6 +34,6 @@ const customStyles = {
         color: state.isSelected ? '#000' : state.isFocused ? '#000' : 'white',
         padding: '10px',
     })
-};
+}
 
-export default customStyles;
+export default customStyles

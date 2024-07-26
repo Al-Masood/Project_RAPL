@@ -1,9 +1,10 @@
 const cfContests = require('../models/cfcontests.js')
 
-async function getCount(data) {
+async function getCount(req, res) {
     try {
-        const year = data[0]
-        const month = data[1]
+        const data = req.body
+        const year = data.year
+        const month = data.month
         const startDate = new Date(year, month - 1, 1, 0, 0, 0)
         const endDate = new Date(year, month, 0, 23, 59, 59)
 
@@ -13,11 +14,12 @@ async function getCount(data) {
                 $lte: endDate
             }
         })
-        
-        return count
-        
-    } catch (error) {
-        console.log('Error while getting count of CF contests')
+
+        res.status(200).send(JSON.stringify(count))
+
+    }
+    catch {
+        res.status(400).send('Error while getting count of CF contests')
     }
 }
 

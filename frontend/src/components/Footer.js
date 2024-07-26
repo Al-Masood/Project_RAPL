@@ -1,10 +1,10 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import { faFacebook } from '@fortawesome/free-brands-svg-icons';
-import '../css/Footer.css';
-import logo from '../data/photos/rapl-logo.png';
+import React from 'react'
+import { Link } from 'react-router-dom'
+import '../css/Footer.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import { faFacebook } from '@fortawesome/free-brands-svg-icons'
+import logo from '../data/photos/rapl-logo.png'
 
 const Footer = () => {
     return (
@@ -21,11 +21,11 @@ const Footer = () => {
                 <div className="footer-section links">
                     <Link to="/cfrating">CF Rating</Link>
                     <Link to="/cfactivity">CF Activity</Link>
-                    <Link to="/cfperformance">CF Performance</Link>
                     <Link to="/cfstandings">CF Standings</Link>
+                    <Link to="/cfperformance">CF Performance</Link>
                     <Link to="/tfcranklist">TFC Ranklist</Link>
-                    <Link to="/resources">Resources</Link>
-                    <Link to="/halloffame">Hall of Fame</Link>
+                    <Link to="/sessionplan">Session Plan</Link>
+                    <Link to="/achievements">Achievements</Link>
                 </div>
                 <div className="footer-section contact">
                     <h5>Contact Us</h5>
@@ -44,10 +44,10 @@ const Footer = () => {
                 </div>
             </div>
             <div className="footer-bottom">
-                <p>&copy; {new Date().getFullYear()} RUET Analytical Programming Lab. All Rights Reserved.</p>
+                <p>&copy {new Date().getFullYear()} RUET Analytical Programming Lab. All Rights Reserved.</p>
             </div>
         </footer>
-    );
+    )
 }
 
-export default Footer;
+export default Footer

@@ -1,39 +1,39 @@
-import { useState, useEffect } from "react";
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
+import { useState, useEffect } from "react"
+const BACKEND_URL = process.env.REACT_APP_BACKEND_URL
 
 const SignUp = () => {
-    const [name, setName] = useState('');
-    const [email, setEmail] = useState('');
-    const [roll, setRoll] = useState('');
-    const [cfHandle, setCFHandle] = useState('');
-    const [vjHandle, setVJHandle] = useState('');
-    const [ccHandle, setCCHandle] = useState('');
-    const [atcoderHandle, setAtcoderHandle] = useState('');
-    const [password, setPassword] = useState('');
-    const [confirmPassword, setConfirmPassword] = useState('');
-    const [error, setError] = useState('');
-    const [success, setSuccess] = useState('');
-    const [isLoading, setIsLoading] = useState(false);
+    const [name, setName] = useState('')
+    const [email, setEmail] = useState('')
+    const [roll, setRoll] = useState('')
+    const [cfHandle, setCFHandle] = useState('')
+    const [vjHandle, setVJHandle] = useState('')
+    const [ccHandle, setCCHandle] = useState('')
+    const [atcoderHandle, setAtcoderHandle] = useState('')
+    const [password, setPassword] = useState('')
+    const [confirmPassword, setConfirmPassword] = useState('')
+    const [error, setError] = useState('')
+    const [success, setSuccess] = useState('')
+    const [isLoading, setIsLoading] = useState(false)
 
     useEffect(() => {
         if (success) {
-            setName('');
-            setEmail('');
-            setRoll('');
-            setCFHandle('');
-            setVJHandle('');
-            setCCHandle('');
-            setAtcoderHandle('');
-            setPassword('');
-            setConfirmPassword('');
+            setName('')
+            setEmail('')
+            setRoll('')
+            setCFHandle('')
+            setVJHandle('')
+            setCCHandle('')
+            setAtcoderHandle('')
+            setPassword('')
+            setConfirmPassword('')
         }
-    }, [success]);
+    }, [success])
 
     const handleSubmit = async (e) => {
-        e.preventDefault();
-        setError('');
-        setSuccess('');
-        setIsLoading(true);
+        e.preventDefault()
+        setError('')
+        setSuccess('')
+        setIsLoading(true)
 
         const user = {
             name,
@@ -45,7 +45,7 @@ const SignUp = () => {
             atcoderHandle,
             password,
             confirmPassword
-        };
+        }
 
         try {
             const response = await fetch(`${BACKEND_URL}/signup`, {
@@ -54,20 +54,20 @@ const SignUp = () => {
                 headers: {
                     'Content-Type': 'application/json'
                 }
-            });
+            })
 
-            const responseData = await response.text();
+            const responseData = await response.text()
             if (response.ok) {
-                setSuccess(responseData);
+                setSuccess(responseData)
             } else {
-                setError(responseData);
+                setError(responseData)
             }
         } catch (error) {
-            setError('An error occurred. Please try again.');
+            setError('An error occurred. Please try again.')
         } finally {
-            setIsLoading(false);
+            setIsLoading(false)
         }
-    };
+    }
 
     return (
         <form className="listing" onSubmit={handleSubmit}>
@@ -170,7 +170,7 @@ const SignUp = () => {
             {error && <div className="error">{error}</div>}
             {success && <div className="success">{success}</div>}
         </form>
-    );
+    )
 }
 
-export default SignUp;
+export default SignUp

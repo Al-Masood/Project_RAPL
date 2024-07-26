@@ -5,7 +5,7 @@ async function getContests(req, res) {
         .sort({ date: -1 })
         .limit(10)
         .select('name number')
-        .exec();
+        .exec()
     
     res.send(contests)
 }

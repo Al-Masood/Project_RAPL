@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { useAuthContext } from "../hooks/UseAuthContext";
+import { useAuthContext } from "../hooks/UseAuthContext"
 const BACKEND_URL = process.env.REACT_APP_BACKEND_URL
 
 const UserProfile = () => {
@@ -18,6 +18,7 @@ const UserProfile = () => {
 
     const handleChange = (e) => {
         const { name, value } = e.target
+        console.log({name, value})
         setChange({
             ...change,
             [name]: value
@@ -29,6 +30,15 @@ const UserProfile = () => {
     }
 
     const handleCancelEdit = () => {
+        setChange({
+            name: user.name,
+            email: user.email,
+            roll: user.roll,
+            cfHandle: user.cfHandle,
+            vjHandle: user.vjHandle,
+            ccHandle: user.ccHandle,
+            atcoderHandle: user.atcoderHandle
+        })
         setEditMode(false)
     }
 
@@ -40,7 +50,18 @@ const UserProfile = () => {
                 'Content-Type': 'application/json'
             }
         })
+        setChange({
+            name: user.name,
+            email: user.email,
+            roll: user.roll,
+            cfHandle: user.cfHandle,
+            vjHandle: user.vjHandle,
+            ccHandle: user.ccHandle,
+            atcoderHandle: user.atcoderHandle
+        })
+        setEditMode(false)
     }
+
 
     return (
         <div className="listing">
@@ -48,7 +69,7 @@ const UserProfile = () => {
                 <div>
                     <div className="details-group">
                         <label>Name:</label>
-                        <input 
+                        <input
                             className='input-field'
                             type="text"
                             name="name"
@@ -59,7 +80,7 @@ const UserProfile = () => {
                     </div>
                     <div className="details-group">
                         <label>Email:</label>
-                        <input 
+                        <input
                             className='input-field'
                             type="email"
                             name="email"
@@ -70,7 +91,7 @@ const UserProfile = () => {
                     </div>
                     <div className="details-group">
                         <label>Roll:</label>
-                        <input 
+                        <input
                             className='input-field'
                             type="text"
                             name="roll"
@@ -81,7 +102,7 @@ const UserProfile = () => {
                     </div>
                     <div className="details-group">
                         <label>Codeforces Handle:</label>
-                        <input 
+                        <input
                             className='input-field'
                             type="text"
                             name="cfHandle"
@@ -92,7 +113,7 @@ const UserProfile = () => {
                     </div>
                     <div className="details-group">
                         <label>Vjudge Handle:</label>
-                        <input 
+                        <input
                             className='input-field'
                             type="text"
                             name="vjHandle"
@@ -103,7 +124,7 @@ const UserProfile = () => {
                     </div>
                     <div className="details-group">
                         <label>CodeChef Handle:</label>
-                        <input 
+                        <input
                             className='input-field'
                             type="text"
                             name="ccHandle"
@@ -114,7 +135,7 @@ const UserProfile = () => {
                     </div>
                     <div className="details-group">
                         <label>Atcoder Handle:</label>
-                        <input 
+                        <input
                             className='input-field'
                             type="text"
                             name="atcoderHandle"

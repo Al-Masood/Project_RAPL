@@ -1,19 +1,19 @@
-import React, { useState } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
+import React, { useState } from 'react'
+import { useParams, useNavigate } from 'react-router-dom'
 const BACKEND_URL = process.env.REACT_APP_BACKEND_URL
 
 const ResetPassword = () => {
-    const { token } = useParams();
-    const navigate = useNavigate();
-    const [newPassword, setNewPassword] = useState('');
-    const [confirmPassword, setConfirmPassword] = useState('');
-    const [success, setMessage] = useState('');
-    const [error, setError] = useState('');
+    const { token } = useParams()
+    const navigate = useNavigate()
+    const [newPassword, setNewPassword] = useState('')
+    const [confirmPassword, setConfirmPassword] = useState('')
+    const [success, setSuccess] = useState('')
+    const [error, setError] = useState('')
 
     const handleSubmit = async (e) => {
-        e.preventDefault();
-        setError('');
-        setMessage('');
+        e.preventDefault()
+        setError('')
+        setSuccess('')
 
         try {
             const response = await fetch(`${BACKEND_URL}/resetpassword`, {
@@ -22,19 +22,19 @@ const ResetPassword = () => {
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({ token, newPassword, confirmPassword })
-            });
+            })
 
             if (response.ok) {
-                setMessage('Password has been reset successfully');
-                setTimeout(() => navigate('/login'), 2000);
+                setSuccess('Password has been reset successfully')
+                setTimeout(() => navigate('/login'), 2000)
             } else {
-                const errorText = await response.text();
-                setError(errorText);
+                const errorText = await response.text()
+                setError(errorText)
             }
         } catch (error) {
-            setError('Server Error');
+            setError('Server Error')
         }
-    };
+    }
 
     return (
         <form className="listing" onSubmit={handleSubmit}>
@@ -67,7 +67,7 @@ const ResetPassword = () => {
             {success && <div className='success'>{success}</div>}
             {error && <div className='error'>{error}</div>}
         </form>
-    );
-};
+    )
+}
 
-export default ResetPassword;
+export default ResetPassword

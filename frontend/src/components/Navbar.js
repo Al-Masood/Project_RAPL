@@ -1,33 +1,33 @@
-import { Link, useLocation } from "react-router-dom";
-import { useLogout } from "../hooks/UseLogout";
-import { useAuthContext } from "../hooks/UseAuthContext";
-import { useState } from "react";
-import '../css/Navbar.css';
-import logo from '../data/photos/rapl_logo_brand.jpg';
+import { useState } from "react"
+import { Link, useLocation } from "react-router-dom"
+import { useLogout } from "../hooks/UseLogout"
+import { useAuthContext } from "../hooks/UseAuthContext"
+import '../css/Navbar.css'
+import logo from '../data/photos/rapl_logo_brand.jpg'
 
 const Navbar = () => {
-    const { logout } = useLogout();
-    const { user } = useAuthContext();
-    const location = useLocation();
-    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const { logout } = useLogout()
+    const { user } = useAuthContext()
+    const location = useLocation()
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
     const handleClick = () => {
-        logout();
-    };
+        logout()
+    }
 
     const toggleMobileMenu = () => {
-        setIsMobileMenuOpen(!isMobileMenuOpen);
-    };
+        setIsMobileMenuOpen(!isMobileMenuOpen)
+    }
 
     const links = [
         { to: "/cfrating", label: "CF Rating" },
         { to: "/cfactivity", label: "CF Activity" },
-        { to: "/cfperformance", label: "CF Performance" },
         { to: "/cfstandings", label: "CF Standings" },
-        { to: "/vjudgeranklist", label: "TFC Ranklist" },
-        { to: "/resources", label: "Resources" },
-        { to: "/halloffame", label: "Hall of Fame" }
-    ];
+        { to: "/cfperformance", label: "CF Performance" },
+        { to: "/tfcranklist", label: "TFC Ranklist" },
+        { to: "/sessionplan", label: "Session Plan" },
+        { to: "/achievements", label: "Achievements" }
+    ]
 
     return (
         <header>
@@ -50,11 +50,11 @@ const Navbar = () => {
                 ))}
                 {user && user.admin === true && (
                     <Link
-                        to="/adminpanel"
-                        className={location.pathname === "/adminpanel" ? "active" : ""}
+                        to="/admin"
+                        className={location.pathname === "/admin" ? "active" : ""}
                         onClick={() => setIsMobileMenuOpen(false)}
                     >
-                        Admin Panel
+                        Admin
                     </Link>
                 )}
                 <div className="navbar-user">
@@ -81,10 +81,10 @@ const Navbar = () => {
             </nav>
 
             <button className="mobile-menu-toggle" onClick={toggleMobileMenu}>
-                &#9776;
+                &#9776
             </button>
         </header>
-    );
-};
+    )
+}
 
-export default Navbar;
+export default Navbar

@@ -1,54 +1,54 @@
-import React, { useState, useEffect } from 'react';
-import '../css/Resources.css';
-import '../css/Table.css';
-import beginnerData from '../data/beginnerplan.json';
-import advancedData from '../data/advancedplan.json';
+import React, { useState, useEffect } from 'react'
+import '../css/SessionPlan.css'
+import '../css/Table.css'
+import beginnerData from '../data/beginnerplan.json'
+import advancedData from '../data/advancedplan.json'
 
-const Resources = () => {
-  const [showResourcesModal, setShowResourcesModal] = useState(false);
-  const [showTopicsModal, setShowTopicsModal] = useState(false);
-  const [modalContent, setModalContent] = useState('');
-  const [modalTitle, setModalTitle] = useState('');
-  const [sessionData, setSessionData] = useState([]);
-  const [activeComponent, setActiveComponent] = useState('Beginner');
+const SessionPlan = () => {
+  const [showResourcesModal, setShowResourcesModal] = useState(false)
+  const [showTopicsModal, setShowTopicsModal] = useState(false)
+  const [modalContent, setModalContent] = useState('')
+  const [modalTitle, setModalTitle] = useState('')
+  const [sessionData, setSessionData] = useState([])
+  const [activeComponent, setActiveComponent] = useState('Beginner')
 
 
   const handleClick = (selectedType) => {
     if (selectedType === 'Advanced') {
-      setSessionData(advancedData.Sessions);
+      setSessionData(advancedData.Sessions)
     } else {
-      setSessionData(beginnerData.Sessions);
+      setSessionData(beginnerData.Sessions)
     }
-  };
+  }
 
   useEffect(() => {
-    handleClick('Beginner');
-  }, []);
+    handleClick('Beginner')
+  }, [])
 
   const handleTitleClick = (topics) => {
-    setModalTitle('Topics');
-    setModalContent(topics.length > 0 ? topics.join(', ') : 'No topics available');
-    setShowTopicsModal(true);
-  };
+    setModalTitle('Topics')
+    setModalContent(topics.length > 0 ? topics.join(', ') : 'No topics available')
+    setShowTopicsModal(true)
+  }
 
   const handleResourcesClick = (resources) => {
-    setModalTitle('Resources');
-    setModalContent(resources ? resources : 'No resources available');
-    setShowResourcesModal(true);
-  };
+    setModalTitle('Resources')
+    setModalContent(resources ? resources : 'No resources available')
+    setShowResourcesModal(true)
+  }
 
   return (
     <div>
       <div className="option-button-large">
         <button
           className={`option-button button ${activeComponent === 'Beginner' ? 'active' : ''}`}
-          onClick={() => { setActiveComponent('Beginner'); handleClick('Beginner'); }}
+          onClick={() => { setActiveComponent('Beginner'); handleClick('Beginner') }}
         >
           Beginner
         </button>
         <button
           className={`option-button button ${activeComponent === 'Advanced' ? 'active' : ''}`}
-          onClick={() => { setActiveComponent('Advanced'); handleClick('Advanced'); }}
+          onClick={() => { setActiveComponent('Advanced'); handleClick('Advanced') }}
         >
           Advanced
         </button>
@@ -92,7 +92,7 @@ const Resources = () => {
         {showTopicsModal && (
           <div className="modal">
             <div className="modal-content">
-              <span className="close" onClick={() => setShowTopicsModal(false)}>&times;</span>
+              <span className="close" onClick={() => setShowTopicsModal(false)}>&times</span>
               <h2>{modalTitle}</h2>
               <p>{modalContent}</p>
             </div>
@@ -102,7 +102,7 @@ const Resources = () => {
         {showResourcesModal && (
           <div className="modal">
             <div className="modal-content">
-              <span className="close" onClick={() => setShowResourcesModal(false)}>&times;</span>
+              <span className="close" onClick={() => setShowResourcesModal(false)}>&times</span>
               <h2>{modalTitle}</h2>
               <p>{modalContent}</p>
             </div>
@@ -110,7 +110,7 @@ const Resources = () => {
         )}
       </div>
     </div>
-  );
+  )
 }
 
-export default Resources;
+export default SessionPlan

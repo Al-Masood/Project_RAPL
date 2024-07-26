@@ -11,7 +11,6 @@ const ChangeRequestSchema = new Schema({
     email: {
         type: String,
         required: true,
-        unique: true
     },
 
     roll: {

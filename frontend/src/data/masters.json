@@ -2,31 +2,31 @@
     "masters": [
         {
             "name": "Tauhedul Islam Tanu",
-            "photo": "",
+            "photo": "tanu.jpg",
             "roll": 16,
             "cfHandle": "tanus_era",
-            "linkedin": ""
+            "linkedin": "https://www.linkedin.com/in/tauhedul-islam/"
         },
         {
             "name": "Risal Shahriar Shefin",
-            "photo": "",
+            "photo": "shefin.jpg",
             "roll": 16,
             "cfHandle": "Shefin_ ",
-            "linkedin": ""
+            "linkedin": "https://www.linkedin.com/in/risal-shefin/"
         },
         {
             "name": "Adnan Toky",
             "photo": "adnan.jpg",
-            "roll": 19,
+            "roll": 1903137,
             "cfHandle": "adnan_toky",
-            "linkedin": ""
+            "linkedin": "https://www.linkedin.com/in/adnan-toky/"
         },
         {
             "name": "Sayeef Mahmud",
             "photo": "sayeef.jpg",
-            "roll": 19,
+            "roll": 1903006,
             "cfHandle": "thisIsMorningstar",
-            "linkedin": ""
+            "linkedin": "https://www.linkedin.com/in/sayeef-mahmud-8374a1232/"
         }
     ]
 }

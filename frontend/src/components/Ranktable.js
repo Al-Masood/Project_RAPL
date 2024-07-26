@@ -1,8 +1,8 @@
-import '../css/Table.css';
+import '../css/Table.css'
 
 const Ranktable = ({ finalRanklist }) => {
     if (finalRanklist.length === 0) {
-        return <div></div>;
+        return <div></div>
     }
     return (
         <div className="table-container">
@@ -25,7 +25,7 @@ const Ranktable = ({ finalRanklist }) => {
                 </tbody>
             </table>
         </div>
-    );
-};
+    )
+}
 
-export default Ranktable;
+export default Ranktable

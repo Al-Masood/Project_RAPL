@@ -1,16 +1,17 @@
 import ChangeRequests from '../components/ChangeRequests'
 import TempUsers from '../components/TempUsers'
-import VJAdder from '../components/VJAdder'
+import AddVJContest from '../components/AddVJContest'
+import '../css/Admin.css'
 
-const AdminPanel = () => {
+const Admin = () => {
 
-    return(
+    return (
         <div>
-            <VJAdder/>
+            <AddVJContest />
             <TempUsers />
             <ChangeRequests />
         </div>
     )
 }
 
-export default AdminPanel
+export default Admin

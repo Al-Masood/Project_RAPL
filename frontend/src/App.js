@@ -1,21 +1,21 @@
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
-import Home from './pages/Home';
-import CFRating from './pages/CFRating';
-import CFActivity from './pages/CFActivity';
-import CFPerfRanklist from './pages/CFPerfRanklist';
-import CFStandings from './pages/CFStandings';
-import VJRanklist from './pages/VJRanklist';
-import Resources from './pages/Resources';
-import HallofFame from './pages/HallofFame';
-import Login from './pages/Login';
-import SignUp from './pages/SignUp';
-import AdminPanel from './pages/AdminPanel';
-import Profile from './pages/Profile';
-import ForgotPassword from './pages/ForgotPassword';
-import ResetPassword from './pages/ResetPassword';
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
-import { useAuthContext } from "./hooks/UseAuthContext";
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
+import Home from './pages/Home'
+import CFRating from './pages/CFRating'
+import CFActivity from './pages/CFActivity'
+import CFPerformance from './pages/CFPerformance'
+import CFStandings from './pages/CFStandings'
+import TFCRanklist from './pages/TFCRanklist'
+import SessionPlan from './pages/SessionPlan'
+import Achievements from './pages/Achievements'
+import Login from './pages/Login'
+import SignUp from './pages/SignUp'
+import Admin from './pages/Admin'
+import Profile from './pages/Profile'
+import ForgotPassword from './pages/ForgotPassword'
+import ResetPassword from './pages/ResetPassword'
+import Navbar from './components/Navbar'
+import Footer from './components/Footer'
+import { useAuthContext } from "./hooks/UseAuthContext"
 import './css/App.css'
 
 function App() {
@@ -35,16 +35,16 @@ function App() {
 
             <Route
               path="/cfperformance/:query?"
-              element={<CFPerfRanklist />}
+              element={<CFPerformance />}
             />
 
             <Route path="/cfstandings" element={<CFStandings />} />
 
-            <Route path="/vjudgeranklist" element={<VJRanklist />} />
+            <Route path="/tfcranklist" element={<TFCRanklist />} />
 
-            <Route path="/resources" element={<Resources />} />
+            <Route path="/sessionplan" element={<SessionPlan />} />
 
-            <Route path="/halloffame" element={<HallofFame />} />
+            <Route path="/achievements" element={<Achievements />} />
 
             {!user && (
               <Route path="/login" element={<Login />} />
@@ -65,7 +65,7 @@ function App() {
             )}
 
             {user && user.admin && (
-              <Route path="/adminpanel" element={<AdminPanel />} />
+              <Route path="/admin" element={<Admin />} />
             )}
 
             <Route path="*" element={<Navigate to="/" />} />
@@ -74,7 +74,7 @@ function App() {
         <Footer />
       </BrowserRouter>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

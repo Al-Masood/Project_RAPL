@@ -49,6 +49,16 @@ const userSchema = new Schema({
         default: false,
     },
 
+    rating: {
+        type: Number,
+        default: false
+    },
+
+    maxRating: {
+        type: Number,
+        default: false
+    },
+
     allTime: {
         type: Number,
         default: false

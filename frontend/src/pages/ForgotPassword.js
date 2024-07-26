@@ -1,15 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'
 const BACKEND_URL = process.env.REACT_APP_BACKEND_URL
 
 const ForgotPassword = () => {
-    const [email, setEmail] = useState('');
-    const [success, setMessage] = useState('');
-    const [error, setError] = useState('');
+    const [email, setEmail] = useState('')
+    const [success, setSuccess] = useState('')
+    const [error, setError] = useState('')
 
     const handleSubmit = async (e) => {
-        e.preventDefault();
-        setError('');
-        setMessage('');
+        e.preventDefault()
+        setError('')
+        setSuccess('')
 
         try {
             const response = await fetch(`${BACKEND_URL}/requestpasswordreset`, {
@@ -18,18 +18,18 @@ const ForgotPassword = () => {
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({ email })
-            });
+            })
 
             if (response.ok) {
-                setMessage('Recovery email sent');
+                setSuccess('Recovery email sent')
             } else {
-                const errorText = await response.text();
-                setError(errorText);
+                const errorText = await response.text()
+                setError(errorText)
             }
         } catch (error) {
-            setError('Server Error');
+            setError('Server Error')
         }
-    };
+    }
 
     return (
         <form className="listing" onSubmit={handleSubmit} >
@@ -49,7 +49,7 @@ const ForgotPassword = () => {
             {success && <div className='success'>{success}</div>}
             {error && <div className='error'>{error}</div>}
         </form>
-    );
-};
+    )
+}
 
-export default ForgotPassword;
+export default ForgotPassword

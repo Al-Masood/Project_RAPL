@@ -1,21 +1,21 @@
-import { useState } from 'react';
-import { useLogin } from '../hooks/UseLogin';
-import { useNavigate } from 'react-router-dom';
+import { useState } from 'react'
+import { useLogin } from '../hooks/UseLogin'
+import { useNavigate } from 'react-router-dom'
 
 const Login = () => {
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-    const { login, isLoading, error } = useLogin();
-    const navigate = useNavigate();
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
+    const { login, isLoading, error } = useLogin()
+    const navigate = useNavigate()
 
     const handleSubmit = async (e) => {
-        e.preventDefault();
-        await login(email, password);
-    };
+        e.preventDefault()
+        await login(email, password)
+    }
 
     const handleForgotPassword = () => {
-        navigate('/forgotpassword');
-    };
+        navigate('/forgotpassword')
+    }
 
     return (
         <form className="listing" onSubmit={handleSubmit}>
@@ -43,19 +43,19 @@ const Login = () => {
                     <div className="loading">Loading...</div>
                 ) : (
                     <button disabled={isLoading} className="button">Login</button>
-                   
+
                 )}
                 {isLoading ? (
                     <div className="loading"></div>
                 ) : (
                     <button className="button" onClick={handleForgotPassword}>Forgot Password</button>
                 )}
-                 
-                
+
+
             </div>
             {error && <div className='error'>{error}</div>}
         </form>
-    );
-};
+    )
+}
 
-export default Login;
+export default Login

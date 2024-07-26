@@ -7,24 +7,21 @@
             "teamMembers": [
                 {
                     "name": "Shahwat Hasnaine",
-                    "photo": "sayeef.jpg",
                     "roll": 16,
                     "cfHandle": "Hasnaine_",
-                    "linkedin": ""
+                    "linkedin": "https://www.linkedin.com/in/shas9/"
                 },
                 {
                     "name": "Risal Shahriar Shefin",
-                    "photo": "sayeef.jpg",
                     "roll": 16,
                     "cfHandle": "Shefin_ ",
-                    "linkedin": ""
+                    "linkedin": "https://www.linkedin.com/in/risal-shefin/"
                 },
                 {
                     "name": "Tauhedul Islam Tanu",
-                    "photo": "sayeef.jpg",
                     "roll": 16,
                     "cfHandle": "tanus_era",
-                    "linkedin": ""
+                    "linkedin": "https://www.linkedin.com/in/tauhedul-islam/"
                 }
             ]
         },
@@ -36,24 +33,21 @@
                 {
                     "name": "Risal Shahriar Shefin",
                     "photo": "sayeef.jpg",
-                    "roll": 16,
                     "cfHandle": "Shefin_ ",
-                    "linkedin": ""
+                    "linkedin": "https://www.linkedin.com/in/risal-shefin/"
                 },
 
                 {
                     "name": "Adnan Toky",
-                    "photo": "sayeef.jpg",
-                    "roll": 19,
+                    "roll": 1903137,
                     "cfHandle": "adnan_toky",
-                    "linkedin": ""
+                    "linkedin": "https://www.linkedin.com/in/adnan-toky/"
                 },
                 {
                     "name": "Sayeef Mahmud",
-                    "photo": "sayeef.jpg",
-                    "roll": 19,
+                    "roll": 1903006,
                     "cfHandle": "thisIsMorningstar",
-                    "linkedin": ""
+                    "linkedin": "https://www.linkedin.com/in/sayeef-mahmud-8374a1232/"
                 }
             ]
         }

@@ -1,14 +1,14 @@
-import { useState, useEffect } from 'react';
-import Ranktable from "../components/Ranktable";
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
+import { useState, useEffect } from 'react'
+import Ranktable from "../components/Ranktable"
+const BACKEND_URL = process.env.REACT_APP_BACKEND_URL
 
 const CodeforcesRating = () => {
-    const [ranklist, setRanklist] = useState([]);
-    const [loading, setLoading] = useState(false);
-    const [activeComponent, setActiveComponent] = useState('CurrentRating');
+    const [ranklist, setRanklist] = useState([])
+    const [loading, setLoading] = useState(false)
+    const [activeComponent, setActiveComponent] = useState('CurrentRating')
 
     const handleClick = async (clickType) => {
-        setLoading(true);
+        setLoading(true)
 
         try {
             const response = await fetch(`${BACKEND_URL}/cfrating`, {
@@ -17,34 +17,33 @@ const CodeforcesRating = () => {
                 headers: {
                     'Content-Type': 'application/json'
                 }
-            });
+            })
 
-            const newRanklist = await response.json();
-            console.log(newRanklist)
-            setRanklist(newRanklist);
+            const newRanklist = await response.json()
+            setRanklist(newRanklist)
         } catch (error) {
-            console.error('Error fetching the ranklist:', error);
+            console.error('Error fetching the ranklist:', error)
         } finally {
-            setLoading(false);
+            setLoading(false)
         }
-    };
+    }
 
     useEffect(() => {
-        handleClick('CurrentRating');
-    }, []);
+        handleClick('CurrentRating')
+    }, [])
 
     return (
         <div>
             <div className="option-button-large">
                 <button
                     className={`option-button button ${activeComponent === 'CurrentRating' ? 'active' : ''}`}
-                    onClick={() => { setActiveComponent('CurrentRating'); handleClick('CurrentRating'); }}
+                    onClick={() => { setActiveComponent('CurrentRating'); handleClick('CurrentRating') }}
                 >
                     Current Rating
                 </button>
                 <button
                     className={`option-button button ${activeComponent === 'MaxRating' ? 'active' : ''}`}
-                    onClick={() => { setActiveComponent('MaxRating'); handleClick('MaxRating'); }}
+                    onClick={() => { setActiveComponent('MaxRating'); handleClick('MaxRating') }}
                 >
                     Max Rating 
                 </button>
@@ -57,7 +56,7 @@ const CodeforcesRating = () => {
                 <Ranktable finalRanklist={ranklist} />
             )}
         </div>
-    );
-};
+    )
+}
 
-export default CodeforcesRating;
+export default CodeforcesRating

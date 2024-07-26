@@ -81,7 +81,7 @@ const Navbar = () => {
             </nav>
 
             <button className="mobile-menu-toggle" onClick={toggleMobileMenu}>
-                &#9776
+                &#9776;
             </button>
         </header>
     )

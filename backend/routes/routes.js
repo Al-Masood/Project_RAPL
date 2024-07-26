@@ -10,6 +10,8 @@ const getContests = require('../controllers/getcontests')
 const cfPerformance = require('../controllers/cfperformance')
 const tfcRanklist = require('../controllers/tfcranklist')
 const getCount = require('../controllers/getcount')
+const updateRating = require('../database/rating')
+const updateProblemCount = require('../database/problemcount')
 
 
 router.post('/signup', signupUser)
@@ -51,5 +53,9 @@ router.post('/cfperformance', cfPerformance)
 router.post('/tfcranklist', tfcRanklist)
 
 router.post('/addvjcontest', addVJContest)
+
+router.post('/updaterating', updateRating)
+
+router.post('/updateproblemcount', updateProblemCount)
 
 module.exports = router

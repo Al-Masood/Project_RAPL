@@ -4,10 +4,10 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 15px 5%; /* Reduced padding */
+    padding: 15px 5%; 
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Ensures items are spread apart horizontally */
+    justify-content: space-between; 
     font-weight: bolder;
     z-index: 1000;
 }
@@ -17,19 +17,19 @@ header * {
 }
 
 header .navbar-brand {
-    flex: 0 0 auto; /* Do not grow or shrink */
+    flex: 0 0 auto; 
 }
 
 header .navbar-brand img {
     border-radius: 8px;
-    height: 40px; /* Adjust as necessary */
+    height: 40px; 
 }
 
 header .navbar-links {
     display: flex;
-    flex: 1 1 auto; /* Grow and shrink as necessary */
+    flex: 1 1 auto;
     justify-content: center;
-    gap: 15px; /* Adjusted gap for smaller font size */
+    gap: 15px; 
 }
 
 header .navbar-links a {
@@ -78,7 +78,7 @@ header .mobile-menu-toggle {
 
 @media (max-width: 768px) {
     header {
-        justify-content: space-between; /* Ensure space between items in mobile view */
+        justify-content: space-between; 
     }
 
     header .navbar-links {
@@ -98,11 +98,11 @@ header .mobile-menu-toggle {
 
     header .mobile-menu-toggle {
         display: block;
-        margin-left: auto; /* Move to the right */
+        margin-left: auto; 
     }
 
     header .navbar-user {
-        display: none; /* Hide the user links on mobile */
+        display: none;
         flex-direction: column;
         gap: 15px;
         margin-top: 15px;
@@ -121,6 +121,6 @@ header .mobile-menu-toggle {
     }
 
     header .navbar-links.open .navbar-user {
-        display: flex; /* Show the user links in the dropdown */
+        display: flex;
     }
 }

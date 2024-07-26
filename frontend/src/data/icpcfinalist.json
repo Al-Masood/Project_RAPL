@@ -7,19 +7,19 @@
             "teamMembers": [
                 {
                     "name": "Shahwat Hasnaine",
-                    "roll": 16,
+                    "roll": 1610002,
                     "cfHandle": "Hasnaine_",
                     "linkedin": "https://www.linkedin.com/in/shas9/"
                 },
                 {
                     "name": "Risal Shahriar Shefin",
-                    "roll": 16,
-                    "cfHandle": "Shefin_ ",
+                    "roll": 1603081,
+                    "cfHandle": "Shefin_",
                     "linkedin": "https://www.linkedin.com/in/risal-shefin/"
                 },
                 {
                     "name": "Tauhedul Islam Tanu",
-                    "roll": 16,
+                    "roll": 1603070,
                     "cfHandle": "tanus_era",
                     "linkedin": "https://www.linkedin.com/in/tauhedul-islam/"
                 }
@@ -32,8 +32,8 @@
             "teamMembers": [
                 {
                     "name": "Risal Shahriar Shefin",
-                    "photo": "sayeef.jpg",
-                    "cfHandle": "Shefin_ ",
+                    "roll": 1603081,
+                    "cfHandle": "Shefin_",
                     "linkedin": "https://www.linkedin.com/in/risal-shefin/"
                 },
 

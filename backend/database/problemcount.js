@@ -1,9 +1,3 @@
-const mongoose = require('mongoose')
-mongoose.connect('mongodb+srv://masood:DLoMI60ksHyhb7GC@rapl.mz1pwz0.mongodb.net/?retryWrites=true&w=majority&appName=RAPL', { 
-})
-.then(() => console.log('MongoDB Connected'))
-.catch(err => console.log(err));
-
 const users = require('../models/users')
 const axios = require('axios')
 const cheerio = require('cheerio')
@@ -25,8 +19,6 @@ const updateProblemCount = async () => {
         let lastMonth = $('div._UserActivityFrame_counterValue').eq(2).text().trim()
         lastMonth = parseInt(lastMonth.match(/\d+/)[0], 10)
         
-        console.log(allTime, lastYear, lastMonth)
-
         await users.findByIdAndUpdate(user._id, {
             $set: {
                 allTime,

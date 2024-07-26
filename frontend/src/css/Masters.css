@@ -1,53 +1,62 @@
 .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    color: #ffffff;
-    font-family: 'Arial', sans-serif;
-  }
-  
-  .title {
-    font-size: 2.5em;
-    color: #ff8c00;
-    margin-bottom: 20px;
-  }
-  
-  .masters {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  
-  .master {
-    min-width: 400px;
-    margin: 20px;
-    padding: 20px;
-    background-color: #112233;
-    border-radius: 10px;
-    width: 200px;
-    text-align: center;
-  }
-  
-  .master-photo {
-    width: 70%;
-    height: auto;
-    border-radius: 5px;
-    margin-bottom: 10px;
-  }
-  
-  .master-name {
-    font-size: 1.5em;
-    margin-bottom: 5px;
-  }
-  
-  .master-handle, .master-roll {
-    margin: 5px 0;
-    font-weight: bold;
-  }
-    
-  .linkedin-logo {
-    width: 30px;
-    height: 30px;
-    vertical-align: middle;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  color: #ffffff;
+  font-family: 'Arial', sans-serif;
+}
+
+.title {
+  font-size: 2.5em;
+  color: #ff8c00;
+  margin-bottom: 20px;
+}
+
+.masters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.master {
+  min-width: 400px;
+  margin: 20px;
+  padding: 20px;
+  background-color: #112233;
+  border-radius: 10px;
+  width: 200px;
+  text-align: center;
+}
+
+.master-photo {
+  width: 70%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.master-name {
+  font-size: 1.5em;
+  margin-bottom: 5px;
+}
+
+.master-handle,
+.master-roll,
+.master-max-rating {
+  margin: 5px 0;
+  font-weight: bold;
+}
+
+.linkedin-logo {
+  width: 30px;
+  height: 30px;
+  vertical-align: middle;
+}
+
+.codeforces-logo {
+  width: 22px;
+  height: 22px;
+  vertical-align: middle;
+  margin-right: 10px;
+}

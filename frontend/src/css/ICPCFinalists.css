@@ -17,10 +17,16 @@
   text-align: center;
 }
 
-.team-title,
-.team-name {
+.finals-title{
   color: #ffcc00;
   margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.team-name {
+  color: #ffffff;
+  margin-bottom: 10px;
+  font-size: 18px;
 }
 
 .team-members {
@@ -50,20 +56,21 @@
 }
 
 .member-handle,
-.member-roll {
+.member-roll,
+.member-max-rating {
   margin: 5px 0;
+  font-weight: bold;
 }
 
-.member-linkedin {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 5px 10px;
-  background-color: #0077b5;
-  color: #ffffff;
-  text-decoration: none;
-  border-radius: 5px;
+.linkedin-logo {
+  width: 30px;
+  height: 30px;
+  vertical-align: middle;
 }
 
-.member-linkedin:hover {
-  background-color: #005582;
+.codeforces-logo {
+  width: 22px;
+  height: 22px;
+  vertical-align: middle;
+  margin-right: 10px;
 }

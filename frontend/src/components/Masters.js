@@ -3,6 +3,7 @@ import axios from 'axios'
 import getColorByRating from '../components/GetColor'
 import mastersData from '../data/masters.json'
 import linkedinLogo from '../data/photos/linkedin.png'
+import codeforcesLogo from '../data/photos/codeforces.png'
 import '../css/Masters.css'
 
 const importImage = (imageName) => {
@@ -18,7 +19,7 @@ const Masters = () => {
 
 	useEffect(() => {
 		const fetchRatings = async () => {
-			const handles = mastersData.masters.map(master => master.cfHandle).join('')
+			const handles = mastersData.masters.map(master => master.cfHandle).join(';')
 			try {
 				const response = await axios.get(`https://codeforces.com/api/user.info?handles=${handles}`)
 				const ratingsData = response.data.result.reduce((acc, user) => {
@@ -47,17 +48,31 @@ const Masters = () => {
 							className="master-photo"
 						/>
 						<h3 className="master-name">{master.name}</h3>
-						<a href={`codeforces.com/profile/${master.linkedin}`}
-							target="_blank" rel="noopener noreferrer"
+						<a
+							href={`https://codeforces.com/profile/${master.cfHandle}`}
+							target="_blank" 
+							rel="noopener noreferrer"
 							className="master-handle"
-							style={{ color: getColorByRating(ratings[master.cfHandle]) }}>
+							style={{ color: getColorByRating(ratings[master.cfHandle]) }}
+						>
+							<img
+								src={codeforcesLogo} 
+								alt="Codeforces"
+								className="codeforces-logo"
+							/>
+
 							{master.cfHandle}
 						</a>
 						<p className="master-max-rating">
 							Max Rating: {ratings[master.cfHandle]}
 						</p>
 						<p className="master-roll">Roll: {master.roll}</p>
-						<a href={master.linkedin} target="_blank" rel="noopener noreferrer" className="master-linkedin">
+						<a
+							href={master.linkedin}
+							target="_blank"
+							rel="noopener noreferrer"
+							className="master-linkedin"
+						>
 							<img src={linkedinLogo} alt="LinkedIn" className="linkedin-logo" />
 						</a>
 					</div>

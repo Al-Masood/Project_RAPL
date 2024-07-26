@@ -92,7 +92,7 @@ const SessionPlan = () => {
         {showTopicsModal && (
           <div className="modal">
             <div className="modal-content">
-              <span className="close" onClick={() => setShowTopicsModal(false)}>&times</span>
+              <span className="close" onClick={() => setShowTopicsModal(false)}>&times;</span>
               <h2>{modalTitle}</h2>
               <p>{modalContent}</p>
             </div>
@@ -102,7 +102,7 @@ const SessionPlan = () => {
         {showResourcesModal && (
           <div className="modal">
             <div className="modal-content">
-              <span className="close" onClick={() => setShowResourcesModal(false)}>&times</span>
+              <span className="close" onClick={() => setShowResourcesModal(false)}>&times;</span>
               <h2>{modalTitle}</h2>
               <p>{modalContent}</p>
             </div>

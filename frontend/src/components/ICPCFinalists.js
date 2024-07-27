@@ -69,9 +69,6 @@ const ICPCFinalists = () => {
 									/>
 									{member.cfHandle}
 								</a>
-								<p className="member-max-rating">
-									Max Rating: {ratings[member.cfHandle]}
-								</p>
 								<p className="member-roll">Roll: {member.roll}</p>
 								<a
 									href={member.linkedin}

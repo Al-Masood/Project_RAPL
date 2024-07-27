@@ -1,8 +1,3 @@
-const mongoose = require('mongoose');
-mongoose.connect('mongodb+srv://masood:DLoMI60ksHyhb7GC@rapl.mz1pwz0.mongodb.net/?retryWrites=true&w=majority&appName=RAPL', {})
-    .then(() => console.log('MongoDB Connected'))
-    .catch(err => console.log(err));
-
 const users = require('../models/users');
 const axios = require('axios');
 
@@ -34,7 +29,6 @@ const updateRating = async () => {
             );
         }
 
-        console.log('User ratings updated successfully');
     } catch (error) {
         console.error('Error updating user ratings:', error);
     }

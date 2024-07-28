@@ -18,15 +18,6 @@ const Footer = () => {
                         </Link>
                     </div>
                 </div>
-                <div className="footer-section links">
-                    <Link to="/cfrating">CF Rating</Link>
-                    <Link to="/cfactivity">CF Activity</Link>
-                    <Link to="/cfstandings">CF Standings</Link>
-                    <Link to="/cfperformance">CF Performance</Link>
-                    <Link to="/tfcranklist">TFC Ranklist</Link>
-                    <Link to="/sessionplan">Session Plan</Link>
-                    <Link to="/achievements">Achievements</Link>
-                </div>
                 <div className="footer-section contact">
                     <h5>Contact Us</h5>
                     <p>

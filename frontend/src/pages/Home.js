@@ -18,19 +18,19 @@ const Header = styled.h1`
 `;
 
 const Logo = styled.img`
-  width: 300px; /* Adjust the size as needed */
+  width: 300px; 
   margin-top: 20px;
 `;
 
 const TextBox = styled.div`
-  font-size: 20.5px;
+  font-size: 19.5px;
   background-color: #112233;
   color: white;
   padding: 20px;
   margin-top: 80px;
   border-radius: 8px;
-  max-width: 800px; /* Adjust the width as needed */
-  text-align: justify;
+  max-width: 800px;
+  text-align: left;
 `;
 
 const HomePage = () => {

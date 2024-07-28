@@ -1,14 +1,14 @@
-import { useState, useEffect } from 'react'
-import Ranktable from "../components/Ranktable"
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL
+import { useState, useEffect } from 'react';
+import Ranktable from "../components/RatingTable";
+const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
 
 const CodeforcesRating = () => {
-    const [ranklist, setRanklist] = useState([])
-    const [loading, setLoading] = useState(false)
-    const [activeComponent, setActiveComponent] = useState('CurrentRating')
+    const [ranklist, setRanklist] = useState([]);
+    const [loading, setLoading] = useState(false);
+    const [activeComponent, setActiveComponent] = useState('CurrentRating');
 
     const handleClick = async (clickType) => {
-        setLoading(true)
+        setLoading(true);
 
         try {
             const response = await fetch(`${BACKEND_URL}/cfrating`, {
@@ -17,20 +17,20 @@ const CodeforcesRating = () => {
                 headers: {
                     'Content-Type': 'application/json'
                 }
-            })
+            });
 
-            const newRanklist = await response.json()
-            setRanklist(newRanklist)
+            const newRanklist = await response.json();
+            setRanklist(newRanklist);
         } catch (error) {
-            console.error('Error fetching the ranklist:', error)
+            console.error('Error fetching the ranklist:', error);
         } finally {
-            setLoading(false)
+            setLoading(false);
         }
     }
 
     useEffect(() => {
-        handleClick('CurrentRating')
-    }, [])
+        handleClick('CurrentRating');
+    }, []);
 
     return (
         <div>
@@ -53,10 +53,10 @@ const CodeforcesRating = () => {
                     <div className="loading-spinner"></div>
                 </div>
             ) : (
-                <Ranktable finalRanklist={ranklist} />
+                <Ranktable finalRanklist={ranklist} activeComponent={activeComponent} />
             )}
         </div>
     )
 }
 
-export default CodeforcesRating
+export default CodeforcesRating;

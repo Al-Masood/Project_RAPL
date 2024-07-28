@@ -7,9 +7,13 @@ h1 {
 .link-button {
     background: none;
     border: none;
-    color: #00aaff;
     cursor: pointer;
-    text-decoration: underline;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.link-button i {
+    margin-left: 5px;
 }
 
 .modal {
@@ -50,3 +54,4 @@ h1 {
     text-decoration: none;
     cursor: pointer;
 }
+

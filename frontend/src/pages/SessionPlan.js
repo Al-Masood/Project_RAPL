@@ -3,6 +3,7 @@ import '../css/SessionPlan.css'
 import '../css/Table.css'
 import beginnerData from '../data/beginnerplan.json'
 import advancedData from '../data/advancedplan.json'
+import '@fortawesome/fontawesome-free/css/all.min.css'
 
 const SessionPlan = () => {
   const [showResourcesModal, setShowResourcesModal] = useState(false)
@@ -11,7 +12,6 @@ const SessionPlan = () => {
   const [modalTitle, setModalTitle] = useState('')
   const [sessionData, setSessionData] = useState([])
   const [activeComponent, setActiveComponent] = useState('Beginner')
-
 
   const handleClick = (selectedType) => {
     if (selectedType === 'Advanced') {
@@ -71,12 +71,12 @@ const SessionPlan = () => {
                     <td>{session.Week}</td>
                     <td>
                       <button className="link-button" onClick={() => handleTitleClick(session.Topics)}>
-                        {session.Title}
+                        {session.Title}   <i className="fas fa-chevron-down"></i>
                       </button>
                     </td>
                     <td>
                       <button className="link-button" onClick={() => handleResourcesClick(session.Resources)}>
-                        Resources
+                        <i className="fas fa-chevron-down"></i>
                       </button>
                     </td>
                     <td>
